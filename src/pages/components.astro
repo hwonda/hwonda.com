@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button";
+---
+
+<Layout title="컴포넌트 - 황원다 포트폴리오">
+  <div class="max-w-2xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6">컴포넌트 예시</h1>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">버튼</h2>
+      <div class="flex flex-wrap gap-4">
+        <Button>기본 버튼</Button>
+        <Button variant="secondary">보조 버튼</Button>
+        <Button variant="outline">아웃라인 버튼</Button>
+      </div>
+    </section>
+  </div>
+</Layout>
