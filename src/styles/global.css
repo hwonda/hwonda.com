@@ -1,2 +1,6 @@
 @import 'tailwindcss/preflight';
 @tailwind utilities;
+
+:root {
+  font-family: var(--font-paperlogy), var(--font-pretendard), var(--font-noto), sans-serif;
+}
