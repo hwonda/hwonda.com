@@ -3,4 +3,30 @@
 
 :root {
   font-family: var(--font-paperlogy), var(--font-pretendard), var(--font-noto), sans-serif;
+  
+  --gray-0: rgb(55, 55, 55);
+  --gray-1: rgb(75, 75, 75);
+  --gray-2: rgb(95, 95, 95);
+  --gray-3: rgb(115, 115, 115);
+  --gray-4: rgb(135, 135, 135);
+  --gray-5: rgb(155, 155, 155);
+  --gray-6: rgb(175, 175, 175);
+  --gray-7: rgb(195, 195, 195);
+  --gray-8: rgb(215, 215, 215);
+  --gray-9: rgb(235, 235, 235);
+  --gray-10: rgb(245, 245, 245);
+}
+
+.dark {
+  --gray-0: rgb(200, 200, 200);
+  --gray-1: rgb(180, 180, 180);
+  --gray-2: rgb(160, 160, 160);
+  --gray-3: rgb(140, 140, 140);
+  --gray-4: rgb(120, 120, 120);
+  --gray-5: rgb(100, 100, 100);
+  --gray-6: rgb(80, 80, 80);
+  --gray-7: rgb(60, 60, 60);
+  --gray-8: rgb(45, 45, 45);
+  --gray-9: rgb(30, 30, 30);
+  --gray-10: rgb(20, 20, 20);
 }
