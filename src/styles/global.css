@@ -1,10 +1,18 @@
 @import "tailwindcss";
-@tailwind utilities;
 
 :root {
-  font-family: var(--font-paperlogy), var(--font-pretendard), var(--font-noto), sans-serif;
+  font-family: var(--font-pretendard), var(--font-paperlogy), var(--font-noto), sans-serif;
+
+  --primary-color: rgb(255, 100, 100);
+  --secondary-color: rgb(255, 200, 100);
   
-  --gray-0: rgb(55, 55, 55);
+  --background-color: rgb(245, 245, 245);
+  --foreground-color: rgb(55, 55, 55);
+
+  --text-main-color: rgb(15, 15, 15);
+  --text-sub-color: rgb(45, 45, 45);
+  --text-inverse-color: rgb(245, 245, 245);
+
   --gray-1: rgb(75, 75, 75);
   --gray-2: rgb(95, 95, 95);
   --gray-3: rgb(115, 115, 115);
@@ -14,11 +22,19 @@
   --gray-7: rgb(195, 195, 195);
   --gray-8: rgb(215, 215, 215);
   --gray-9: rgb(235, 235, 235);
-  --gray-10: rgb(245, 245, 245);
 }
 
 .dark {
-  --gray-0: rgb(200, 200, 200);
+  --primary-color: rgb(255, 100, 100);
+  --secondary-color: rgb(255, 200, 100);
+
+  --background-color: rgb(20, 20, 20);
+  --foreground-color: rgb(200, 200, 200);
+
+  --text-main-color: rgb(245, 245, 245);
+  --text-sub-color: rgb(200, 200, 200);
+  --text-inverse-color: rgb(15, 15, 15);
+
   --gray-1: rgb(180, 180, 180);
   --gray-2: rgb(160, 160, 160);
   --gray-3: rgb(140, 140, 140);
@@ -28,5 +44,30 @@
   --gray-7: rgb(60, 60, 60);
   --gray-8: rgb(45, 45, 45);
   --gray-9: rgb(30, 30, 30);
-  --gray-10: rgb(20, 20, 20);
+}
+
+@theme inline {
+  --color-primary: var(--primary-color);
+  --color-secondary: var(--secondary-color);
+
+  --color-background: var(--background-color);
+  --color-foreground: var(--foreground-color);
+
+  --color-main: var(--text-main-color);
+  --color-sub: var(--text-sub-color);
+  --color-inverse: var(--text-inverse-color);
+
+  --color-gray1: var(--gray-1);
+  --color-gray2: var(--gray-2);
+  --color-gray3: var(--gray-3);
+  --color-gray4: var(--gray-4);
+  --color-gray5: var(--gray-5);
+  --color-gray6: var(--gray-6);
+  --color-gray7: var(--gray-7);
+  --color-gray8: var(--gray-8);
+  --color-gray9: var(--gray-9);
+
+  --font-paperlogy: 'Paperlogy', sans-serif;
+  --font-pretendard: 'Pretendard', sans-serif;
+  --font-noto: 'Noto Sans KR', sans-serif;
 }
