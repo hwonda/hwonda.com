@@ -27,7 +27,9 @@ export default function Hero() {
             </span>
           </h1>
           <p className="text-main font-paperlogy text-2xl font-bold">
-            뜨겁게 성장하고, 따듯하게 협업합니다
+            <span className="text-accent-1">뜨겁게</span> 성장하고,{' '}
+            <span className="text-accent-2">따듯하게 </span>
+            협업합니다
           </p>
           <p className="text-sub font-pretendard max-w-2xl text-lg">
             깔끔한 코드, 부드러운 사용자 경험, 그리고 창의적인 아이디어를
