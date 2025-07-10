@@ -1,0 +1,52 @@
+/* 애니메이션 정의 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 커스텀 애니메이션 클래스 */
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-intro {
+  opacity: 0;
+  transform: translateY(1rem);
+  animation: slideUp 0.7s ease forwards;
+}
+
+/* 애니메이션 딜레이 클래스 */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-700 {
+  animation-delay: 700ms;
+}
+
+.delay-900 {
+  animation-delay: 900ms;
+}
