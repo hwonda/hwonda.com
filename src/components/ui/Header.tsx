@@ -23,16 +23,29 @@ const Header = () => {
   }, []);
 
   return (
-    <div
-      className={`flex items-center justify-between rounded-full px-10 py-4 transition-all duration-300 ${
-        isScrolled ? 'bg-black/60 backdrop-blur-md' : 'bg-transparent'
-      }`}
-    >
-      <h1 className="font-paperlogy text-2xl">앗! 뜨거</h1>
-      <nav className="flex items-center gap-4">
-        <a href="about">주다훤</a>
-        <a href="projects">프로젝트</a>
-        <a href="contact">연락하기</a>
+    <div className="relative flex items-center justify-between rounded-full py-2 pr-3 pl-10">
+      {/* 항상 존재하는 배경 그라데이션 레이어 */}
+      <div
+        className={`from-accent-1/50 via-accent-2/20 to-accent-4/40 absolute inset-0 rounded-full bg-gradient-to-r opacity-0 backdrop-blur-md transition-opacity duration-700 ${
+          isScrolled ? 'opacity-100' : ''
+        }`}
+      ></div>
+
+      {/* 컨텐츠 */}
+      <h1 className="font-paperlogy relative z-10 text-2xl">핫🔥한 개발자</h1>
+      <nav className="relative z-10 flex items-center gap-2">
+        <a
+          href="about"
+          className="color-sub hover:bg-accent-1/20 rounded-full px-3 py-1.5 transition-all duration-300"
+        >
+          '주다훤'에 대하여
+        </a>
+        <a
+          href="projects"
+          className="color-sub bg-gray3/10 hover:bg-gray3/20 rounded-full px-3 py-1.5 transition-all duration-300"
+        >
+          프로젝트
+        </a>
       </nav>
     </div>
   );
