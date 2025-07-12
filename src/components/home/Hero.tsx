@@ -37,24 +37,16 @@ export default function Hero() {
             </span>
           </h1>
           <p
-            className={`text-main font-paperlogy hidden text-2xl font-bold sm:block ${isLoaded ? 'animate-intro delay-500' : 'opacity-0'}`}
+            className={`font-paperlogy flex flex-col gap-1 text-2xl font-bold sm:flex-row ${isLoaded ? 'animate-intro delay-500' : 'opacity-0'}`}
           >
-            <span className="text-accent-1">뜨겁게</span>
-            성장하고,
-            <span className="text-accent-2">따듯하게 </span>
-            협업합니다
-          </p>
-          <p
-            className={`text-main font-paperlogy text-2xl font-bold sm:hidden ${isLoaded ? 'animate-intro delay-500' : 'opacity-0'}`}
-          >
-            <div>
-              <span className="text-accent-1">뜨겁게</span>
+            <span>
+              <span className="text-accent-1">뜨겁게 </span>
               성장하고,
-            </div>
-            <div>
-              <span className="text-accent-2">따듯하게 </span>
-              협업합니다.
-            </div>
+            </span>
+            <span>
+              <span className="text-accent-2"> 따뜻하게 </span>
+              협업합니다
+            </span>
           </p>
           <p
             className={`text-sub font-pretendard hidden max-w-2xl text-lg sm:block ${isLoaded ? 'animate-intro delay-700' : 'opacity-0'}`}
@@ -73,14 +65,20 @@ export default function Hero() {
             구현하는 것에 열정을 가지고 있습니다.
           </p>
           <div
-            className={`flex flex-wrap justify-center gap-4 ${isLoaded ? 'animate-intro delay-900' : 'opacity-0'}`}
+            className={`flex flex-wrap justify-center gap-4 sm:justify-start ${isLoaded ? 'animate-intro delay-900' : 'opacity-0'}`}
           >
-            <button className="bg-foreground hover:bg-foreground/80 text-inverse rounded-lg px-6 py-3 font-medium transition-colors">
+            <a
+              href="#projects"
+              className="bg-foreground hover:bg-foreground/80 text-inverse rounded-lg px-6 py-3 font-medium transition-colors"
+            >
               프로젝트 보기
-            </button>
-            <button className="border-gray3 text-main hover:bg-gray9 rounded-lg border px-6 py-3 font-medium transition-colors">
+            </a>
+            <a
+              href="#contact"
+              className="border-gray3 text-main hover:bg-gray9 rounded-lg border px-6 py-3 font-medium transition-colors"
+            >
               연락하기
-            </button>
+            </a>
           </div>
         </div>
       </div>
