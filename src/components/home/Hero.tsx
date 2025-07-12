@@ -11,7 +11,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative flex h-screen w-screen items-center justify-center overflow-hidden">
+    <section className="relative flex h-screen items-center justify-center overflow-hidden">
       {/* 배경 이미지 */}
       <div
         className={`absolute inset-0 -z-10 blur-xs ${

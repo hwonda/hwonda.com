@@ -34,7 +34,7 @@ const projectsData: Project[] = [
 
 export default function Projects() {
   return (
-    <section className="py-16">
+    <section className="h-screen">
       <div className="container mx-auto px-4">
         <h2 className="font-pretendard mb-12 text-center text-3xl font-bold md:text-4xl">
           프로젝트
@@ -43,7 +43,7 @@ export default function Projects() {
           {projectsData.map((project) => (
             <div
               key={project.id}
-              className="border-gray-8 overflow-hidden rounded-lg border bg-white shadow-sm transition-all hover:shadow-md"
+              className="border-gray-8 bg-gray8 overflow-hidden rounded-lg border shadow-sm transition-all hover:shadow-md"
             >
               <div className="bg-gray-9 aspect-video w-full">
                 {/* <img
