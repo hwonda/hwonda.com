@@ -33,7 +33,7 @@ const Header = () => {
 
       {/* 컨텐츠 */}
       <h1 className="font-paperlogy relative z-10 text-base font-medium sm:text-2xl">
-        여름에 더 뜨거운 개발자
+        <a href="/">여름에 더 뜨거운 개발자</a>
       </h1>
       <nav className="relative z-10 flex items-center gap-2 text-sm sm:text-base">
         <a
