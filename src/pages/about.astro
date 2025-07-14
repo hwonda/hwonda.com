@@ -1,0 +1,221 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// 스킬 데이터
+const skills = [
+  {
+    category: '프론트엔드',
+    items: [
+      'React',
+      'Vue',
+      'Next.js',
+      'JavaScript',
+      'TypeScript',
+      'Tailwind CSS',
+      'HTML/CSS',
+      'OpenLayers',
+      'Cesium',
+    ],
+  },
+  {
+    category: '상태관리',
+    items: ['Redux', 'Vuex'],
+  },
+  {
+    category: '통신',
+    items: ['Axios', 'RTK-Query'],
+  },
+  {
+    category: '디자인',
+    items: ['Figma', 'Storybook'],
+  },
+  {
+    category: '백엔드',
+    items: ['Node.js', 'Firebase', 'MongoDB', 'Swagger'],
+  },
+  {
+    category: '기타',
+    items: ['Git', 'GitHub Actions', 'Docker'],
+  },
+];
+
+// 경력 데이터
+const experiences = [
+  {
+    period: '2023 - 현재',
+    title: '프론트엔드 개발자',
+    company: '(주)한국해양기상기술',
+    description:
+      '주요 웹 애플리케이션 개발 및 유지보수를 담당하고 있습니다. React와 TypeScript를 활용하여 사용자 친화적인 인터페이스를 구현하였습니다.',
+  },
+];
+
+// 교육 데이터
+const education = [
+  {
+    period: '2012 - 2019',
+    degree: '기계시스템디자인공학과',
+    institution: '서울과학기술대학교',
+    description: '기계공학과 졸업',
+  },
+];
+---
+
+<Layout
+  title="소개 | 주다훤 포트폴리오"
+  description="프론트엔드 개발자 주다훤의 소개 페이지입니다. 경력, 기술 스택, 그리고 교육 배경에 대한 정보를 확인하세요."
+>
+  <div class="mx-auto mt-40 px-4 sm:top-8 sm:px-8 md:px-10 lg:px-20 xl:px-40">
+    <h1 class="font-pretendard relative mb-12 text-4xl font-bold">
+      <span
+        class="from-accent-3 to-accent-1 bg-gradient-to-b bg-clip-text text-transparent"
+      >
+        주다훤
+      </span>
+      에 대하여
+      <div
+        class="from-gray5 to-gray1 absolute bottom-[-16px] left-[-4px] z-50 h-[16px] w-[101px] rounded-full border border-white/30 bg-gradient-to-b opacity-40 shadow-sm backdrop-blur-sm backdrop-filter before:absolute before:inset-0 before:rounded-full before:border before:border-white/60 before:content-[''] after:absolute after:inset-[-2px] after:rounded-full after:border-[0.5px] after:border-white/20 after:content-['']"
+      >
+      </div>
+    </h1>
+
+    <div class="grid gap-8 md:grid-cols-3">
+      <div class="md:col-span-1">
+        <div class="bg-gray9 overflow-hidden rounded-lg p-6">
+          <div class="mb-6 text-center">
+            <div
+              class="bg-gray9 mx-auto mb-4 h-40 w-40 overflow-hidden rounded-full"
+            >
+              <img
+                src="/placeholder-profile.jpg"
+                alt="주다훤 프로필 이미지"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <h2 class="font-pretendard text-2xl font-bold">주다훤</h2>
+            <p class="text-gray-3">프론트엔드 개발자</p>
+          </div>
+
+          <div class="mb-4">
+            <h3 class="font-pretendard mb-2 text-lg font-semibold">연락처</h3>
+            <ul class="text-gray-3 space-y-2">
+              <li>
+                <span class="font-medium">이메일:</span> hwondaa@gmail.com
+              </li>
+              <li>
+                <span class="font-medium">GitHub:</span>
+                <a
+                  href="https://github.com/hwonda"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-accent-1 hover:underline"
+                >
+                  github.com/hwonda
+                </a>
+              </li>
+              <li>
+                <span class="font-medium">LinkedIn:</span>
+                <a
+                  href="https://linkedin.com/in/hwonda"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-accent-1 hover:underline"
+                >
+                  linkedin.com/in/hwonda
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-pretendard mb-2 text-lg font-semibold">
+              기술 스택
+            </h3>
+            {
+              skills.map((skillGroup) => (
+                <div class="mb-4">
+                  <h4 class="text-gray-2 mb-1 text-sm font-medium">
+                    {skillGroup.category}
+                  </h4>
+                  <div class="flex flex-wrap gap-2">
+                    {skillGroup.items.map((skill) => (
+                      <span class="bg-gray-9 text-gray-1 rounded-full px-3 py-1 text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="md:col-span-2">
+        <div class="bg-gray9 mb-8 rounded-lg p-6">
+          <h2 class="font-pretendard mb-6 text-2xl font-bold">자기소개</h2>
+          <div class="text-gray-1 space-y-4">
+            <p>
+              안녕하세요, 프론트엔드 개발자 주다훤입니다. 사용자 경험을 중심으로
+              한 웹 개발에 관심이 많으며, 최신 기술 트렌드를 따라가며 지속적으로
+              성장하고 있습니다.
+            </p>
+            <p>
+              React, TypeScript, Tailwind CSS 등의 기술 스택을 활용하여 사용자
+              친화적이고 성능이 뛰어난 웹 애플리케이션을 개발하는 것을
+              좋아합니다. 특히 복잡한 UI 컴포넌트를 설계하고 구현하는 것에
+              강점이 있으며, 접근성과 반응형 디자인을 항상 고려합니다.
+            </p>
+            <p>
+              팀 협업을 중요시하며, 명확한 커뮤니케이션과 코드 리뷰를 통해 더
+              나은 결과물을 만들어내는 것을 지향합니다. 항상 새로운 도전을
+              환영하며, 문제 해결 과정에서 배우는 것을 즐깁니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gray9 mb-8 rounded-lg p-6">
+          <h2 class="font-pretendard mb-6 text-2xl font-bold">경력</h2>
+          <div class="space-y-6">
+            {
+              experiences.map((exp) => (
+                <div class="border-gray-7 border-b pb-6 last:border-0 last:pb-0">
+                  <div class="mb-2 flex items-center justify-between">
+                    <h3 class="font-pretendard text-xl font-semibold">
+                      {exp.title}
+                    </h3>
+                    <span class="text-gray-3 text-sm">{exp.period}</span>
+                  </div>
+                  <p class="text-accent-2 mb-2 font-medium">{exp.company}</p>
+                  <p class="text-gray-2">{exp.description}</p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="bg-gray9 rounded-lg p-6">
+          <h2 class="font-pretendard mb-6 text-2xl font-bold">교육</h2>
+          <div class="space-y-6">
+            {
+              education.map((edu) => (
+                <div>
+                  <div class="mb-2 flex items-center justify-between">
+                    <h3 class="font-pretendard text-xl font-semibold">
+                      {edu.degree}
+                    </h3>
+                    <span class="text-gray-3 text-sm">{edu.period}</span>
+                  </div>
+                  <p class="text-accent-2 mb-2 font-medium">
+                    {edu.institution}
+                  </p>
+                  <p class="text-gray-2">{edu.description}</p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
