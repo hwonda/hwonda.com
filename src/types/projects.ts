@@ -14,6 +14,7 @@ export interface Project {
     thumbnail: string;
     full?: string[];
     video?: string;
+    captions?: string[]; // 각 이미지에 대한 설명 추가
   };
   urls?: {
     github?: string;
