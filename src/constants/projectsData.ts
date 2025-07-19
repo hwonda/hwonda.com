@@ -1,4 +1,4 @@
-import type { Project, YearProjects } from '../types/projects';
+import type { Project, YearProjects } from '@/types/projects';
 
 // 연도별 프로젝트 데이터
 export const projectsData: YearProjects[] = [

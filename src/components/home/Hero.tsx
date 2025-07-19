@@ -1,4 +1,4 @@
-import '../../styles/animation.css';
+import '@/styles/animation.css';
 
 import { ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
