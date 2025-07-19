@@ -139,8 +139,10 @@ const education = [
                   </h4>
                   <div class="flex flex-wrap gap-2">
                     {skillGroup.items.map((skill) => (
-                      <span class="bg-gray-9 text-gray-1 rounded-full px-3 py-1 text-sm">
-                        {skill}
+                      <span class="text-gray-1 border-accent-2 relative rounded-full border px-3 py-1 text-sm">
+                        <span class="from-accent-2 to-accent-4 absolute inset-0 rounded-full bg-gradient-to-r opacity-20" />
+                        <span class="bg-gray-8 absolute inset-[1px] rounded-full" />
+                        <span class="text-gray-1 relative z-10">{skill}</span>
                       </span>
                     ))}
                   </div>
