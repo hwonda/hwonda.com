@@ -87,12 +87,12 @@ export default function ImageCarousel({
       onClick={onClose}
     >
       <div
-        className="from-gray6 to-gray5 relative flex max-h-[90vh] w-[90vw] flex-col rounded-2xl bg-gradient-to-br p-4"
+        className="bg-background relative flex max-h-[90vh] w-[90vw] flex-col rounded-md p-4"
         onClick={(e) => e.stopPropagation()}
       >
         {/* 닫기 버튼 */}
         <button
-          className="bg-gray8 hover:bg-accent-1 text-main absolute top-6 right-6 z-10 flex items-center gap-2 rounded-full p-2 pl-3.5 transition-all duration-300 hover:cursor-pointer xl:top-4 xl:right-4"
+          className="bg-gray8 hover:bg-accent-1 text-main absolute top-[-48px] right-6 z-10 flex items-center gap-2 rounded-full p-2 pl-3.5 transition-all duration-300 hover:cursor-pointer"
           onClick={onClose}
         >
           닫기
@@ -106,17 +106,16 @@ export default function ImageCarousel({
             alt={captions?.[currentIndex] || `이미지 ${currentIndex + 1}`}
             className="max-h-[70vh] max-w-full object-contain"
           />
-
           {/* 이전/다음 버튼 */}
           <button
             type="button"
-            className="bg-gray8 hover:bg-accent-2 text-main absolute left-4 rounded-full p-2 transition-all duration-300 hover:cursor-pointer"
+            className="bg-gray8 hover:bg-accent-2 text-main absolute left-0 rounded-full p-2 transition-all duration-300 hover:cursor-pointer sm:left-4"
             onClick={handlePrev}
           >
             <ChevronLeft className="text-main ml-[-2px] size-6" />
           </button>
           <button
-            className="bg-gray8 hover:bg-accent-2 text-main absolute right-4 rounded-full p-2 transition-all duration-300 hover:cursor-pointer"
+            className="bg-gray8 hover:bg-accent-2 text-main absolute right-0 rounded-full p-2 transition-all duration-300 hover:cursor-pointer sm:right-4"
             onClick={handleNext}
           >
             <ChevronRight className="text-main mr-[-2px] size-6" />
