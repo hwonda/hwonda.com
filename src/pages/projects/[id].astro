@@ -68,9 +68,9 @@ const allImages = [project.images.thumbnail, ...fullImages];
       </a>
     </div>
 
-    <div class="mb-12">
-      <h1 class="font-pretendard mb-4 text-4xl font-bold">{project.title}</h1>
-      <div class="mb-6 flex flex-wrap gap-2">
+    <div class="mb-8 space-y-4">
+      <h1 class="font-pretendard text-4xl font-bold">{project.title}</h1>
+      <div class="flex flex-wrap gap-2">
         {
           project.techStack?.map((tech) => (
             <span class="text-gray-1 border-accent-2 relative rounded-full border px-3 py-1 text-sm">
@@ -81,7 +81,7 @@ const allImages = [project.images.thumbnail, ...fullImages];
           ))
         }
       </div>
-      <div class="mb-4 flex flex-col gap-4">
+      <div class="flex flex-col gap-4">
         <p class="text-gray-2 text-lg">{project.description.short}</p>
         <p
           class="from-gray9 to-gray8 text-main rounded-lg bg-gradient-to-b p-4 leading-relaxed whitespace-pre-line"
@@ -90,7 +90,7 @@ const allImages = [project.images.thumbnail, ...fullImages];
         </p>
       </div>
 
-      <div class="mb-8 flex flex-wrap gap-4">
+      <div class="mb-6 flex flex-wrap gap-4">
         {
           project.urls?.demo && (
             <a
@@ -118,8 +118,11 @@ const allImages = [project.images.thumbnail, ...fullImages];
       </div>
     </div>
 
-    <div class="mb-3 grid gap-3 lg:grid-cols-2">
-      <div class="bg-gray8 aspect-video overflow-hidden rounded-lg">
+    <div class="mb-3 flex flex-col gap-3 lg:flex-row">
+      <div
+        class="bg-gray8 image-gallery aspect-video cursor-pointer overflow-hidden rounded-lg lg:w-1/2"
+        data-image-index="0"
+      >
         <img
           src={project.images.thumbnail}
           alt={`${project.title} 메인 이미지`}
@@ -128,9 +131,12 @@ const allImages = [project.images.thumbnail, ...fullImages];
       </div>
       {
         hasRightImages && (
-          <div class="grid grid-cols-2 gap-3">
+          <div class="grid grid-cols-2 grid-rows-2 gap-3 lg:w-1/2">
             {rightImages.map((image, index) => (
-              <div class="bg-gray8 aspect-video overflow-hidden rounded-lg">
+              <div
+                class="bg-gray8 image-gallery aspect-video cursor-pointer overflow-hidden rounded-lg"
+                data-image-index={index + 1}
+              >
                 <img
                   src={image}
                   alt={`${project.title} 이미지 ${index + 1}`}
@@ -146,9 +152,12 @@ const allImages = [project.images.thumbnail, ...fullImages];
     {
       hasBottomImages && (
         <div class="mb-12">
-          <div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <div class="grid grid-cols-2 gap-3 lg:grid-cols-4">
             {bottomImages.map((image, index) => (
-              <div class="bg-gray8 aspect-video overflow-hidden rounded-lg">
+              <div
+                class="bg-gray8 image-gallery aspect-video cursor-pointer overflow-hidden rounded-lg"
+                data-image-index={index + 5}
+              >
                 <img
                   src={image}
                   alt={`${project.title} 이미지 ${index + 5}`}

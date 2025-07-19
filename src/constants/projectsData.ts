@@ -12,8 +12,8 @@ export const projectsData: YearProjects[] = [
           short:
             '개발자를 위한 지식 관리 플랫폼으로, 마크다운 기반의 문서 작성과 공유 기능을 제공합니다.',
           full: `데이터 용어사전 웹 프론트엔드 개발 프로젝트입니다.
-      Firestore 데이터를 빌드 시점에 수집하여 Static Site Generation(SSG) 방식으로 페이지 렌더링하며, 랜딩페이지, 포스트 목록, 포스트 페이지 등을 구현했습니다.
-      lunr.js를 활용한 컨텐츠 가중치 검색 기능을 제공하고, Github Actions 및 Vercel을 통한 자동 배포를 구현했습니다.`,
+            Firestore 데이터를 빌드 시점에 수집하여 Static Site Generation(SSG) 방식으로 페이지 렌더링하며, 랜딩페이지, 포스트 목록, 포스트 페이지 등을 구현했습니다.
+            lunr.js를 활용한 컨텐츠 가중치 검색 기능을 제공하고, Github Actions 및 Vercel을 통한 자동 배포를 구현했습니다.`,
         },
         images: {
           thumbnail: '/projects/diki/thumbnail.webp',
@@ -133,11 +133,11 @@ export const projectsData: YearProjects[] = [
         description: {
           short: '항공 관제 및 조종사를 위한 위험 기상 예측 시스템입니다.',
           full: `항공 관제 및 조종사를 위한 위험기상 예측 시스템으로,
-      전체 UI 구조 설계와 Redux를 활용한 전역 상태 관리 및 공용 커스텀 훅 상태 개선을 담당했습니다.
-      지도 오픈소스 라이브러리 OpenLayers를 React에서 사용하기 위해 매핑하고,
-      외부 API 기반 위험정보를 2D 지도 위에 시각화했습니다.
-      기상 범례에 따라 색상 자동 조정 기능을 구현하고,
-      제작중인 React UI 라이브러리(koast-ui)를 도입 및 해당 라이브러리 버그를 수정했습니다.`,
+            전체 UI 구조 설계와 Redux를 활용한 전역 상태 관리 및 공용 커스텀 훅 상태 개선을 담당했습니다.
+            지도 오픈소스 라이브러리 OpenLayers를 React에서 사용하기 위해 매핑하고,
+            외부 API 기반 위험정보를 2D 지도 위에 시각화했습니다.
+            기상 범례에 따라 색상 자동 조정 기능을 구현하고,
+            제작중인 React UI 라이브러리(koast-ui)를 도입 및 해당 라이브러리 버그를 수정했습니다.`,
         },
         images: {
           thumbnail: '/projects/aviation-weather/thumbnail.webp',
@@ -152,21 +152,34 @@ export const projectsData: YearProjects[] = [
         ],
       },
       {
-        id: 'nare-weather',
+        id: 'digital-twin',
         title: '맞춤형 해양예측정보 제공 서비스(디지털트윈)',
         description: {
           short:
             '어획량 예측 웹 및 갯벌 내비게이션 앱을 포함한 맞춤형 해양 예측 정보 서비스입니다.',
           full: `어획량 예측 웹 프론트엔드 개발을 담당했으며,
-      Cesium과 GIS 레이어를 사용한 3D 지도격자를 구현했습니다.
-      어종에 따른 어획량을 icon의 크기 및 색상으로 표출하여 직관성을 향상시켰고,
-      비교를 위해 2분할된 지도 화면에서 레이어 표출을 최적화했습니다.
-      갯벌 안전 내비게이션 기획, 디자인 및 웹뷰 개발을 진행하며,
-      Figma를 활용한 모바일 웹 프로토타입을 제작하고,
-      Flutter, React를 사용한 모바일 웹뷰를 개발 중입니다.`,
+            Cesium과 GIS 레이어를 사용한 3D 지도격자를 구현했습니다.
+            어종에 따른 어획량을 icon의 크기 및 색상으로 표출하여 직관성을 향상시켰고,
+            비교를 위해 2분할된 지도 화면에서 레이어 표출을 최적화했습니다.
+            갯벌 안전 내비게이션 기획, 디자인 및 웹뷰 개발을 진행하며,
+            Figma를 활용한 모바일 웹 프로토타입을 제작하고,
+            Flutter, React를 사용한 모바일 웹뷰를 개발 중입니다.`,
         },
         images: {
-          thumbnail: '/projects/nare-weather/thumbnail.webp',
+          thumbnail: '/projects/digital-twin/thumbnail.webp',
+          full: [
+            '/projects/digital-twin/2.webp',
+            '/projects/digital-twin/3.webp',
+            '/projects/digital-twin/4.webp',
+            '/projects/digital-twin/5.webp',
+            '/projects/digital-twin/6.webp',
+            '/projects/digital-twin/7.webp',
+            '/projects/digital-twin/8.webp',
+            '/projects/digital-twin/9.webp',
+            '/projects/digital-twin/10.webp',
+            '/projects/digital-twin/11.webp',
+            '/projects/digital-twin/12.webp',
+          ],
         },
         period: '2024.12 ~ 2025.03',
         techStack: [
@@ -211,7 +224,7 @@ export const projectsData: YearProjects[] = [
         techStack: ['Next.js', 'TypeScript', 'TailwindCSS', 'Vercel'],
       },
       {
-        id: 'weather-system',
+        id: 'nims',
         title: '연구용 기상관측 통합관리체계',
         description: {
           short: '해양 연구장비 및 데이터를 관리하는 통합 시스템입니다.',
@@ -223,7 +236,13 @@ export const projectsData: YearProjects[] = [
       RTK Query를 사용하여 데이터의 효율적인 상태 관리 및 서버와의 통신을 구현했습니다.`,
         },
         images: {
-          thumbnail: '/projects/weather-system/thumbnail.webp',
+          thumbnail: '/projects/nims/thumbnail.webp',
+          full: [
+            '/projects/nims/1.webp',
+            '/projects/nims/2.webp',
+            '/projects/nims/3.webp',
+            '/projects/nims/4.webp',
+          ],
         },
         period: '2024.06 ~ 2024.08',
         techStack: [
@@ -256,9 +275,15 @@ export const projectsData: YearProjects[] = [
         images: {
           thumbnail: '/projects/aisar/thumbnail.webp',
           full: [
-            '/projects/aisar.webp',
-            '/projects/aisar.webp',
-            '/projects/aisar.webp',
+            '/projects/aisar/1.webp',
+            '/projects/aisar/2.webp',
+            '/projects/aisar/3.webp',
+            '/projects/aisar/4.webp',
+            '/projects/aisar/5.webp',
+            '/projects/aisar/6.webp',
+            '/projects/aisar/7.webp',
+            '/projects/aisar/8.webp',
+            '/projects/aisar/9.webp',
           ],
         },
         urls: {
@@ -304,19 +329,32 @@ export const projectsData: YearProjects[] = [
         ],
       },
       {
-        id: 'smart-farm-2024',
+        id: 'aqua-farm-2024',
         title: '스마트양식장',
         description: {
           short: '스마트 양식 기술을 활용한 양식장 관리 시스템입니다.',
           full: `CSS Grid를 사용해 수조 상태, 어종 정보, 캘린더, CCTV 등의 정보를 표출하는 대시보드를 구현했습니다.
-      사료 잔량과 사료공급장치의 상태를 시각화하는 모니터링 페이지를 구현하고,
-      오류 시 알림 기능을 만들어 관리자 메일 및 SNS 알림을 발송합니다.
-      사료공급 및 개인 일정을 관리할 수 있는 캘린더 기능을 추가하고,
-      오픈소스 Vue-datepicker를 래핑하여 솔루션의 톤 앤 매너를 통일했습니다.
-      관리자가 대시보드 등 웹사이트 설정이나 수조, 센서 등을 관리할 수 있도록 페이지를 구축했습니다.`,
+            사료 잔량과 사료공급장치의 상태를 시각화하는 모니터링 페이지를 구현하고,
+            오류 시 알림 기능을 만들어 관리자 메일 및 SNS 알림을 발송합니다.
+            사료공급 및 개인 일정을 관리할 수 있는 캘린더 기능을 추가하고,
+            오픈소스 Vue-datepicker를 래핑하여 솔루션의 톤 앤 매너를 통일했습니다.
+            관리자가 대시보드 등 웹사이트 설정이나 수조, 센서 등을 관리할 수 있도록 페이지를 구축했습니다.`,
         },
         images: {
-          thumbnail: '/projects/smart-farm/thumbnail.webp',
+          thumbnail: '/projects/aqua-farm-2024/thumbnail.webp',
+          full: [
+            '/projects/aqua-farm-2024/1.webp',
+            '/projects/aqua-farm-2024/2.webp',
+            '/projects/aqua-farm-2024/3.webp',
+            '/projects/aqua-farm-2024/4.webp',
+            '/projects/aqua-farm-2024/5.webp',
+            '/projects/aqua-farm-2024/6.webp',
+            '/projects/aqua-farm-2024/7.webp',
+            '/projects/aqua-farm-2024/8.webp',
+            '/projects/aqua-farm-2024/9.webp',
+            '/projects/aqua-farm-2024/10.webp',
+            '/projects/aqua-farm-2024/11.webp',
+          ],
         },
         period: '2023.01 ~ 현재',
         techStack: ['Vue2', 'Vuex', 'Axios', 'CSS Grid'],
