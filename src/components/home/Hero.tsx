@@ -1,5 +1,6 @@
 import '../../styles/animation.css';
 
+import { ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const BackgroundImage = ({ isLoaded }: { isLoaded: boolean }) => {
@@ -33,6 +34,14 @@ const Title = ({ isLoaded }: { isLoaded: boolean }) => {
 };
 
 const Description = ({ isLoaded }: { isLoaded: boolean }) => {
+  const scrollToProjects = () => {
+    const viewportHeight = window.innerHeight;
+    window.scrollTo({
+      top: viewportHeight,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <>
       <p
@@ -63,6 +72,23 @@ const Description = ({ isLoaded }: { isLoaded: boolean }) => {
         깔끔한 코드, 부드러운 사용자 경험, 그리고 창의적인 아이디어를 현실로
         구현하는 것에 열정을 가지고 있습니다.
       </p>
+      <button
+        type="button"
+        onClick={scrollToProjects}
+        className={`absolute inset-x-0 bottom-4 flex flex-col items-center justify-center hover:cursor-pointer ${isLoaded ? 'animate-intro delay-900' : 'opacity-0'}`}
+      >
+        <span className="bg-gray9 absolute z-0 h-10 w-12 rounded-full px-3 pt-0.5 pb-2" />
+        <span className="z-10 flex flex-col items-center justify-center px-3 pt-0.5 pb-2">
+          <ChevronDown
+            className="text-primary animate-bounceArrow1"
+            size={20}
+          />
+          <ChevronDown
+            className="text-primary animate-bounceArrow2 -mt-3"
+            size={20}
+          />
+        </span>
+      </button>
     </>
   );
 };
