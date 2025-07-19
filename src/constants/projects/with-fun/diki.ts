@@ -1,0 +1,82 @@
+import type { Project } from '@/types/projects';
+
+export const diki: Project = {
+  id: 'diki',
+  title: 'Diki',
+  description: {
+    short:
+      '개발자를 위한 지식 관리 플랫폼으로, 마크다운 기반의 문서 작성과 공유 기능을 제공합니다.',
+    full: `데이터 용어사전 웹 프론트엔드 개발 프로젝트입니다.
+      Firestore 데이터를 빌드 시점에 수집하여 Static Site Generation(SSG) 방식으로 페이지 렌더링하며, 랜딩페이지, 포스트 목록, 포스트 페이지 등을 구현했습니다.
+      lunr.js를 활용한 컨텐츠 가중치 검색 기능을 제공하고, Github Actions 및 Vercel을 통한 자동 배포를 구현했습니다.`,
+  },
+  images: {
+    thumbnail: '/projects/diki/thumbnail.webp',
+    full: [
+      '/projects/diki/1.webp',
+      '/projects/diki/2.webp',
+      '/projects/diki/3.webp',
+      '/projects/diki/4.webp',
+      '/projects/diki/5.webp',
+      '/projects/diki/6.webp',
+      '/projects/diki/7.webp',
+      '/projects/diki/8.webp',
+      '/projects/diki/9.webp',
+      '/projects/diki/10.webp',
+      '/projects/diki/11.webp',
+      '/projects/diki/12.webp',
+      '/projects/diki/13.webp',
+      '/projects/diki/14.webp',
+      '/projects/diki/15.webp',
+      '/projects/diki/16.webp',
+      '/projects/diki/17.webp',
+      '/projects/diki/18.webp',
+      '/projects/diki/19.webp',
+      '/projects/diki/20.webp',
+      '/projects/diki/21.webp',
+      '/projects/diki/22.webp',
+      '/projects/diki/23.webp',
+      '/projects/diki/24.webp',
+      '/projects/diki/25.webp',
+      '/projects/diki/26.webp',
+      '/projects/diki/27.webp',
+      '/projects/diki/28.webp',
+      '/projects/diki/29.webp',
+      '/projects/diki/30.webp',
+    ],
+    captions: [
+      '프로젝트 메인 대시보드 화면',
+      '용어 검색 결과 화면',
+      '용어 상세 페이지',
+      '마크다운 편집기 화면',
+      '데이터 시각화 대시보드',
+      '사용자 권한 관리 화면',
+      '태그 기반 필터링 기능',
+      '다크 모드 지원 화면',
+      '모바일 반응형 화면',
+      '설정 페이지 화면',
+    ],
+  },
+  urls: {
+    github: 'https://github.com/dxwiki/diki',
+    demo: 'https://diki.kr',
+  },
+  points: [
+    {
+      challenges: `실시간 협업 기능을 구현하면서 동시 편집 충돌을 해결하는 것이 가장 큰 도전이었습니다.
+또한 다양한 마크다운 확장 기능을 지원하면서도 성능을 유지하는 것이 중요했습니다.`,
+      solutions: `CRDT(Conflict-free Replicated Data Type) 알고리즘을 도입하여 동시 편집 문제를 해결했습니다.
+또한 코드 스플리팅과 가상화 기법을 활용하여 대용량 문서도 원활하게 편집할 수 있도록 했습니다.`,
+      results: `팀 내 문서화 작업 효율이 40% 향상되었으며, 지식 공유가 활성화되어 신규 입사자의 온보딩 시간이 30% 단축되었습니다.`,
+    },
+  ],
+  period: '2024.10 ~ 현재',
+  techStack: [
+    'Next.js',
+    'TypeScript',
+    'TailwindCSS',
+    'Firebase',
+    'Redux',
+    'Vercel',
+  ],
+};

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-import { projectsData } from '@/constants/projectsData';
+import { projectsData } from '@/constants/projects';
 
 export default function Projects() {
   const projectRefs = useRef<(HTMLAnchorElement | null)[][]>([]);
