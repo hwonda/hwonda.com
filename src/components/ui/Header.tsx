@@ -37,14 +37,14 @@ const Header = () => {
       </h1>
       <nav className="relative z-10 flex items-center gap-2 text-sm sm:text-base">
         <a
-          href="about"
+          href="/about"
           className="color-sub hover:bg-accent-1/20 rounded-full px-3 py-1.5 transition-all duration-300"
         >
           주다훤
           <span className="hidden sm:inline">에 대하여</span>
         </a>
         <a
-          href="projects"
+          href="/projects"
           className="color-sub bg-gray3/10 hover:bg-gray3/20 rounded-full px-3 py-1.5 transition-all duration-300"
         >
           프로젝트
