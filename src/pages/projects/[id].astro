@@ -1,4 +1,6 @@
 ---
+import { ChevronLeft } from 'lucide-react';
+
 import ImageCarouselWrapper from '@/components/ImageCarouselWrapper';
 import { projectsData } from '@/constants/projects';
 import Layout from '@/layouts/Layout.astro';
@@ -46,19 +48,7 @@ const allImages = [project.images.thumbnail, ...fullImages];
         href="/projects"
         class="text-accent-1 hover:bg-gray9 flex items-center gap-2 rounded-full p-2 pr-3 opacity-85 hover:opacity-100"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="m15 18-6-6 6-6"></path>
-        </svg>
+        <ChevronLeft />
         모든 프로젝트 보기
       </a>
     </div>
