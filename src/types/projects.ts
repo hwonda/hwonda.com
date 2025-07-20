@@ -6,6 +6,7 @@ export interface YearProjects {
 export interface Project {
   id: string;
   title: string;
+  subtitle?: string;
   description: {
     short: string;
     full: string;
