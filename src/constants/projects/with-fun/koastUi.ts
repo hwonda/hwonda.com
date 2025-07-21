@@ -3,6 +3,7 @@ import type { Project } from '@/types/projects';
 export const koastUi: Project = {
   id: 'koast-ui',
   title: '@koast/ui',
+  subtitle: '사내 React UI 라이브러리',
   description: {
     short:
       '사내 React UI 라이브러리로, 개발 러닝커브를 낮추고 일관된 디자인 아이덴티티를 제공합니다.',

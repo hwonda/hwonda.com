@@ -3,6 +3,7 @@ import type { Project } from '@/types/projects';
 export const diki: Project = {
   id: 'diki',
   title: 'Diki',
+  subtitle: '데이터 용어사전',
   description: {
     short:
       '개발자를 위한 지식 관리 플랫폼으로, 마크다운 기반의 문서 작성과 공유 기능을 제공합니다.',
@@ -71,6 +72,8 @@ export const diki: Project = {
     },
   ],
   period: '2024.10 ~ 현재',
+  role: 'Frontend / Backend / SEO',
+  team: 'DXWiki',
   techStack: [
     'Next.js',
     'TypeScript',
