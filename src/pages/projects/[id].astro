@@ -43,9 +43,7 @@ const allImages = [project.images.thumbnail, ...fullImages];
   title={`${project.title} | 훤다 포트폴리오`}
   description={project.description.short}
 >
-  <main
-    class="container mx-auto w-full px-4 py-16 sm:px-8 md:px-10 lg:px-20 xl:px-40"
-  >
+  <main class="w-full px-4 py-16 sm:px-8 md:px-10 lg:px-20 xl:px-40">
     <div class="my-8 w-fit">
       <a
         href="/projects"
@@ -90,14 +88,16 @@ const allImages = [project.images.thumbnail, ...fullImages];
         <span class="text-xl font-bold">프로젝트 개요</span>
         <span class="whitespace-pre-line">{project.description.full}</span>
       </div>
-      <div class="flex items-center justify-center gap-4 md:justify-start">
+      <div
+        class="mt-2 flex items-center justify-center gap-4 sm:mt-0 md:justify-start"
+      >
         {
           project.urls?.demo && (
             <a
               href={project.urls.demo}
               target="_blank"
               rel="noopener noreferrer"
-              class="bg-accent-1 hover:bg-accent-1/90 text-inverse inline-block rounded px-6 py-3 font-medium transition-colors"
+              class="bg-accent-1 hover:bg-accent-1/90 text-inverse inline-block rounded px-3 py-2.5 text-sm font-medium transition-colors sm:px-6 sm:py-3 sm:text-base"
             >
               프로젝트 보기
             </a>
@@ -109,10 +109,26 @@ const allImages = [project.images.thumbnail, ...fullImages];
               href={project.urls.github}
               target="_blank"
               rel="noopener noreferrer"
-              class="border-gray3 text-main hover:bg-gray9 inline-block rounded border px-6 py-3 font-medium transition-colors"
+              class="border-gray3 text-main hover:bg-gray9 inline-block rounded border px-3 py-2.5 text-sm font-medium transition-colors sm:px-6 sm:py-3 sm:text-base"
             >
               GitHub 저장소
             </a>
+          )
+        }
+        {
+          project.urls?.etc && (
+            <div>
+              {project.urls.etc.map((url) => (
+                <a
+                  href={url.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="border-gray8 bg-gray8 text-main hover:bg-gray7 inline-block rounded border px-3 py-2.5 text-sm font-medium transition-colors sm:px-6 sm:py-3 sm:text-base"
+                >
+                  {url.title}
+                </a>
+              ))}
+            </div>
           )
         }
       </div>
@@ -164,7 +180,7 @@ const allImages = [project.images.thumbnail, ...fullImages];
 
     {
       project.points && project.points.length > 0 && (
-        <div class="mb-12 grid gap-8 md:grid-cols-3">
+        <div class="grid grid-rows-3 gap-8 md:grid-cols-3">
           {project.points[0].challenges && (
             <div>
               <h2 class="font-pretendard mb-4 text-xl font-bold">도전 과제</h2>
