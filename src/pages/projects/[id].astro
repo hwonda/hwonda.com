@@ -1,6 +1,7 @@
 ---
 import { ChevronLeft } from 'lucide-react';
 
+import ExpandableImageGrid from '@/components/ExpandableImageGrid';
 import ImageCarouselWrapper from '@/components/ImageCarouselWrapper';
 import { projectsData } from '@/constants/projects';
 import Layout from '@/layouts/Layout.astro';
@@ -42,7 +43,9 @@ const allImages = [project.images.thumbnail, ...fullImages];
   title={`${project.title} | 훤다 포트폴리오`}
   description={project.description.short}
 >
-  <main class="container mx-auto px-4 py-16 sm:px-8 md:px-10 lg:px-20 xl:px-40">
+  <main
+    class="container mx-auto w-full px-4 py-16 sm:px-8 md:px-10 lg:px-20 xl:px-40"
+  >
     <div class="my-8 w-fit">
       <a
         href="/projects"
@@ -151,33 +154,13 @@ const allImages = [project.images.thumbnail, ...fullImages];
 
     {
       hasBottomImages && (
-        <div class="mb-16">
-          <div class="grid grid-cols-2 gap-3 lg:grid-cols-4">
-            {bottomImages.map((image, index) => (
-              <div
-                class="image-gallery border-gray8 aspect-video cursor-pointer overflow-hidden rounded-lg border opacity-90 hover:opacity-100"
-                data-image-index={index + 5}
-              >
-                <img
-                  src={image}
-                  alt={`${project.title} 이미지 ${index + 5}`}
-                  class="h-full w-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <ExpandableImageGrid
+          client:load
+          images={bottomImages}
+          projectTitle={project.title}
+        />
       )
     }
-
-    <div class="mb-16">
-      <h2 class="font-pretendard mb-6 text-2xl font-bold">프로젝트 개요</h2>
-      <div class="bg-gray8 rounded-lg p-6">
-        <div class="text-gray-1 whitespace-pre-line">
-          {project.description.full}
-        </div>
-      </div>
-    </div>
 
     {
       project.points && project.points.length > 0 && (
