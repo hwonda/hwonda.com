@@ -11,7 +11,7 @@ export default function ExpandableImageGrid({ images, projectTitle }) {
       setTimeout(() => {
         document.getElementById('bottomImagesContainer')?.scrollIntoView({
           behavior: 'smooth',
-          block: 'start',
+          block: 'center',
         });
       }, 100);
     }
