@@ -3,6 +3,7 @@ import type { Project } from '@/types/projects';
 export const reactMultiEmail: Project = {
   id: 'react-multi-email',
   title: 'React-multi-email',
+  subtitle: 'Open Source Contribute',
   description: {
     short:
       '다중 이메일 입력을 위한 React 컴포넌트 라이브러리로, 사용자 친화적인 인터페이스와 검증 기능을 제공합니다.',
@@ -25,7 +26,13 @@ export const reactMultiEmail: Project = {
   },
   urls: {
     github: 'https://github.com/axisj/react-multi-email',
-    demo: 'https://hwonda.github.io/react-multi-email-docs/',
+    demo: 'https://www.npmjs.com/package/react-multi-email',
+    etc: [
+      {
+        title: 'Docs',
+        url: 'https://hwonda.github.io/react-multi-email-docs/',
+      },
+    ],
   },
   points: [
     {

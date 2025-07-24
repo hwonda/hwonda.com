@@ -3,7 +3,7 @@ import type { Project } from '@/types/projects';
 export const koastUi: Project = {
   id: 'koast-ui',
   title: '@koast/ui',
-  subtitle: '사내 React UI 라이브러리',
+  subtitle: '사내 React + TailwindCSS UI 라이브러리',
   description: {
     short:
       '사내 React UI 라이브러리로, 개발 러닝커브를 낮추고 일관된 디자인 아이덴티티를 제공합니다.',
@@ -21,14 +21,25 @@ Github Pages로 Storybook Docs를 제작하고 NPM에 배포했으며,
   images: {
     thumbnail: '/projects/koast-ui/thumbnail.webp',
     full: [
-      '/projects/koast-ui.webp',
-      '/projects/koast-ui.webp',
-      '/projects/koast-ui.webp',
+      '/projects/koast-ui/1.webp',
+      '/projects/koast-ui/2.webp',
+      '/projects/koast-ui/3.webp',
+      '/projects/koast-ui/4.webp',
+      '/projects/koast-ui/5.webp',
+      '/projects/koast-ui/6.webp',
+      '/projects/koast-ui/7.webp',
+      '/projects/koast-ui/8.webp',
     ],
   },
   urls: {
-    github: 'https://github.com/username/koast-ui',
-    demo: 'https://koast-ui-demo.com',
+    github: 'https://github.com/koast-crew/koast-ui',
+    demo: 'https://www.npmjs.com/package/@koast/ui',
+    etc: [
+      {
+        title: 'Storybook Docs',
+        url: 'https://koast-crew.github.io/koast-ui/?path=/docs/components-button--docs',
+      },
+    ],
   },
   points: [
     {
@@ -40,6 +51,8 @@ Github Pages로 Storybook Docs를 제작하고 NPM에 배포했으며,
 현재 여러 해양 관련 프로젝트에서 핵심 라이브러리로 사용되고 있습니다.`,
     },
   ],
-  period: '2025.03 ~ 2025.04',
-  techStack: ['React', 'TypeScript', 'TailwindCSS', 'Vite'],
+  period: '2025.03 ~ 2025.04 (1개월)',
+  role: 'Frontend / DevOps',
+  team: 'KOAST',
+  techStack: ['React', 'TypeScript', 'TailwindCSS', 'Vite', 'Storybook'],
 };
