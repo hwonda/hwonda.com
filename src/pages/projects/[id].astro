@@ -180,10 +180,10 @@ const allImages = [project.images.thumbnail, ...fullImages];
 
     {
       project.points && project.points.length > 0 && (
-        <div class="grid grid-rows-3 gap-8 md:grid-cols-3">
+        <div class="grid gap-8 md:grid-cols-3">
           {project.points[0].challenges && (
             <div>
-              <h2 class="font-pretendard mb-4 text-xl font-bold">도전 과제</h2>
+              <h2 class="font-pretendard text-xl font-bold">도전 과제</h2>
               <div class="bg-gray8 h-full rounded-lg p-6">
                 <div class="text-gray-2 whitespace-pre-line">
                   {project.points[0].challenges}
@@ -193,7 +193,7 @@ const allImages = [project.images.thumbnail, ...fullImages];
           )}
           {project.points[0].solutions && (
             <div>
-              <h2 class="font-pretendard mb-4 text-xl font-bold">해결 방법</h2>
+              <h2 class="font-pretendard text-xl font-bold">해결 방법</h2>
               <div class="bg-gray8 h-full rounded-lg p-6">
                 <div class="text-gray-2 whitespace-pre-line">
                   {project.points[0].solutions}
@@ -203,7 +203,7 @@ const allImages = [project.images.thumbnail, ...fullImages];
           )}
           {project.points[0].results && (
             <div>
-              <h2 class="font-pretendard mb-4 text-xl font-bold">결과</h2>
+              <h2 class="font-pretendard text-xl font-bold">결과</h2>
               <div class="bg-gray8 h-full rounded-lg p-6">
                 <div class="text-gray-2 whitespace-pre-line">
                   {project.points[0].results}
