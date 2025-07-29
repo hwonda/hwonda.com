@@ -3,9 +3,7 @@ import type { Project } from '@/types/projects';
 export const mmis2023: Project = {
   id: 'mmis-2023',
   title: 'MMIS',
-  period: '2023.04 ~ 2023.10 (6개월)',
-  role: 'Frontend',
-  team: 'Koast',
+  subtitle: '해양기상 맞춤형 서비스 기술개발',
   description: {
     short:
       '대국민 서비스(해양기상정보포털) 및 기상청 내부 관계자 기상 정보 관련 업무 서비스 기능을 개발했습니다.',
@@ -16,5 +14,8 @@ export const mmis2023: Project = {
     thumbnail: '/projects/mmis-2023/thumbnail.webp',
     full: ['/projects/mmis-2023/1.webp', '/projects/mmis-2023/2.webp'],
   },
+  period: '2023.04 ~ 2023.10 (6개월)',
+  role: 'Frontend',
+  team: 'Koast',
   techStack: ['Vue.js', 'Node.js', 'PostgreSQL'],
 };

@@ -2,7 +2,8 @@ import type { Project } from '@/types/projects';
 
 export const nims: Project = {
   id: 'nims',
-  title: '연구용 기상관측 통합관리체계',
+  title: '기상관측 통합관리',
+  subtitle: '연구용 기상관측 장비 통합관리 시스템',
   description: {
     short: '해양 연구장비 및 데이터를 관리하는 통합 시스템입니다.',
     full: `연구용 관측장비와 데이터를 테이블 형식으로 표출하고,
@@ -21,6 +22,8 @@ RTK Query를 사용하여 데이터의 효율적인 상태 관리 및 서버와�
       '/projects/nims/4.webp',
     ],
   },
-  period: '2024.06 ~ 2024.08',
+  period: '2024.06 ~ 2024.08(2개월)',
+  role: 'Frontend',
+  team: 'Koast',
   techStack: ['React', 'TypeScript', 'TailwindCSS', 'OpenLayers', 'RTK Query'],
 };

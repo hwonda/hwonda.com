@@ -4,9 +4,6 @@ export const aquaFarm2023: Project = {
   id: 'aqua-farm-2023',
   title: '스마트 양식장 2023',
   subtitle: '스마트 양식 서비스 개발',
-  period: '2023.01 ~ 2023.04 (4개월)',
-  role: 'Frontend',
-  team: 'Koast',
   description: {
     short: '포항 사료연구센터의 스마트 양식장 기획 및 웹앱 개발',
     full: `CSS Grid를 사용해 수조 상태, 어종 정보, 캘린더, CCTV 등의 정보를 표출하는 대시보드를 구현했습니다.
@@ -31,5 +28,8 @@ export const aquaFarm2023: Project = {
   images: {
     thumbnail: '/projects/aqua-farm-2023/thumbnail.webp',
   },
+  period: '2023.01 ~ 2023.04 (4개월)',
+  role: 'Frontend',
+  team: 'Koast',
   techStack: ['Vue.js', 'Vuex', 'Axios', 'SCSS'],
 };

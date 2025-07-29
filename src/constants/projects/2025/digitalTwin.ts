@@ -3,6 +3,7 @@ import type { Project } from '@/types/projects';
 export const digitalTwin: Project = {
   id: 'digital-twin',
   title: '맞춤형 해양예측정보 제공 서비스(디지털트윈)',
+  subtitle: '어획량 예측 웹 개발',
   description: {
     short:
       '어획량 예측 웹 및 갯벌 내비게이션 앱을 포함한 맞춤형 해양 예측 정보 서비스입니다.',
@@ -31,6 +32,8 @@ export const digitalTwin: Project = {
     ],
   },
   period: '2024.12 ~ 2025.03',
+  role: 'Frontend',
+  team: 'Koast',
   techStack: [
     'React',
     'Flutter',

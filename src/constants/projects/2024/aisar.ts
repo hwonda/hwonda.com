@@ -2,7 +2,8 @@ import type { Project } from '@/types/projects';
 
 export const aisar: Project = {
   id: 'aisar',
-  title: '해양 수색구조 의사결정 지원 시스템(AI수색구조)',
+  title: '수색구조 시스템',
+  subtitle: '해양 수색구조 의사결정 지원 시스템(AI수색구조)',
   description: {
     short:
       '해상사고 시 수색구조에 도움이 되는 데이터를 시각화하여 의사결정을 돕는 해양경찰청 내 시스템입니다.',
@@ -55,6 +56,8 @@ Figma를 활용하여 기존 시스템의 디자인 변경 및 기획, 개발을
 이는 인명 구조 확률을 크게 높이는 결과로 이어졌습니다.`,
     },
   ],
-  period: '2024.03 ~ 2024.05',
+  period: '2024.03 ~ 2024.05(2개월)',
+  role: 'Frontend',
+  team: 'Koast',
   techStack: ['HTML', 'JavaScript', 'SCSS', 'Figma'],
 };

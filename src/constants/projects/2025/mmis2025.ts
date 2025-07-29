@@ -2,7 +2,8 @@ import type { Project } from '@/types/projects';
 
 export const mmis2025: Project = {
   id: 'mmis2025',
-  title: '항공 위험기상 예측 시스템(나래웨더)',
+  title: '항공 위험기상 예측 시스템',
+  subtitle: '항공 관제 및 조종사를 위한 위험 기상 예측 시스템',
   description: {
     short: '항공 관제 및 조종사를 위한 위험 기상 예측 시스템입니다.',
     full: `항공 관제 및 조종사를 위한 위험기상 예측 시스템으로,
@@ -16,5 +17,7 @@ export const mmis2025: Project = {
     thumbnail: '/projects/mmis-2025/thumbnail.webp',
   },
   period: '2025.03 ~ 2025.04',
+  role: 'Frontend',
+  team: 'Koast',
   techStack: ['React', 'TypeScript', 'TailwindCSS', 'Redux', 'OpenLayers'],
 };
