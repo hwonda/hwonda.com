@@ -1,11 +1,11 @@
 import type { Project } from '@/types/projects';
 
-export const mmis2025: Project = {
-  id: 'mmis2025',
-  title: '기상청 해양기상 플랫폼',
-  subtitle: '대국민 서비스 UI/UX 개선',
+export const narae: Project = {
+  id: 'narae',
+  title: '항공 위험기상 예측 시스템',
+  subtitle: '항공 관제 및 조종사를 위한 위험 기상 예측 시스템',
   description: {
-    short: '기상청 대국민 서비스인 해양기상정보포털의 PC, Mobile UI/UX 개선',
+    short: '항공 관제 및 조종사를 위한 위험 기상 예측 시스템입니다.',
     full: `항공 관제 및 조종사를 위한 위험기상 예측 시스템으로,
       전체 UI 구조 설계와 Redux를 활용한 전역 상태 관리 및 공용 커스텀 훅 상태 개선을 담당했습니다.
       지도 오픈소스 라이브러리 OpenLayers를 React에서 사용하기 위해 매핑하고,
@@ -16,16 +16,8 @@ export const mmis2025: Project = {
   images: {
     thumbnail: '/projects/mmis-2025/thumbnail.webp',
   },
-  period: '2025.06 ~ 현재 (2개월~)',
+  period: '2025.03 ~ 2025.04 (1개월)',
   role: 'Frontend',
   team: 'Koast',
-  techStack: [
-    'Vue3',
-    'Vuex',
-    'TypeScript',
-    'SCSS',
-    'Axios',
-    'React-Native',
-    'OpenLayers',
-  ],
+  techStack: ['React', 'TypeScript', 'TailwindCSS', 'Redux', 'OpenLayers'],
 };

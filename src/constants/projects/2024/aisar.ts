@@ -56,7 +56,7 @@ Figma를 활용하여 기존 시스템의 디자인 변경 및 기획, 개발을
 이는 인명 구조 확률을 크게 높이는 결과로 이어졌습니다.`,
     },
   ],
-  period: '2024.03 ~ 2024.05(2개월)',
+  period: '2024.03 ~ 2024.05 (2개월)',
   role: 'Frontend',
   team: 'Koast',
   techStack: ['HTML', 'JavaScript', 'SCSS', 'Figma'],

@@ -2,7 +2,7 @@ import type { Project } from '@/types/projects';
 
 export const mmis2023: Project = {
   id: 'mmis-2023',
-  title: 'MMIS',
+  title: '기상청 해양기상 플랫폼',
   subtitle: '해양기상 맞춤형 서비스 기술개발',
   description: {
     short:
@@ -17,5 +17,13 @@ export const mmis2023: Project = {
   period: '2023.04 ~ 2023.10 (6개월)',
   role: 'Frontend',
   team: 'Koast',
-  techStack: ['Vue.js', 'Node.js', 'PostgreSQL'],
+  techStack: [
+    'Vue3',
+    'Vuex',
+    'TypeScript',
+    'SCSS',
+    'Axios',
+    'React-Native',
+    'OpenLayers',
+  ],
 };

@@ -22,7 +22,7 @@ RTK Query를 사용하여 데이터의 효율적인 상태 관리 및 서버와�
       '/projects/nims/4.webp',
     ],
   },
-  period: '2024.06 ~ 2024.08(2개월)',
+  period: '2024.06 ~ 2024.08 (2개월)',
   role: 'Frontend',
   team: 'Koast',
   techStack: ['React', 'TypeScript', 'TailwindCSS', 'OpenLayers', 'RTK Query'],

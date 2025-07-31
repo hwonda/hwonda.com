@@ -2,7 +2,7 @@ import type { Project } from '@/types/projects';
 
 export const digitalTwin: Project = {
   id: 'digital-twin',
-  title: '맞춤형 해양예측정보 제공 서비스(디지털트윈)',
+  title: '디지털 트윈',
   subtitle: '어획량 예측 웹 개발',
   description: {
     short:
@@ -31,7 +31,7 @@ export const digitalTwin: Project = {
       '/projects/digital-twin/12.webp',
     ],
   },
-  period: '2024.12 ~ 2025.03',
+  period: '2024.12 ~ 2025.03 (3개월)',
   role: 'Frontend',
   team: 'Koast',
   techStack: [

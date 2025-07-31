@@ -28,8 +28,8 @@ export const aquaFarm2023: Project = {
   images: {
     thumbnail: '/projects/aqua-farm-2023/thumbnail.webp',
   },
-  period: '2023.01 ~ 2023.04 (4개월)',
+  period: '2023.01 ~ 2023.04 (3개월)',
   role: 'Frontend',
   team: 'Koast',
-  techStack: ['Vue.js', 'Vuex', 'Axios', 'SCSS'],
+  techStack: ['Vue2', 'Vuex', 'Axios', 'SCSS'],
 };

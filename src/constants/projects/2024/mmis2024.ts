@@ -2,7 +2,7 @@ import type { Project } from '@/types/projects';
 
 export const mmis2024: Project = {
   id: 'mmis-2024',
-  title: 'MMIS',
+  title: '기상청 해양기상 플랫폼',
   subtitle: '모바일 랜딩페이지 개발',
   description: {
     short: '기상청 대국민 서비스 및 기상청 내 솔루션 시스템입니다.',
@@ -16,13 +16,14 @@ React-Native를 사용하여 위성 방송 애플리케이션에 콘텐츠를 �
   images: {
     thumbnail: '/projects/mmis/thumbnail.webp',
   },
-  period: '2024.09 ~ 2024.11(3개월)',
+  period: '2024.09 ~ 2024.11 (2개월)',
   role: 'Frontend',
   team: 'Koast',
   techStack: [
     'Vue3',
     'Vuex',
     'TypeScript',
+    'SCSS',
     'Axios',
     'React-Native',
     'OpenLayers',
