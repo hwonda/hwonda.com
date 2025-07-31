@@ -99,16 +99,17 @@ const ButtonWrapper = ({ isLoaded }: { isLoaded: boolean }) => {
       className={`flex flex-wrap justify-center gap-4 sm:justify-start ${isLoaded ? 'animate-intro delay-900' : 'opacity-0'}`}
     >
       <a
-        href="#projects"
+        href="/projects"
         className="bg-foreground hover:bg-foreground/80 text-inverse rounded-lg px-6 py-3 font-medium transition-colors"
       >
         프로젝트 보기
       </a>
       <a
-        href="#contact"
+        href="/resume_dahwon_ju.pdf"
+        download
         className="border-gray3 text-main hover:bg-gray9 rounded-lg border px-6 py-3 font-medium transition-colors"
       >
-        연락하기
+        이력서 다운로드
       </a>
     </div>
   );
