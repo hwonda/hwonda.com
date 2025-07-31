@@ -121,10 +121,11 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
               ref={tabsRef}
             >
               <button
+                type="button"
                 onClick={() => handleYearChange('all')}
                 onMouseEnter={() => handleTabHover('all')}
                 onMouseLeave={() => handleTabHover(null)}
-                className={`relative px-2 py-2.5 text-sm font-medium transition-all duration-300 ${
+                className={`relative cursor-pointer px-2 py-2.5 text-sm font-medium transition-all duration-300 ${
                   activeYear === 'all'
                     ? 'text-accent-1'
                     : 'text-gray2 hover:text-accent-2'
@@ -138,11 +139,12 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
 
               {projectsData.map((yearData) => (
                 <button
+                  type="button"
                   key={yearData.year}
                   onClick={() => handleYearChange(yearData.year)}
                   onMouseEnter={() => handleTabHover(yearData.year)}
                   onMouseLeave={() => handleTabHover(null)}
-                  className={`relative py-2.5 text-sm font-medium transition-all duration-300 ${
+                  className={`relative cursor-pointer py-2.5 text-sm font-medium transition-all duration-300 ${
                     activeYear === yearData.year
                       ? 'text-accent-1'
                       : 'text-gray2 hover:text-accent-2'
