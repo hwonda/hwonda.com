@@ -7,12 +7,18 @@ import Header from '@/components/ui/Header.tsx';
 interface Props {
   title: string;
   description?: string;
+  image?: string;
+  canonicalURL?: string;
 }
 
 const {
   title,
   description = '훤다의 프론트엔드 개발 포트폴리오입니다. React, TypeScript, Astro 등을 활용한 프로젝트를 확인해보세요.',
+  image = '/images/og-image.png',
+  canonicalURL = new URL(Astro.url.pathname, Astro.site),
 } = Astro.props;
+
+const siteURL = Astro.site || 'https://hwonda.com/';
 ---
 
 <!doctype html>
@@ -21,23 +27,56 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="author" content="훤다" />
+    <meta name="author" content="주다훤" />
     <meta
       name="keywords"
-      content="포트폴리오, 프론트엔드, 개발자, React, Astro, TypeScript"
+      content="주다훤, 포트폴리오, 프론트엔드, 개발자, React, Astro, TypeScript, 웹개발, 프론트엔드 개발자"
     />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href={canonicalURL} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://hwonda.com/" />
+    <meta property="og:url" content={siteURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, siteURL).toString()} />
+    <meta property="og:site_name" content="주다훤 포트폴리오" />
+    <meta property="og:locale" content="ko_KR" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://hwonda.com/" />
+    <meta property="twitter:url" content={siteURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
+    <meta
+      property="twitter:image"
+      content={new URL(image, siteURL).toString()}
+    />
+    <meta property="twitter:creator" content="@hwonda" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- JSON-LD for structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "주다훤",
+        "url": "https://hwonda.com",
+        "jobTitle": "프론트엔드 개발자",
+        "sameAs": [
+          "https://github.com/hwonda",
+          "https://linkedin.com/in/hwonda"
+        ]
+      }
+    </script>
 
     <Font />
     <title>{title}</title>
