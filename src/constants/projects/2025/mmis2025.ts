@@ -6,12 +6,10 @@ export const mmis2025: Project = {
   subtitle: '대국민 서비스 UI/UX 개선',
   description: {
     short: '기상청 대국민 서비스인 해양기상정보포털의 PC, Mobile UI/UX 개선',
-    full: `항공 관제 및 조종사를 위한 위험기상 예측 시스템으로,
-      전체 UI 구조 설계와 Redux를 활용한 전역 상태 관리 및 공용 커스텀 훅 상태 개선을 담당했습니다.
-      지도 오픈소스 라이브러리 OpenLayers를 React에서 사용하기 위해 매핑하고,
-      외부 API 기반 위험정보를 2D 지도 위에 시각화했습니다.
-      기상 범례에 따라 색상 자동 조정 기능을 구현하고,
-      제작중인 React UI 라이브러리(koast-ui)를 도입 및 해당 라이브러리 버그를 수정했습니다.`,
+    full: `기상청 해양기상정보포털의 PC, Mobile UI/UX 개선을 담당했습니다.
+      기상청 담당 주무관님과 1:1로 대화하며 디자인의 방향을 잡고, Figma로 디자인을 작업했습니다.
+      협의된 시안을 바탕으로 기존 레거시 코드를 리팩토링하고, 디자인을 적용하고 있습니다.
+    `,
   },
   images: {
     thumbnail: '/projects/mmis-2025/thumbnail.webp',
@@ -28,4 +26,5 @@ export const mmis2025: Project = {
     'React-Native',
     'OpenLayers',
   ],
+  inProgress: true,
 };

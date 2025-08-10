@@ -14,7 +14,7 @@ export const narae: Project = {
       제작중인 React UI 라이브러리(koast-ui)를 도입 및 해당 라이브러리 버그를 수정했습니다.`,
   },
   images: {
-    thumbnail: '/projects/mmis-2025/thumbnail.webp',
+    thumbnail: '/projects/narae/thumbnail.webp',
   },
   period: '2025.03 ~ 2025.04 (1개월)',
   role: 'Frontend',

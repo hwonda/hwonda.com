@@ -88,6 +88,16 @@ export default function Projects() {
                         data-index={projectIndex}
                         className="group border-background hover:border-accent-2 relative flex aspect-video flex-col gap-1 rounded-lg border p-1 opacity-0 shadow-sm transition-all duration-300 hover:cursor-pointer hover:shadow-md"
                       >
+                        {project.inProgress ? (
+                          <>
+                            <div className="bg-accent-1 absolute top-0 right-0 z-10 flex items-center justify-center rounded-lg px-2 py-1 font-bold opacity-100 transition-all duration-300 group-hover:opacity-0">
+                              In Progress
+                            </div>
+                            <div className="text-main absolute top-0 left-0 z-10 flex size-full items-center justify-center rounded-lg bg-black/50 px-2 py-1 font-bold opacity-0 transition-all duration-300 group-hover:opacity-100">
+                              진행 중인 프로젝트
+                            </div>
+                          </>
+                        ) : null}
                         <img
                           src={project.images.thumbnail}
                           alt={project.title}

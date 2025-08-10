@@ -42,4 +42,5 @@ export interface Project {
   role?: string;
   team?: string;
   techStack?: string[];
+  inProgress?: boolean;
 }

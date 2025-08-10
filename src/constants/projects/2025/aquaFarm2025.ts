@@ -15,4 +15,5 @@ export const aquaFarm2025: Project = {
   role: 'Frontend',
   team: 'Koast',
   techStack: ['React', 'TailwindCSS', 'Vite'],
+  inProgress: true,
 };
