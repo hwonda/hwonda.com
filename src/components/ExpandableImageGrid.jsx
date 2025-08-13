@@ -18,23 +18,23 @@ export default function ExpandableImageGrid({ images, projectTitle }) {
   };
 
   return (
-    <div className="mb-16">
+    <div className="mb-16 w-full">
       <div 
         id="bottomImagesContainer"
-        className={`grid grid-cols-2 gap-3 lg:grid-cols-4 transition-all duration-300 overflow-hidden ${
+        className={`grid grid-cols-2 gap-3 lg:grid-cols-4 transition-all rounded-lg ${
           isExpanded ? 'h-auto opacity-100' : 'h-0 opacity-0'
         }`}
       >
         {images.map((image, index) => (
           <div
             key={index}
-            className="image-gallery border-gray8 aspect-video cursor-pointer overflow-hidden rounded-lg border opacity-90 hover:opacity-100"
+            className="image-gallery border-gray8 aspect-video cursor-pointer rounded-lg border opacity-90 hover:opacity-100"
             data-image-index={index + 5}
           >
             <img
               src={image}
               alt={`${projectTitle} 이미지 ${index + 5}`}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover rounded-lg hover:scale-105 transition-transform duration-300"
             />
           </div>
         ))}

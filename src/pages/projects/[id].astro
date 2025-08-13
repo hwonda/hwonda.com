@@ -138,13 +138,13 @@ const allImages = [project.images.thumbnail, ...fullImages];
       <div class="text-xl font-bold">프로젝트 이미지</div>
       <div class="flex flex-col gap-3 lg:flex-row">
         <div
-          class="image-gallery border-gray8 aspect-video cursor-pointer overflow-hidden rounded-lg border opacity-90 hover:opacity-100 lg:w-1/2"
+          class="image-gallery border-gray8 aspect-video cursor-pointer rounded-lg border opacity-90 hover:opacity-100 lg:w-1/2"
           data-image-index="0"
         >
           <img
             src={project.images.thumbnail}
             alt={`${project.title} 메인 이미지`}
-            class="h-full w-full object-cover"
+            class="h-full w-full object-cover rounded-lg"
           />
         </div>
         {
@@ -152,13 +152,13 @@ const allImages = [project.images.thumbnail, ...fullImages];
             <div class="grid grid-cols-2 grid-rows-2 gap-3 lg:w-1/2">
               {rightImages.map((image, index) => (
                 <div
-                  class="image-gallery border-gray8 aspect-video cursor-pointer overflow-hidden rounded-lg border opacity-90 hover:opacity-100"
+                  class="image-gallery border-gray8 aspect-video cursor-pointer rounded-lg border opacity-90 hover:opacity-100"
                   data-image-index={index + 1}
                 >
                   <img
                     src={image}
                     alt={`${project.title} 이미지 ${index + 1}`}
-                    class="h-full w-full object-cover"
+                    class="h-full w-full object-cover rounded-lg hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               ))}
