@@ -14,7 +14,13 @@ OpenLayers를 활용하여 폭풍, 해일, 기온 등의 정보를 표출하는 
 React-Native를 사용하여 위성 방송 애플리케이션에 콘텐츠를 추가했습니다.`,
   },
   images: {
-    thumbnail: '/projects/mmis/thumbnail.webp',
+    thumbnail: '/projects/mmis-2024/thumbnail.webp',
+    full: [
+      '/projects/mmis-2024/1.webp',
+      '/projects/mmis-2024/2.webp',
+      '/projects/mmis-2024/3.webp',
+      '/projects/mmis-2024/4.webp',
+    ],
   },
   period: '2024.09 ~ 2024.11 (2개월)',
   role: 'Frontend',
