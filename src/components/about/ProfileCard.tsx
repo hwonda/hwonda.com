@@ -25,13 +25,13 @@ export default function ProfileCard({
   skills,
 }: ProfileCardProps) {
   return (
-    <div className="bg-gray9 overflow-hidden rounded-lg p-6">
+    <div className="bg-gray9 rounded-lg p-6">
       <div className="mb-6 text-center">
-        <div className="bg-gray9 mx-auto mb-4 h-40 w-40 overflow-hidden rounded-full">
+        <div className="bg-gray9 mx-auto mb-4 h-40 w-40">
           <img
             src={profileImage}
             alt={`${name} 프로필 이미지`}
-            className="h-full w-full object-cover"
+            className="h-full w-full rounded-full"
           />
         </div>
         <h2 className="font-pretendard text-2xl font-bold">{name}</h2>
