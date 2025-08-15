@@ -22,7 +22,7 @@ export default function ExpandableImageGrid({ images, projectTitle }) {
       <div 
         id="bottomImagesContainer"
         className={`grid grid-cols-2 gap-3 lg:grid-cols-4 transition-all rounded-lg ${
-          isExpanded ? 'h-auto opacity-100' : 'h-0 opacity-0'
+          isExpanded ? 'h-auto opacity-100' : 'w-0 h-0 opacity-0'
         }`}
       >
         {images.map((image, index) => (
@@ -41,7 +41,7 @@ export default function ExpandableImageGrid({ images, projectTitle }) {
       </div>
       <button 
         onClick={toggleExpand}
-        className={`bg-accent-1 hover:bg-accent-1/90 text-inverse ${isExpanded ? 'mt-3' : 'mt-0'} rounded px-4 py-2 font-medium transition-colors`}
+        className={`bg-accent-1 hover:bg-accent-1/90 text-inverse ${isExpanded ? 'mt-3' : 'mt-0'} rounded px-4 py-2 font-medium transition-colors cursor-pointer`}
       >
         {isExpanded ? '접기' : '더보기'}
       </button>
