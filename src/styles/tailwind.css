@@ -1,0 +1,173 @@
+/* Typography styles based on global.css variables */
+
+/* Base typography styles */
+.prose {
+  max-width: none;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose strong {
+  color: var(--text-main-color);
+}
+
+.prose p,
+.prose span,
+.prose li {
+  color: var(--text-sub-color);
+}
+
+.prose p {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+
+/* Heading styles */
+.prose :where(h1):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  color: var(--primary-color);
+  font-family: var(--font-noto);
+}
+
+.prose :where(h2):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  margin-top: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.prose :where(h3):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Link styles */
+.prose :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.prose :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)):hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-decoration-color: var(--primary-color);
+  text-underline-offset: 4px;
+}
+
+/* Tag button styles */
+.prose .tag-button, 
+.tag-button-no-link {
+  color: var(--text-sub-color);
+  border: 1px solid var(--gray-7);
+  padding: 3px 7px 3px 8px;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  margin-right: 0.25rem;
+}
+
+/* Markdown text styles */
+.markdown-text-sub p {
+  margin-bottom: 0;
+}
+
+/* Code styles */
+.prose code {
+  padding: 0.25rem 0.4rem;
+  border-radius: 0.25rem;
+  color: var(--primary-color);
+  background-color: var(--gray-4);
+  font-family: var(--font-pretendard);
+}
+
+.prose code::before,
+.prose code::after {
+  display: none;
+}
+
+/* List styles */
+.prose ol, 
+.prose ul {
+  margin: 0.4rem 0;
+}
+
+.prose :where(ol > li)::marker, 
+.prose :where(ul > li)::marker {
+  color: var(--gray-1);
+}
+
+.prose .list-decimal, 
+.prose .list-disc {
+  margin: 0.2rem 0 0.2rem 2rem;
+  padding-left: 0.2rem;
+}
+
+/* Math styles */
+.markdown-math-block,
+.markdown-math-inline {
+  color: var(--text-main-color) !important;
+}
+
+.br-gap {
+  margin-bottom: 0.75rem;
+}
+
+.prose .MJX-TEX {
+  padding-right: 0.05rem !important;
+}
+
+.prose .MathJax {
+  top: 0.1rem !important;
+  padding-right: 0.05rem !important;
+}
+
+.prose mjx-c.mjx-c30::before {
+  padding-right: 0.7rem !important;
+}
+
+/* Blockquote styles */
+.markdown-blockquote {
+  background-color: var(--gray-5);
+  border-left: 4px solid var(--primary-color);
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 0.25rem 0 0 0.25rem;
+  color: var(--text-main-color);
+  font-style: normal;
+}
+
+/* Table styles */
+.markdown-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.8rem 0;
+  table-layout: auto;
+}
+
+.markdown-table th, 
+.markdown-table td {
+  border: 1px solid var(--gray-7);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.markdown-table th:first-child, 
+.markdown-table td:first-child {
+  width: 1%;
+  padding: 0 1.5rem;
+  min-width: 100px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.markdown-table th:not(:first-child), 
+.markdown-table td:not(:first-child) {
+  width: auto;
+  padding-left: 1.5rem;
+}
+
+.markdown-table th {
+  border: 0;
+  font-weight: 600;
+}

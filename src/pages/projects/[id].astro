@@ -1,6 +1,7 @@
 ---
 import { ChevronLeft } from 'lucide-react';
 
+import MarkdownContent from '@/components/common/MarkdownContent';
 import ExpandableImageGrid from '@/components/projects/ExpandableImageGrid';
 import ImageCarouselWrapper from '@/components/projects/ImageCarouselWrapper';
 import { projectsData } from '@/constants/projects';
@@ -82,11 +83,9 @@ const allImages = [project.images.thumbnail, ...fullImages];
     </div>
 
     <div class="mb-16 space-y-2">
-      <div
-        class="text-sub flex flex-col gap-2 leading-relaxed whitespace-pre-line"
-      >
+      <div class="text-sub flex flex-col gap-2 leading-relaxed">
         <span class="text-xl font-bold">프로젝트 개요</span>
-        <span class="whitespace-pre-line">{project.description.full}</span>
+        <MarkdownContent content={project.description.full} />
       </div>
       <div
         class="mt-2 flex items-center justify-center gap-4 sm:mt-0 md:justify-start"
