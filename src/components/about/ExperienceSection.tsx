@@ -11,7 +11,7 @@ interface ExperienceProps {
   experiences: ExperienceItem[];
 }
 
-export default function Experience({ experiences }: ExperienceProps) {
+export default function ExperienceSection({ experiences }: ExperienceProps) {
   return (
     <div className="bg-gray9 mb-8 rounded-lg p-6">
       <h2 className="font-pretendard mb-6 text-2xl font-bold">경력</h2>

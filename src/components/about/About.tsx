@@ -1,10 +1,11 @@
-import React from 'react';
-
-import AboutMe from './AboutMe';
-import Education from './Education';
-import Experience from './Experience';
-import PageTitle from './PageTitle';
-import ProfileCard from './ProfileCard';
+import {
+  AboutMe,
+  EducationSection,
+  ExperienceSection,
+  PageTitle,
+  ProfileCard,
+  TechStackSection,
+} from './index';
 
 // 타입 정의
 export interface SkillGroup {
@@ -64,14 +65,14 @@ export default function About({
             email={email}
             github={github}
             linkedin={linkedin}
-            skills={skills}
           />
         </div>
 
         <div className="md:col-span-2">
           <AboutMe paragraphs={aboutParagraphs} />
-          <Experience experiences={experiences} />
-          <Education education={education} />
+          <TechStackSection skills={skills} />
+          <ExperienceSection experiences={experiences} />
+          <EducationSection education={education} />
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
-import { techStacks } from '@/constants/techStacks';
+import { techStacks } from '@/constants/techStackConst';
 import { type YearProjects } from '@/types/projects';
 import { calculateTotalProjects, filterProjects } from '@/utils/projectUtils';
 
