@@ -1,6 +1,9 @@
+import { X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
+import { techStacks } from '@/constants/techStacks';
 import { type YearProjects } from '@/types/projects';
+import { calculateTotalProjects, filterProjects } from '@/utils/projectUtils';
 
 import ProjectCard from './ProjectCard';
 
@@ -14,16 +17,14 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
   const [filteredProjects, setFilteredProjects] = useState<YearProjects[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [activeTechStacks, setActiveTechStacks] = useState<string[]>([]);
   const projectsRef = useRef<HTMLDivElement>(null);
   const tabsRef = useRef<HTMLDivElement>(null);
   const indicatorRef = useRef<HTMLSpanElement>(null);
   const hoverIndicatorRef = useRef<HTMLSpanElement>(null);
 
   // 모든 프로젝트 수 계산
-  const totalProjects = projectsData.reduce(
-    (acc, yearData) => acc + yearData.projects.length,
-    0,
-  );
+  const totalProjects = calculateTotalProjects(projectsData);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -46,20 +47,42 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
     }, 300); // 애니메이션 지속 시간
   };
 
+  // 기술 스택 변경 처리 함수
+  const handleTechStackChange = (tech: string) => {
+    setIsAnimating(true);
+
+    // 이미 선택된 기술 스택인 경우 제거, 아니면 추가
+    setActiveTechStacks((prev) => {
+      if (prev.includes(tech)) {
+        return prev.filter((item) => item !== tech);
+      } else {
+        return [...prev, tech];
+      }
+    });
+
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 300);
+  };
+
+  // 모든 기술 스택 필터 초기화
+  const resetTechStackFilters = () => {
+    setActiveTechStacks([]);
+    setIsAnimating(true);
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 300);
+  };
+
   // 탭 호버 처리 함수
   const handleTabHover = (year: string | null) => {
     setHoverYear(year);
   };
 
   useEffect(() => {
-    if (activeYear === 'all') {
-      setFilteredProjects(projectsData);
-    } else {
-      setFilteredProjects(
-        projectsData.filter((yearData) => yearData.year === activeYear),
-      );
-    }
-  }, [activeYear, projectsData]);
+    const filtered = filterProjects(projectsData, activeYear, activeTechStacks);
+    setFilteredProjects(filtered);
+  }, [activeYear, activeTechStacks, projectsData]);
 
   // 탭 인디케이터 위치 업데이트
   useEffect(() => {
@@ -170,6 +193,39 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
             </div>
           </div>
         </div>
+        <div
+          className={`mt-4 hidden flex-col gap-2 transition-all duration-500 ${
+            isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+          } sm:flex`}
+        >
+          <div className="flex flex-wrap gap-2 overflow-x-auto">
+            {techStacks.map((tech) => (
+              <button
+                key={tech}
+                type="button"
+                onClick={() => handleTechStackChange(tech)}
+                className={`rounded-full px-3 py-1 text-xs font-medium transition-all duration-300 ${
+                  activeTechStacks.includes(tech)
+                    ? 'bg-accent-1 text-background'
+                    : 'bg-gray8/30 text-gray1 hover:bg-gray7'
+                }`}
+                aria-label={`${tech} 기술 스택으로 필터링`}
+              >
+                {tech}
+              </button>
+            ))}
+            {activeTechStacks.length > 0 && (
+              <button
+                type="button"
+                onClick={resetTechStackFilters}
+                className="bg-accent-2 hover:bg-accent-1 flex items-center gap-0.5 rounded-full py-0.5 pr-1.5 pl-2 text-xs text-white"
+              >
+                초기화
+                <X className="h-4 w-4" />
+              </button>
+            )}
+          </div>
+        </div>
       </div>
 
       {/* Projects Grid */}
@@ -224,10 +280,62 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
             ))
           )
         ) : (
-          <div className="bg-gray-8/40 text-gray1 flex h-40 items-center justify-center rounded-lg backdrop-blur-sm">
-            해당 연도의 프로젝트가 없습니다.
+          <div className="bg-gray8/40 text-gray1 flex h-40 flex-col items-center justify-center rounded-lg backdrop-blur-sm">
+            {activeTechStacks.length > 0 && (
+              <>
+                <p className="mb-2 text-lg font-medium">
+                  {activeYear === 'all' ? '' : `${activeYear} `}
+                  <span className="text-accent-1">
+                    {activeTechStacks.join(', ')}
+                  </span>{' '}
+                  기술을{' '}
+                  {activeTechStacks.length > 1 ? '모두 사용한' : '사용한'}{' '}
+                  프로젝트가 없습니다.
+                </p>
+                <button
+                  type="button"
+                  onClick={resetTechStackFilters}
+                  className="bg-gray7 text-gray1 hover:bg-gray6 mt-2 rounded-full px-4 py-1.5 text-sm"
+                >
+                  기술 필터 초기화
+                </button>
+              </>
+            )}
           </div>
         )}
+      </div>
+      <div
+        className={`mt-6 flex flex-col gap-2 pb-2 transition-all duration-500 ${
+          isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+        } sm:hidden`}
+      >
+        <div className="mt-1 flex flex-wrap gap-2 overflow-x-auto">
+          {techStacks.map((tech) => (
+            <button
+              key={tech}
+              type="button"
+              onClick={() => handleTechStackChange(tech)}
+              className={`rounded-full px-3 py-1 text-xs font-medium transition-all duration-300 ${
+                activeTechStacks.includes(tech)
+                  ? 'bg-accent-1 text-background'
+                  : 'bg-gray8/30 text-gray1 hover:bg-gray7'
+              }`}
+              aria-label={`${tech} 기술 스택으로 필터링`}
+            >
+              {tech}
+            </button>
+          ))}
+          {activeTechStacks.length > 0 && (
+            <button
+              type="button"
+              onClick={resetTechStackFilters}
+              className="bg-accent-2 hover:bg-accent-1 flex items-center gap-0.5 rounded-full py-0.5 pr-1.5 pl-2 text-xs text-white"
+            >
+              초기화
+              <X className="h-4 w-4" />
+            </button>
+          )}
+        </div>
       </div>
     </section>
   );

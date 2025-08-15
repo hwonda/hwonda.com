@@ -6,6 +6,10 @@ html {
   color: var(--text-main-color);
 }
 
+button {
+  cursor: pointer;
+}
+
 /* :root {
   --primary-color: rgb(227, 27, 27);
   --secondary-color: rgb(255, 200, 100);
