@@ -1,8 +1,8 @@
 ---
 import { ChevronLeft } from 'lucide-react';
 
-import ExpandableImageGrid from '@/components/ExpandableImageGrid';
-import ImageCarouselWrapper from '@/components/ImageCarouselWrapper';
+import ExpandableImageGrid from '@/components/projects/ExpandableImageGrid';
+import ImageCarouselWrapper from '@/components/projects/ImageCarouselWrapper';
 import { projectsData } from '@/constants/projects';
 import Layout from '@/layouts/Layout.astro';
 import type { Project } from '@/types/projects';
@@ -144,7 +144,7 @@ const allImages = [project.images.thumbnail, ...fullImages];
           <img
             src={project.images.thumbnail}
             alt={`${project.title} 메인 이미지`}
-            class="h-full w-full object-cover rounded-lg"
+            class="h-full w-full rounded-lg object-cover"
           />
         </div>
         {
@@ -158,7 +158,7 @@ const allImages = [project.images.thumbnail, ...fullImages];
                   <img
                     src={image}
                     alt={`${project.title} 이미지 ${index + 1}`}
-                    class="h-full w-full object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                    class="h-full w-full rounded-lg object-cover transition-transform duration-300 hover:scale-105"
                   />
                 </div>
               ))}
