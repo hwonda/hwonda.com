@@ -100,7 +100,7 @@ const ButtonWrapper = ({ isLoaded }: { isLoaded: boolean }) => {
     >
       <a
         href="/projects"
-        className="bg-foreground hover:bg-foreground/80 text-inverse rounded-lg px-6 py-3 font-medium transition-colors"
+        className="bg-foreground hover:bg-foreground/80 text-inverse rounded-lg px-6 py-3 font-bold transition-colors"
       >
         프로젝트 보기
       </a>
