@@ -61,8 +61,8 @@ export default function About({
   return (
     <div className="mx-auto mt-24 max-w-[1000px] px-4 sm:top-8 md:mt-44 md:px-10 2xl:max-w-[1200px]">
       <div className="grid gap-8 md:grid-cols-3">
-        <div className="relative sm:mt-20 md:col-span-1">
-          <div className="sticky top-24">
+        <div className="relative sm:mt-32 md:col-span-1">
+          <div className="sticky top-32">
             <ProfileCard
               name={name}
               title={title}
@@ -74,7 +74,7 @@ export default function About({
           </div>
         </div>
 
-        <div className="md:col-span-2">
+        <div className="flex flex-col gap-8 md:col-span-2">
           <PageTitle name={name} />
           <AboutMeSection paragraphs={aboutParagraphs} />
           <ExperienceSection experiences={experiences} />

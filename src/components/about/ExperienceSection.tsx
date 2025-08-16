@@ -13,13 +13,13 @@ interface ExperienceProps {
 
 export default function ExperienceSection({ experiences }: ExperienceProps) {
   return (
-    <div className="bg-gray9 mb-8 rounded-lg p-6">
+    <div className="bg-gray9 rounded-lg p-6">
       <h2 className="font-pretendard mb-6 text-2xl font-bold">경력</h2>
       <div className="space-y-6">
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className="border-gray-7 border-b pb-6 last:border-0 last:pb-0"
+            className="border-gray7 border-b pb-6 last:border-0 last:pb-0"
           >
             <div className="mb-2 flex items-center justify-between">
               <h3 className="font-pretendard text-xl font-semibold">
