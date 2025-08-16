@@ -1,6 +1,6 @@
-export type { EducationItem, ExperienceItem, SkillGroup } from './About';
-export { default as About } from './About';
-export { default as AboutMe } from './AboutMe';
+export { default as AboutMeSection } from './AboutMeSection';
+export type { EducationItem, ExperienceItem, techStack } from './AboutPage';
+export { default as About } from './AboutPage';
 export { default as EducationSection } from './EducationSection';
 export { default as ExperienceSection } from './ExperienceSection';
 export { default as PageTitle } from './PageTitle';

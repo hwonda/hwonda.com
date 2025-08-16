@@ -1,7 +1,7 @@
 import { X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
-import { techStacks } from '@/constants/techStackConst';
+import { skills } from '@/constants/techStackConst';
 import { type YearProjects } from '@/types/projects';
 import { calculateTotalProjects, filterProjects } from '@/utils/projectUtils';
 
@@ -199,7 +199,7 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
           } sm:flex`}
         >
           <div className="flex flex-wrap gap-2 overflow-x-auto">
-            {techStacks.map((tech) => (
+            {skills.map((tech) => (
               <button
                 key={tech}
                 type="button"
@@ -310,7 +310,7 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
         } sm:hidden`}
       >
         <div className="mt-1 flex flex-wrap gap-2 overflow-x-auto">
-          {techStacks.map((tech) => (
+          {skills.map((tech) => (
             <button
               key={tech}
               type="button"

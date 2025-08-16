@@ -1,8 +1,3 @@
-interface SkillGroup {
-  category: string;
-  items: string[];
-}
-
 interface ProfileCardProps {
   name: string;
   title: string;
@@ -21,9 +16,9 @@ export default function ProfileCard({
   linkedin,
 }: ProfileCardProps) {
   return (
-    <div className="bg-gray9 rounded-lg p-6">
+    <div className="p-6">
       <div className="mb-6 text-center">
-        <div className="bg-gray9 mx-auto mb-4 h-40 w-40">
+        <div className="mx-auto mb-4 h-40 w-40">
           <img
             src={profileImage}
             alt={`${name} 프로필 이미지`}
