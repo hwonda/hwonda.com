@@ -2,13 +2,17 @@
  * 프로젝트에서 사용되는 기술 스택 목록
  */
 export const skills = [
-  'React',
-  'Vue',
+  'React.js',
+  'Vue.js',
   'Next.js',
   'JavaScript',
   'TypeScript',
+  'HTML',
+  'CSS',
   'Tailwind CSS',
-  'HTML/CSS',
+  'SCSS',
+  'React-Native',
+  'Flutter',
   'OpenLayers',
   'Cesium',
   'Redux',
@@ -23,9 +27,6 @@ export const skills = [
   'Git',
   'GitHub Actions',
   'Docker',
-  'React-Native',
-  'Flutter',
-  'SCSS',
 ];
 
 // 스킬 데이터
@@ -34,13 +35,13 @@ export const techStacks = [
     category: '프론트엔드',
     skills: [
       {
-        name: 'React',
+        name: 'React.js',
         proficiency: 80,
         description:
           '주력 프레임워크로 다양한 프로젝트에서 컴포넌트 설계, 상태관리, 라우팅, 성능 최적화를 경험하였습니다.',
       },
       {
-        name: 'Vue',
+        name: 'Vue.js',
         proficiency: 85,
         description:
           '대규모 프로젝트와 Vue 2→3 마이그레이션을 경험하였으며, Composition API, script setup, Provide/Inject 활용에 능숙합니다.',
@@ -63,16 +64,36 @@ export const techStacks = [
           '모든 주요 프로젝트에 적용하여 안정적인 타입 기반 개발을 진행하였습니다.',
       },
       {
+        name: 'HTML',
+        proficiency: 85,
+        description: '웹 표준과 접근성을 고려한 마크업이 가능합니다.',
+      },
+      {
+        name: 'CSS',
+        proficiency: 85,
+        description: '웹 표준과 접근성을 고려한 스타일링이 가능합니다.',
+      },
+      {
         name: 'Tailwind CSS',
         proficiency: 75,
         description:
           '반응형 레이아웃과 재사용 가능한 UI 구성요소 설계에 활용하였습니다.',
       },
       {
-        name: 'HTML/CSS',
-        proficiency: 85,
+        name: 'SCSS',
+        proficiency: 75,
         description:
-          '웹 표준과 접근성을 고려한 마크업 및 스타일링이 가능합니다.',
+          '중첩, 변수, 믹스인 등을 활용해 유지보수성을 높인 스타일링을 작성하였습니다.',
+      },
+      {
+        name: 'React-Native',
+        proficiency: 20,
+        description: '프로토타입 수준의 앱 UI를 구현한 경험이 있습니다.',
+      },
+      {
+        name: 'Flutter',
+        proficiency: 20,
+        description: '프로토타입 수준의 앱 UI를 구현한 경험이 있습니다.',
       },
       {
         name: 'OpenLayers',
@@ -84,22 +105,6 @@ export const techStacks = [
         name: 'Cesium',
         proficiency: 60,
         description: '기본 지도 표출 및 간단한 3D 기능을 구현하였습니다.',
-      },
-      {
-        name: 'React Native',
-        proficiency: 20,
-        description: '프로토타입 수준의 앱 UI를 구현한 경험이 있습니다.',
-      },
-      {
-        name: 'Flutter',
-        proficiency: 20,
-        description: '프로토타입 수준의 앱 UI를 구현한 경험이 있습니다.',
-      },
-      {
-        name: 'SCSS',
-        proficiency: 75,
-        description:
-          '중첩, 변수, 믹스인 등을 활용해 유지보수성을 높인 스타일링을 작성하였습니다.',
       },
     ],
   },
