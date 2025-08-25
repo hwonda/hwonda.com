@@ -21,7 +21,6 @@ export const skills = [
   'RTK-Query',
   'Figma',
   'Storybook',
-  'MongoDB',
   'Swagger',
   'Firebase',
   'Git',
@@ -42,9 +41,9 @@ export const techStacks = [
       },
       {
         name: 'Vue.js',
-        proficiency: 85,
+        proficiency: 80,
         description:
-          '대규모 프로젝트와 Vue 2→3 마이그레이션을 경험하였으며, Composition API, script setup, Provide/Inject 활용에 능숙합니다.',
+          '대규모 프로젝트와 Vue 2 → 3 마이그레이션을 경험하였으며, Composition API, script setup, Provide/Inject 활용에 능숙합니다.',
       },
       {
         name: 'Next.js',
@@ -55,40 +54,43 @@ export const techStacks = [
         name: 'JavaScript',
         proficiency: 70,
         description:
-          'SPA 개발에 필요한 핵심 문법과 DOM 조작에 익숙하며, 주로 TypeScript 환경에서 사용합니다.',
+          'SPA 개발에 필요한 핵심 문법과 DOM 조작에 익숙합니다. ES6+ 문법을 활용하여 코드를 작성합니다.',
       },
       {
         name: 'TypeScript',
         proficiency: 80,
         description:
-          '모든 주요 프로젝트에 적용하여 안정적인 타입 기반 개발을 진행하였습니다.',
+          '모든 주요 프로젝트에 적용하여 안정적인 타입 기반 개발을 진행하였습니다. type assertion과 any를 지양하고 타입 추론을 통해 안정적인 개발을 진행합니다.',
       },
       {
         name: 'HTML',
         proficiency: 85,
-        description: '웹 표준과 접근성을 고려한 마크업이 가능합니다.',
+        description:
+          '웹 표준과 접근성을 고려한 마크업이 가능합니다. 최신 문법을 활용하여 코드를 작성합니다.',
       },
       {
         name: 'CSS',
         proficiency: 85,
-        description: '웹 표준과 접근성을 고려한 스타일링이 가능합니다.',
+        description:
+          '웹 표준과 접근성을 고려한 스타일링이 가능합니다. 1px 단위의 디테일한 디자인을 구현할 수 있습니다.',
       },
       {
         name: 'Tailwind CSS',
         proficiency: 75,
         description:
-          '반응형 레이아웃과 재사용 가능한 UI 구성요소 설계에 활용하였습니다.',
+          '반응형 레이아웃과 재사용 가능한 UI 구성요소 설계에 활용하였습니다. 모바일 환경에서 최적화된 디자인을 구현할 수 있습니다.',
       },
       {
         name: 'SCSS',
-        proficiency: 75,
+        proficiency: 70,
         description:
           '중첩, 변수, 믹스인 등을 활용해 유지보수성을 높인 스타일링을 작성하였습니다.',
       },
       {
         name: 'React-Native',
         proficiency: 20,
-        description: '프로토타입 수준의 앱 UI를 구현한 경험이 있습니다.',
+        description:
+          'RN으로 작성된 코드를 파악하고 요소를 추가하거나 수정할 수 있습니다.',
       },
       {
         name: 'Flutter',
@@ -99,11 +101,11 @@ export const techStacks = [
         name: 'OpenLayers',
         proficiency: 80,
         description:
-          '지도 기반 서비스에서 커스텀 인터랙션과 데이터 시각화를 구현하였습니다.',
+          '지도 기반 서비스에서 커스텀 인터랙션과 데이터 시각화를 구현하였습니다. 시계열 데이터를 표출하고 커스텀 인터랙션을 구현할 수 있습니다.',
       },
       {
         name: 'Cesium',
-        proficiency: 60,
+        proficiency: 40,
         description: '기본 지도 표출 및 간단한 3D 기능을 구현하였습니다.',
       },
     ],
@@ -115,7 +117,7 @@ export const techStacks = [
         name: 'Redux',
         proficiency: 75,
         description:
-          '중규모 이상 프로젝트에서 상태관리와 미들웨어 설정을 경험하였습니다.',
+          '중규모 이상 프로젝트에서 상태관리와 미들웨어 설정을 경험하였습니다. 사이드 프로젝트에서 SSR 환경에서의 상태관리 또한 경험하였습니다.',
       },
       {
         name: 'Vuex',
@@ -138,7 +140,7 @@ export const techStacks = [
         name: 'RTK-Query',
         proficiency: 70,
         description:
-          '데이터 캐싱과 API 상태 관리를 활용한 개발 경험이 있습니다.',
+          '데이터 캐싱과 API 상태 관리를 활용한 개발 경험이 있습니다. 비동기 처리와 loading, error 상태를 관리할 수 있습니다.',
       },
     ],
   },
@@ -149,12 +151,13 @@ export const techStacks = [
         name: 'Figma',
         proficiency: 75,
         description:
-          'UI 설계 및 협업 프로세스에서 디자인 시안을 제작·검토하였습니다.',
+          'UI 설계 및 협업 프로세스에서 디자인 시안을 제작·검토할 수 있습니다. frame과 component를 활용하여 디자인을 구현할 수 있습니다. mcp를 연결하여 코드를 figma로 변경할 수 있습니다.',
       },
       {
         name: 'Storybook',
-        proficiency: 70,
-        description: '컴포넌트 문서화 및 UI 테스트 환경을 구축하였습니다.',
+        proficiency: 75,
+        description:
+          '컴포넌트 문서화 및 UI 테스트 환경을 구축하였습니다. mock 데이터를 활용하여 기획자, 디자이너, 백엔드와 소통하고 단위 테스트를 할 수 있도록 환경을 구성할 수 있습니다.',
       },
     ],
   },
@@ -165,13 +168,7 @@ export const techStacks = [
         name: 'Firebase',
         proficiency: 70,
         description:
-          'API 설계 및 인증, 데이터베이스 구성까지 직접 진행하였습니다.',
-      },
-      {
-        name: 'MongoDB',
-        proficiency: 40,
-        description:
-          '프론트엔드 개발을 위한 데이터 연동 및 쿼리 작성 경험이 있습니다.',
+          '서버리스 환경에서 API 설계 및 인증을 진행하였습니다. Read, Write, Delete의 사용량을 파악하여 데이터 구조 및 사용량 제어를 최적화할 수 있습니다.',
       },
       {
         name: 'Swagger',
@@ -187,17 +184,19 @@ export const techStacks = [
         name: 'Git',
         proficiency: 80,
         description:
-          '브랜치 전략 수립 및 협업 환경에서의 버전 관리를 경험하였습니다.',
+          '브랜치 전략 수립 및 협업 환경에서의 버전 관리를 경험하였습니다. 사내 commit convention을 정립하고 프로젝트에 알맞은 브랜치 전략을 구성합니다.',
       },
       {
         name: 'GitHub Actions',
         proficiency: 60,
-        description: '간단한 CI/CD 파이프라인을 구성하였습니다.',
+        description:
+          'build에서부터 storybook 배포, 테스트 환경 배포, publish 환경 배포를 진행하였습니다. 커밋 메시지에 따라 파일을 자동으로 수정하고, 자동으로 release 버전을 생성할 수 있습니다.',
       },
       {
         name: 'Docker',
         proficiency: 40,
-        description: '개발 환경 컨테이너화를 경험하였습니다.',
+        description:
+          '개발 환경 컨테이너화를 경험하였습니다. 프로젝트에 알맞은 컨테이너 이미지를 생성하고, 프로젝트에 알맞은 환경을 구성할 수 있습니다.',
       },
     ],
   },
