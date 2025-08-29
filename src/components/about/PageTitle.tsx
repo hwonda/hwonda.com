@@ -10,7 +10,7 @@ export default function PageTitle({
   suffix = '에 대하여',
 }: PageTitleProps) {
   return (
-    <h1 className="font-pretendard relative mb-12 text-4xl font-bold md:text-5xl">
+    <h1 className="font-pretendard relative mb-0 text-4xl font-bold sm:mb-12 md:text-5xl">
       <span className="from-accent-3 to-accent-1 bg-gradient-to-b bg-clip-text text-transparent">
         {name}
       </span>

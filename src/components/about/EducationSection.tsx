@@ -13,7 +13,7 @@ interface EducationProps {
 
 export default function EducationSection({ education }: EducationProps) {
   return (
-    <div className="bg-gray9 rounded-lg p-6">
+    <div className="bg-gray9 rounded-lg p-4 sm:p-6">
       <h2 className="font-pretendard mb-6 text-2xl font-bold">교육</h2>
       <div className="space-y-6">
         {education.map((edu, index) => (
