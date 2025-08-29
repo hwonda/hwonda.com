@@ -7,9 +7,7 @@ export const reactMultiEmail: Project = {
   description: {
     short:
       '다중 이메일 입력을 위한 React 컴포넌트 라이브러리로, 사용자 친화적인 인터페이스와 검증 기능을 제공합니다.',
-    full: `오픈 소스 프로젝트에 기여한 활동으로, Jest를 사용하여 유닛 테스트를 작성하고 검증했으며, 버그를 수정하고 PR과 Issue를 확인했습니다.
-      또한, Docusaurus와 mdx를 사용해 라이브러리를 문서화했습니다.
-      `,
+    full: '오픈 소스 프로젝트에 기여한 활동으로, Jest를 사용하여 유닛 테스트를 작성하고 검증했으며, 버그를 수정하고 PR과 Issue를 확인했습니다.\n 또한, Docusaurus와 mdx를 사용해 라이브러리를 문서화했습니다.',
   },
   images: {
     thumbnail: '/projects/react-multi-email/thumbnail.webp',
@@ -43,8 +41,16 @@ export const reactMultiEmail: Project = {
 GitHub에서 300개 이상의 별을 받았으며, 지속적인 기여와 개선이 이루어지고 있습니다.`,
     },
   ],
-  period: '2023.07 ~ 2024.01 (6개월)',
+  period: '2023.07 ~ 2024.01',
   role: 'Contributor/Maintainer',
   team: 'AXISJ(Open Source Team)',
-  techStack: ['Github', 'React', 'Jest', 'Docusaurus', 'mdx'],
+  techStack: [
+    'Github',
+    'React',
+    'Jest',
+    'Docusaurus',
+    'mdx',
+    'Git',
+    'Github Actions',
+  ],
 };

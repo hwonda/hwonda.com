@@ -25,8 +25,16 @@ export const blog: Project = {
       '/projects/blog/8.webp',
     ],
   },
-  period: '2024.07 ~ 현재 (1년 1개월~)',
+  period: '2024.07 ~ 현재',
   role: 'Fullstack',
   team: '개인',
-  techStack: ['Next.js', 'TypeScript', 'TailwindCSS', 'Vercel'],
+  techStack: [
+    'Next.js',
+    'TypeScript',
+    'Tailwind CSS',
+    'Vercel',
+    'Figma',
+    'Git',
+    'Github Actions',
+  ],
 };

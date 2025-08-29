@@ -22,17 +22,21 @@ export const mmis2025: Project = {
   images: {
     thumbnail: '/projects/mmis-2025/thumbnail.webp',
   },
-  period: '2025.06 ~ 현재 (2개월~)',
+  period: '2025.06 ~ 현재',
   role: 'Frontend',
   team: 'Koast',
   techStack: [
-    'Vue3',
+    'Vue.js',
     'Vuex',
     'TypeScript',
     'SCSS',
     'Axios',
     'React-Native',
     'OpenLayers',
+    'Docker',
+    'Jira',
+    'Figma',
+    'Git',
   ],
   inProgress: true,
 };

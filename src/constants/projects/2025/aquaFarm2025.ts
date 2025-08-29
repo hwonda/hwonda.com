@@ -21,9 +21,18 @@ export const aquaFarm2025: Project = {
   images: {
     thumbnail: '/projects/aqua-farm-2025/thumbnail.webp',
   },
-  period: '2025.06 ~ 현재 (2개월~)',
+  period: '2025.06 ~ 현재',
   role: 'PM / Design / Frontend',
   team: 'Koast',
-  techStack: ['React', 'TailwindCSS', 'Vite', 'Figma', 'Jira'],
+  techStack: [
+    'React.js',
+    'TypeScript',
+    'Tailwind CSS',
+    'Vite',
+    'Swagger',
+    'Figma',
+    'Jira',
+    'Git',
+  ],
   inProgress: true,
 };

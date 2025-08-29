@@ -94,3 +94,9 @@ export const getProjectById = (id: string): Project | undefined => {
   const allProjects = getAllProjects();
   return allProjects.find((project) => project.id === id);
 };
+
+/**
+ * 프로젝트 수행 기간 반환
+ */
+
+export const getProjectPeriod = (start: string, end: string): string => {};
