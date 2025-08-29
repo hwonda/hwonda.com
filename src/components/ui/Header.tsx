@@ -33,15 +33,24 @@ const Header = () => {
 
       {/* 컨텐츠 */}
       <h1 className="font-paperlogy relative z-10 text-base font-medium sm:text-2xl">
-        <a href="/">여름에 더 뜨거운 개발자</a>
+        <a href="/">
+          <span className="hidden sm:inline">여름에 더 뜨거운 개발자</span>
+          <span className="sm:hidden">뜨거운 개발자</span>
+        </a>
       </h1>
       <nav className="relative z-10 flex items-center gap-2 text-sm sm:text-base">
         <a
           href="/about"
-          className="color-sub hover:bg-accent-1/20 rounded-full px-3 py-1.5 transition-all duration-300"
+          className="color-sub hover:bg-accent-1/20 rounded-full px-1.5 py-1.5 transition-all duration-300 sm:px-3"
         >
           주다훤
           <span className="hidden sm:inline">에 대하여</span>
+        </a>
+        <a
+          href="https://hwonda.com/blog"
+          className="color-sub hover:bg-accent-1/20 rounded-full px-1.5 py-1.5 transition-all duration-300 sm:px-3"
+        >
+          블로그
         </a>
         <a
           href="/projects"
