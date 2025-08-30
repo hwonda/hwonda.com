@@ -1,4 +1,5 @@
 import type { Project } from '@/types/projects';
+import { getProjectPeriod } from '@/utils/dateUtils';
 
 export const mmis2024: Project = {
   id: 'mmis-2024',
@@ -20,7 +21,9 @@ export const mmis2024: Project = {
       '/projects/mmis-2024/4.webp',
     ],
   },
-  period: '2024.09 ~ 2024.11',
+  startTime: '2024.09',
+  endTime: '2024.11',
+  period: getProjectPeriod('2024.09', '2024.11'),
   role: 'Frontend',
   team: 'Koast',
   techStack: [

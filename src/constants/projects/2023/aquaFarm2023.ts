@@ -1,4 +1,5 @@
 import type { Project } from '@/types/projects';
+import { getProjectPeriod } from '@/utils/dateUtils';
 
 export const aquaFarm2023: Project = {
   id: 'aqua-farm-2023',
@@ -26,7 +27,9 @@ export const aquaFarm2023: Project = {
   images: {
     thumbnail: '/projects/aqua-farm-2023/thumbnail.webp',
   },
-  period: '2023.01 ~ 2023.04',
+  startTime: '2023.01',
+  endTime: '2023.04',
+  period: getProjectPeriod('2023.01', '2023.04'),
   role: 'Frontend',
   team: 'Koast',
   techStack: ['Vue.js', 'Vuex', 'Axios', 'CSS', 'Git', 'Swagger'],

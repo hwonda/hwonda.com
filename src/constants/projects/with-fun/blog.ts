@@ -1,4 +1,5 @@
 import type { Project } from '@/types/projects';
+import { getProjectPeriod } from '@/utils/dateUtils';
 
 export const blog: Project = {
   id: 'blog',
@@ -25,7 +26,9 @@ export const blog: Project = {
       '/projects/blog/8.webp',
     ],
   },
-  period: '2024.07 ~ 현재',
+  startTime: '2024.07',
+  endTime: '현재',
+  period: getProjectPeriod('2024.07', '현재'),
   role: 'Fullstack',
   team: '개인',
   techStack: [

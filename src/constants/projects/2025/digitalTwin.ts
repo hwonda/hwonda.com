@@ -1,4 +1,5 @@
 import type { Project } from '@/types/projects';
+import { getProjectPeriod } from '@/utils/dateUtils';
 
 export const digitalTwin: Project = {
   id: 'digital-twin',
@@ -28,7 +29,9 @@ export const digitalTwin: Project = {
       '/projects/digital-twin/12.webp',
     ],
   },
-  period: '2024.12 ~ 2025.03',
+  startTime: '2024.12',
+  endTime: '2025.03',
+  period: getProjectPeriod('2024.12', '2025.03'),
   role: 'Frontend',
   team: 'Koast',
   techStack: [

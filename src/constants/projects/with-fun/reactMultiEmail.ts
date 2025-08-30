@@ -1,4 +1,5 @@
 import type { Project } from '@/types/projects';
+import { getProjectPeriod } from '@/utils/dateUtils';
 
 export const reactMultiEmail: Project = {
   id: 'react-multi-email',
@@ -41,7 +42,9 @@ export const reactMultiEmail: Project = {
 GitHub에서 300개 이상의 별을 받았으며, 지속적인 기여와 개선이 이루어지고 있습니다.`,
     },
   ],
-  period: '2023.07 ~ 2024.01',
+  startTime: '2023.07',
+  endTime: '2024.01',
+  period: getProjectPeriod('2023.07', '2024.01'),
   role: 'Contributor/Maintainer',
   team: 'AXISJ(Open Source Team)',
   techStack: [

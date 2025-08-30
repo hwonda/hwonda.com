@@ -1,4 +1,5 @@
 import type { Project } from '@/types/projects';
+import { getProjectPeriod } from '@/utils/dateUtils';
 
 export const diki: Project = {
   id: 'diki',
@@ -74,7 +75,9 @@ export const diki: Project = {
       results: `팀 내 문서화 작업 효율이 40% 향상되었으며, 지식 공유가 활성화되어 신규 입사자의 온보딩 시간이 30% 단축되었습니다.`,
     },
   ],
-  period: '2024.10 ~ 현재',
+  startTime: '2024.10',
+  endTime: '현재',
+  period: getProjectPeriod('2024.10', '현재'),
   role: 'Frontend / Backend / SEO',
   team: 'DXWiki',
   techStack: [

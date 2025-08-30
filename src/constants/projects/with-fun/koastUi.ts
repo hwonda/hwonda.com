@@ -1,4 +1,5 @@
 import type { Project } from '@/types/projects';
+import { getProjectPeriod } from '@/utils/dateUtils';
 
 export const koastUi: Project = {
   id: 'koast-ui',
@@ -51,7 +52,9 @@ Github Pages로 Storybook Docs를 제작하고 NPM에 배포했으며,
 현재 여러 해양 관련 프로젝트에서 핵심 라이브러리로 사용되고 있습니다.`,
     },
   ],
-  period: '2025.03 ~ 2025.04',
+  startTime: '2025.03',
+  endTime: '2025.04',
+  period: getProjectPeriod('2025.03', '2025.04'),
   role: 'Frontend / DevOps',
   team: 'KOAST',
   techStack: [

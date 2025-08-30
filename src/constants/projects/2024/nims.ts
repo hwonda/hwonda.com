@@ -1,4 +1,5 @@
 import type { Project } from '@/types/projects';
+import { getProjectPeriod } from '@/utils/dateUtils';
 
 export const nims: Project = {
   id: 'nims',
@@ -22,7 +23,9 @@ RTK Query를 사용하여 데이터의 효율적인 상태 관리 및 서버와�
       '/projects/nims/4.webp',
     ],
   },
-  period: '2024.06 ~ 2024.08',
+  startTime: '2024.06',
+  endTime: '2024.08',
+  period: getProjectPeriod('2024.06', '2024.08'),
   role: 'Frontend',
   team: 'Koast',
   techStack: [

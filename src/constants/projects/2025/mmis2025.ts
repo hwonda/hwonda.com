@@ -1,4 +1,5 @@
 import type { Project } from '@/types/projects';
+import { getProjectPeriod } from '@/utils/dateUtils';
 
 export const mmis2025: Project = {
   id: 'mmis2025',
@@ -22,7 +23,9 @@ export const mmis2025: Project = {
   images: {
     thumbnail: '/projects/mmis-2025/thumbnail.webp',
   },
-  period: '2025.06 ~ 현재',
+  startTime: '2025.06',
+  endTime: '현재',
+  period: getProjectPeriod('2025.06', '현재'),
   role: 'Frontend',
   team: 'Koast',
   techStack: [
