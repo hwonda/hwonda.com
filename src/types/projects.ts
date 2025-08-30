@@ -38,6 +38,8 @@ export interface Project {
   images: Images;
   urls?: Urls;
   points?: ProjectPoints[];
+  startTime?: string;
+  endTime?: string;
   period?: string;
   role?: string;
   team?: string;
