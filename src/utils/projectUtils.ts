@@ -1,4 +1,4 @@
-import { projectsData } from '@/constants/projects';
+// import { projectsData } from '@/constants/projects';
 import type { Project, YearProjects } from '@/types/projects';
 
 /**
@@ -63,14 +63,17 @@ export const filterProjects = (
 /**
  * 모든 프로젝트 목록 반환
  */
-export const getAllProjects = (): Project[] => {
+export const getAllProjects = (projectsData: YearProjects[]): Project[] => {
   return projectsData.flatMap((yearData) => yearData.projects);
 };
 
 /**
  * 특정 연도의 프로젝트 목록 반환
  */
-export const getProjectsByYear = (year: string): Project[] => {
+export const getProjectsByYear = (
+  projectsData: YearProjects[],
+  year: string,
+): Project[] => {
   const yearData = projectsData.find((data) => data.year === year);
   return yearData ? yearData.projects : [];
 };
@@ -78,8 +81,11 @@ export const getProjectsByYear = (year: string): Project[] => {
 /**
  * 특정 기술 스택을 사용하는 프로젝트 목록 반환
  */
-export const getProjectsByTechStack = (tech: string): Project[] => {
-  const allProjects = getAllProjects();
+export const getProjectsByTechStack = (
+  projectsData: YearProjects[],
+  tech: string,
+): Project[] => {
+  const allProjects = getAllProjects(projectsData);
   return allProjects.filter((project) =>
     project.techStack?.some(
       (stack) => stack.toLowerCase() === tech.toLowerCase(),
@@ -90,13 +96,10 @@ export const getProjectsByTechStack = (tech: string): Project[] => {
 /**
  * 특정 ID의 프로젝트 반환
  */
-export const getProjectById = (id: string): Project | undefined => {
-  const allProjects = getAllProjects();
+export const getProjectById = (
+  projectsData: YearProjects[],
+  id: string,
+): Project | undefined => {
+  const allProjects = getAllProjects(projectsData);
   return allProjects.find((project) => project.id === id);
 };
-
-/**
- * 프로젝트 수행 기간 반환
- */
-
-export const getProjectPeriod = (start: string, end: string): string => {};
