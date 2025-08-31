@@ -11,13 +11,7 @@ export const koastUi: Project = {
     full: `React 기반 UI 개발의 러닝커브를 낮추기 위해 자발적으로 사내 공용 UI 라이브러리를 개발했습니다.
 Github Pages로 Storybook Docs를 제작하고 NPM에 배포했으며,
 지도(map)용 Time slider, Legend 등 사내 특화 컴포넌트를 제공합니다.
-백엔드 개발자의 UI 구현 속도 향상 및 서비스 전반에 일관된 디자인 아이덴티티를 부여했습니다.
-
-주요 기능:
-- 해양 데이터 시각화 컴포넌트
-- 해양 지도 컴포넌트
-- 데이터 테이블 및 필터링
-- 반응형 디자인`,
+백엔드 개발자의 UI 구현 속도 향상 및 서비스 전반에 일관된 디자인 아이덴티티를 부여했습니다.`,
   },
   images: {
     thumbnail: '/projects/koast-ui/thumbnail.webp',
