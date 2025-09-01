@@ -1,9 +1,13 @@
 import { X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
-import { skills } from '@/constants/techStackConst';
 import { type YearProjects } from '@/types/projects';
-import { calculateTotalProjects, filterProjects } from '@/utils/projectUtils';
+import {
+  calculateTotalProjects,
+  countProjectsBySkill,
+  extractUniqueSkills,
+  filterProjects,
+} from '@/utils/projectUtils';
 
 import ProjectCard from './ProjectCard';
 
@@ -25,6 +29,12 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
 
   // 모든 프로젝트 수 계산
   const totalProjects = calculateTotalProjects(projectsData);
+
+  // 모든 프로젝트에서 고유한 기술 스택 목록 추출
+  const uniqueSkills = extractUniqueSkills(projectsData);
+
+  // 각 기술 스택이 사용된 프로젝트 수 계산
+  const skillCounts = countProjectsBySkill(projectsData);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -199,7 +209,7 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
           } sm:flex`}
         >
           <div className="flex flex-wrap gap-2 overflow-x-auto">
-            {skills.map((tech) => (
+            {uniqueSkills.map((tech) => (
               <button
                 key={tech}
                 type="button"
@@ -207,18 +217,25 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
                 className={`rounded-full px-3 py-1 text-xs font-medium transition-all duration-300 ${
                   activeTechStacks.includes(tech)
                     ? 'bg-accent-1 text-background'
-                    : 'bg-gray8/30 text-gray1 hover:bg-gray7'
+                    : skillCounts[tech] >= 3
+                      ? 'bg-gray7/30 text-main hover:bg-gray6'
+                      : 'bg-gray8/30 text-gray1 hover:bg-gray7'
                 }`}
                 aria-label={`${tech} 기술 스택으로 필터링`}
               >
                 {tech}
+                <span
+                  className={`${activeTechStacks.includes(tech) ? 'text-gray7' : 'text-gray4'} ml-px`}
+                >
+                  ({skillCounts[tech]})
+                </span>
               </button>
             ))}
             {activeTechStacks.length > 0 && (
               <button
                 type="button"
                 onClick={resetTechStackFilters}
-                className="bg-accent-2 hover:bg-accent-1 flex items-center gap-0.5 rounded-full py-0.5 pr-1.5 pl-2 text-xs text-white"
+                className="bg-accent-2 hover:bg-accent-1 flex items-center gap-0.5 rounded-full py-1 pr-1.5 pl-2 text-xs text-white"
               >
                 초기화
                 <X className="h-4 w-4" />
@@ -310,7 +327,7 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
         } sm:hidden`}
       >
         <div className="mt-1 flex flex-wrap gap-2 overflow-x-auto">
-          {skills.map((tech) => (
+          {uniqueSkills.map((tech) => (
             <button
               key={tech}
               type="button"
@@ -318,7 +335,9 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
               className={`rounded-full px-3 py-1 text-xs font-medium transition-all duration-300 ${
                 activeTechStacks.includes(tech)
                   ? 'bg-accent-1 text-background'
-                  : 'bg-gray8/30 text-gray1 hover:bg-gray7'
+                  : skillCounts[tech] >= 3
+                    ? 'bg-gray7/30 text-main hover:bg-gray6'
+                    : 'bg-gray8/30 text-gray1 hover:bg-gray7'
               }`}
               aria-label={`${tech} 기술 스택으로 필터링`}
             >

@@ -103,3 +103,40 @@ export const getProjectById = (
   const allProjects = getAllProjects(projectsData);
   return allProjects.find((project) => project.id === id);
 };
+
+/**
+ * 모든 프로젝트에서 고유한 기술 스택 목록 추출
+ */
+export const extractUniqueSkills = (projectsData: YearProjects[]): string[] => {
+  const allProjects = getAllProjects(projectsData);
+  // 모든 프로젝트의 techStack 배열을 하나로 합치고 중복 제거
+  const uniqueSkills = new Set<string>();
+  allProjects.forEach((project) => {
+    project.techStack?.forEach((tech) => {
+      uniqueSkills.add(tech.toLowerCase());
+    });
+  });
+  // Set을 배열로 변환하고 알파벳(a-z) 순서로 정렬
+  return Array.from(uniqueSkills).sort((a, b) =>
+    a.toLowerCase().localeCompare(b.toLowerCase()),
+  );
+};
+
+/**
+ * 각 기술 스택이 사용된 프로젝트 수 계산
+ */
+export const countProjectsBySkill = (
+  projectsData: YearProjects[],
+): Record<string, number> => {
+  const allProjects = getAllProjects(projectsData);
+  const skillCounts: Record<string, number> = {};
+
+  allProjects.forEach((project) => {
+    project.techStack?.forEach((tech) => {
+      const techLower = tech.toLowerCase();
+      skillCounts[techLower] = (skillCounts[techLower] || 0) + 1;
+    });
+  });
+
+  return skillCounts;
+};
