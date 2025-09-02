@@ -6,23 +6,28 @@ interface TechStackProps {
 
 export default function TechStackSection({ techStacks }: TechStackProps) {
   return (
-    <div className="p-4">
-      <h3 className="font-pretendard mb-2 text-lg font-semibold">기술 스택</h3>
+    <div className="border-gray9 rounded-lg border p-4 sm:p-6">
+      <h3 className="mb-6 text-2xl font-semibold">기술 스택</h3>
       {techStacks.map((skillGroup, index) => (
-        <div className="mb-4" key={index}>
-          <h4 className="text-gray-2 mb-1 text-sm font-medium">
+        <div className="mb-6" key={index}>
+          <h4 className="text-accent-2 mb-2 font-medium">
             {skillGroup.category}
           </h4>
           <div className="flex flex-wrap gap-2">
             {skillGroup.skills.map((skill, idx) => (
-              <span
-                className="text-gray-1 border-accent-2 relative rounded-full border px-3 py-1 text-sm"
+              <div
                 key={idx}
+                className="group text-gray4 hover:text-sub grid grid-cols-[126px_1fr] gap-2 transition-all duration-300"
               >
-                <span className="from-accent-2 to-accent-4 absolute inset-0 rounded-full bg-gradient-to-r opacity-20" />
-                <span className="bg-gray-8 absolute inset-[1px] rounded-full" />
-                <span className="text-gray-1 relative z-10">{skill.name}</span>
-              </span>
+                <span className="border-gray7 group-hover:border-accent-2 relative h-7 rounded-full border px-3 py-0.5 text-center text-sm">
+                  {/* <span className="from-accent-2 to-accent-4 absolute inset-0 rounded-full bg-gradient-to-r opacity-20" />
+                  <span className="bg-gray-8 absolute inset-[1px] rounded-full" /> */}
+                  <span className="text-sub group-hover:text-main relative z-10">
+                    {skill.name}
+                  </span>
+                </span>
+                <span className="mt-[3px] text-sm">{skill.description}</span>
+              </div>
             ))}
           </div>
         </div>
