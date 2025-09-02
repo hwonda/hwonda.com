@@ -4,7 +4,7 @@ interface ExperienceItem {
   period: string;
   title: string;
   company: string;
-  description: string;
+  description?: string;
 }
 
 interface ExperienceProps {
@@ -13,7 +13,7 @@ interface ExperienceProps {
 
 export default function ExperienceSection({ experiences }: ExperienceProps) {
   return (
-    <div className="bg-gray9 rounded-lg p-4 sm:p-6">
+    <div className="border-gray9 hover:bg-gray9 rounded-lg border p-4 transition-all duration-500 sm:p-6">
       <h2 className="font-pretendard mb-6 text-2xl font-bold">경력</h2>
       <div className="space-y-6">
         {experiences.map((exp, index) => (

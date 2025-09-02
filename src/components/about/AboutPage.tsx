@@ -23,7 +23,7 @@ export interface ExperienceItem {
   period: string;
   title: string;
   company: string;
-  description: string;
+  description?: string;
 }
 
 export interface EducationItem {
