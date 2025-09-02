@@ -20,8 +20,8 @@ export default function TechStackSection({ techStacks }: TechStackProps) {
                 className="group text-gray4 hover:text-sub grid grid-cols-[126px_1fr] gap-2 transition-all duration-300"
               >
                 <span className="border-gray7 group-hover:border-accent-2 relative h-7 rounded-full border px-3 py-0.5 text-center text-sm">
-                  {/* <span className="from-accent-2 to-accent-4 absolute inset-0 rounded-full bg-gradient-to-r opacity-20" />
-                  <span className="bg-gray-8 absolute inset-[1px] rounded-full" /> */}
+                  <span className="from-accent-2 to-accent-4 absolute inset-0 rounded-full bg-gradient-to-r opacity-0 group-hover:opacity-20" />
+                  <span className="bg-gray-8 absolute inset-[1px] rounded-full opacity-0 group-hover:opacity-30" />
                   <span className="text-sub group-hover:text-main relative z-10">
                     {skill.name}
                   </span>
