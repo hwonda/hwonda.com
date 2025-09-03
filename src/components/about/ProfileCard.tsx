@@ -43,13 +43,17 @@ export default function ProfileCard({
 
       <div className="mb-4">
         <h3 className="font-pretendard mb-2 text-lg font-semibold">연락처</h3>
-        <ul className="text-gray-3 space-y-2">
+        <ul className="text-gray-3 space-y-2.5">
           <li>
-            <span className="font-medium">phone</span>
+            <span className="text-gray1 border-gray7 rounded-full border px-3 py-1 font-medium">
+              Phone
+            </span>
             <span className="ml-2">+82) 010-6518-8253</span>
           </li>
           <li>
-            <span className="font-medium">e-mail</span>
+            <span className="text-gray1 border-gray7 rounded-full border px-3 py-1 font-medium">
+              Email
+            </span>
             <button
               type="button"
               onClick={copyEmail}
@@ -59,7 +63,9 @@ export default function ProfileCard({
             </button>
           </li>
           <li>
-            <span className="font-medium">GitHub</span>
+            <span className="text-gray1 border-gray7 rounded-full border px-3 py-1 font-medium">
+              GitHub
+            </span>
             <a
               href={`https://github.com/${github}`}
               target="_blank"
@@ -70,7 +76,9 @@ export default function ProfileCard({
             </a>
           </li>
           <li>
-            <span className="font-medium">LinkedIn</span>
+            <span className="text-gray1 border-gray7 rounded-full border px-3 py-1 font-medium">
+              LinkedIn
+            </span>
             <a
               href={`https://linkedin.com/in/${linkedin}`}
               target="_blank"

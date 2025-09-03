@@ -7,7 +7,7 @@ interface TechStackProps {
 export default function TechStackSection({ techStacks }: TechStackProps) {
   return (
     <div className="border-gray9 rounded-lg border p-4 sm:p-6">
-      <h3 className="mb-6 text-2xl font-semibold">기술 스택</h3>
+      <h3 className="text-gray3 mb-4 font-bold">기술 스택</h3>
       {techStacks.map((skillGroup, index) => (
         <div className="mb-6" key={index}>
           <h4 className="text-accent-2 mb-2 font-medium">

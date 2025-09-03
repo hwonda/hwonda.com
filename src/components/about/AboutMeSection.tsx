@@ -7,10 +7,12 @@ interface AboutMeProps {
 export default function AboutMeSection({ paragraphs }: AboutMeProps) {
   return (
     <div className="bg-gray9 rounded-lg p-4 sm:p-6">
-      <h2 className="font-pretendard mb-6 text-2xl font-bold">자기소개</h2>
-      <div className="text-gray-1 space-y-4">
+      <h2 className="text-gray3 mb-4 font-bold">자기소개</h2>
+      <div className="space-y-4">
         {paragraphs.map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
+          <p key={index} className="text-main">
+            {paragraph}
+          </p>
         ))}
       </div>
     </div>
