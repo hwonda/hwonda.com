@@ -45,6 +45,13 @@
   animation: slideUp 0.7s ease forwards;
 }
 
+.animate-intro-next {
+  opacity: 0;
+  transform: translateY(1rem);
+  animation: slideUp 0.7s ease forwards;
+  animation-delay: 0.5s;
+}
+
 /* 애니메이션 딜레이 클래스 */
 .delay-100 {
   animation-delay: 100ms;
