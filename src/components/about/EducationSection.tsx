@@ -13,8 +13,10 @@ interface EducationProps {
 
 export default function EducationSection({ education }: EducationProps) {
   return (
-    <div className="border-gray9 hover:bg-gray9 rounded-lg border p-4 transition-all duration-500 sm:p-6">
-      <h2 className="text-gray3 mb-4 font-bold">교육</h2>
+    <div className="group border-gray9 hover:bg-gray9 rounded-lg border p-4 transition-all duration-500 sm:p-6">
+      <h2 className="text-gray3 group-hover:text-main mb-4 font-bold transition-all duration-500">
+        교육
+      </h2>
       <div className="space-y-6">
         {education.map((edu, index) => (
           <div key={index}>

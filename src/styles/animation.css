@@ -34,6 +34,15 @@
   }
 }
 
+@keyframes fillGauge {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 /* 커스텀 애니메이션 클래스 */
 .animate-fade-in {
   animation: fadeIn 1s ease forwards;
@@ -79,4 +88,10 @@
 
 .animate-bounceArrow2 {
   animation: staggeredBounce 1.5s ease-in-out infinite 0.2s;
+}
+
+.animate-fill-gauge {
+  width: 0;
+  animation: fillGauge 0.8s ease-in-out forwards;
+  animation-delay: 2s;
 }
