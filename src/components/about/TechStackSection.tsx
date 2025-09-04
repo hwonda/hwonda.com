@@ -20,7 +20,14 @@ export default function TechStackSection({ techStacks }: TechStackProps) {
                 className="group text-gray4 hover:text-sub grid grid-cols-[126px_1fr] gap-2 transition-all duration-300"
               >
                 <span className="border-gray7 group-hover:border-accent-2 relative h-7 rounded-full border px-3 py-0.5 text-center text-sm">
-                  <span className="animate-fill-gauge from-accent-2 to-accent-4 absolute inset-0 rounded-full bg-gradient-to-r opacity-0 group-hover:opacity-20" />
+                  <span
+                    className="animate-fill-gauge from-accent-4 to-accent-1 absolute inset-0 rounded-full bg-gradient-to-r opacity-0 group-hover:opacity-40"
+                    style={
+                      {
+                        '--gauge-width': `${skill.proficiency}%`,
+                      } as React.CSSProperties
+                    }
+                  />
                   <span className="text-sub group-hover:text-main relative z-10">
                     {skill.name}
                   </span>
