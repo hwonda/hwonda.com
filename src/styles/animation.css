@@ -19,6 +19,15 @@
   }
 }
 
+@keyframes gradientRiseUp {
+  from {
+    background-position: 0% 100%;
+  }
+  to {
+    background-position: 0% 0%;
+  }
+}
+
 @keyframes staggeredBounce {
   0%, 100% { 
     transform: translateY(0); 
@@ -98,4 +107,27 @@
 
 .group:hover .animate-fill-gauge {
   animation-play-state: running;
+}
+
+/* 그라데이션 애니메이션 */
+.animate-gradient-rise {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.animate-gradient-rise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, var(--color-accent-1), var(--color-accent-5));
+  background-size: 100% 200%;
+  background-position: 0% 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.animate-gradient-rise:hover::before {
+  opacity: 1;
+  animation: gradientRiseUp 0.5s ease forwards;
 }

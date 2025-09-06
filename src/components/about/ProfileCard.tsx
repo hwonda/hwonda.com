@@ -57,24 +57,24 @@ export default function ProfileCard({
             href={`https://github.com/${github}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:outline-accent-2 rounded-full p-2 hover:outline"
+            className="animate-gradient-rise relative overflow-hidden rounded-full p-2"
           >
             <img
               src="/images/github-white.webp"
               alt="GitHub"
-              className="h-6 w-6"
+              className="relative z-1 h-6 w-6"
             />
           </a>
           <a
             href={`https://linkedin.com/in/${linkedin}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:outline-accent-3 relative rounded-sm p-2 hover:outline"
+            className="animate-gradient-rise relative overflow-hidden rounded-sm p-2"
           >
             <img
               src="/images/linkedin-white.webp"
               alt="LinkedIn"
-              className="h-6 w-6"
+              className="relative z-1 h-6 w-6"
             />
           </a>
         </div>
