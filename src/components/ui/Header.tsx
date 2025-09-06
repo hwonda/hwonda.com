@@ -48,7 +48,7 @@ const Header = () => {
         </a>
         <a
           href="https://hwonda.com/blog"
-          className="color-sub hover:bg-accent-1/20 rounded-full px-1.5 py-1.5 transition-all duration-300 sm:px-3"
+          className="color-sub hover:bg-accent-3/30 rounded-full px-1.5 py-1.5 transition-all duration-300 sm:px-3"
         >
           블로그
         </a>
