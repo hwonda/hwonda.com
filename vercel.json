@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/blog",
+      "destination": "https://hwonda.com/blog"
+    },
+    {
+      "source": "/blog/(.*)",
+      "destination": "https://hwonda.com/blog/$1"
+    }
+  ]
+}
