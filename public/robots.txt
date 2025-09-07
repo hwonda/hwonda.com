@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hwonda.com/sitemap.xml 
+Sitemap: https://www.hwonda.com/sitemap-index.xml
