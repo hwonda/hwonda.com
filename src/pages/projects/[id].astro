@@ -43,6 +43,7 @@ const allImages = [project.images.thumbnail, ...fullImages];
 <Layout
   title={`${project.title} | 주다훤 포트폴리오`}
   description={project.description.short}
+  canonicalURL={new URL(`/projects/${project.id}`, Astro.site).toString()}
 >
   <main class="w-full px-4 py-16 sm:px-8 md:px-10 lg:px-20 xl:px-40">
     <div class="my-8 w-fit">
