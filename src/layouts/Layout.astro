@@ -84,7 +84,7 @@ const siteURL = Astro.site || 'https://www.hwonda.com/';
     <title>{title}</title>
   </head>
   <body class="min-h-screen overflow-x-hidden">
-    <main class="container min-w-screen">
+    <main class="container min-w-screen min-h-screen">
       <div
         class="fixed top-4 z-50 w-full px-4 sm:px-8 md:px-10 lg:px-20 xl:px-40"
       >
@@ -93,4 +93,17 @@ const siteURL = Astro.site || 'https://www.hwonda.com/';
       <slot />
     </main>
   </body>
+  <footer>
+    <div class="bg-gray9 container min-w-screen flex flex-col justify-center items-center mt-20 py-5">
+      <p class="text-gray3 text-sm">
+        <span>© 2025 </span>
+        <span class="font-bold text-gray1">주다훤</span> 
+        <span>All rights reserved.</span>
+      </p>
+      <p class="text-gray3 text-sm">
+        <span>Powered by </span>
+        <span class="font-bold text-gray1">Astro</span>
+      </p>
+    </div>
+  </footer>
 </html>
