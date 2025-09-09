@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/microfrontends.json",
+  "applications": {
+    "hwonda.com": {
+      "development": {
+        "fallback": "www.hwonda.com"
+      }
+    },
+    "blog": {
+      "routing": [
+        {
+          "paths": [
+            "/blog",
+            "/blog/:path*"
+          ]
+        }
+      ]
+    }
+  }
+}
