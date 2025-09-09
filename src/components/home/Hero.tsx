@@ -101,7 +101,7 @@ const ButtonWrapper = ({ isLoaded }: { isLoaded: boolean }) => {
     >
       <a
         href="/projects"
-        className="bg-foreground hover:bg-foreground/80 text-inverse rounded-lg px-6 py-3 font-bold transition-colors"
+        className="bg-foreground hover:bg-foreground/80 text-inverse rounded-lg px-6 pt-3.5 pb-2.5 font-bold transition-colors"
       >
         프로젝트 보기
       </a>
@@ -118,6 +118,7 @@ const ButtonWrapper = ({ isLoaded }: { isLoaded: boolean }) => {
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const lastModified = new Date().toISOString().split('T')[0];
 
   useEffect(() => {
     setIsLoaded(false);
@@ -142,6 +143,11 @@ const Hero = () => {
           <ButtonWrapper isLoaded={isLoaded} />
         </div>
       </div>
+
+      <p className="absolute right-4 bottom-4 text-sm">
+        <span className="text-gray6 text-xs">Last Modified</span>
+        <span className="text-gray3 ml-2 font-bold">{lastModified}</span>
+      </p>
     </section>
   );
 };
