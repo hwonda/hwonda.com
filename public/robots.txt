@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.hwonda.com/sitemap-index.xml
+Sitemap: https://www.hwonda.com/blog/sitemap.xml
