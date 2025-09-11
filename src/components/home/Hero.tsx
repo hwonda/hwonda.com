@@ -118,7 +118,7 @@ const ButtonWrapper = ({ isLoaded }: { isLoaded: boolean }) => {
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const lastModified = new Date().toISOString().split('T')[0];
+  const lastModified = '25/09/11';
 
   useEffect(() => {
     setIsLoaded(false);
