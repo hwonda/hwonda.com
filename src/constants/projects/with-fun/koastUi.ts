@@ -59,5 +59,6 @@ Github Pages로 Storybook Docs를 제작하고 NPM에 배포했으며,
     'Storybook',
     'Git',
     'Github Actions',
+    'npm',
   ],
 };

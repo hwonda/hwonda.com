@@ -48,12 +48,13 @@ GitHub에서 300개 이상의 별을 받았으며, 지속적인 기여와 개선
   role: 'Contributor/Maintainer',
   team: 'AXISJ(Open Source Team)',
   techStack: [
-    'Github',
-    'React',
+    'React.js',
+    'TypeScript',
     'Jest',
     'Docusaurus',
     'mdx',
     'Git',
     'Github Actions',
+    'npm',
   ],
 };

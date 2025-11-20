@@ -34,7 +34,6 @@ export const mmis2025: Project = {
     'TypeScript',
     'SCSS',
     'Axios',
-    'React-Native',
     'OpenLayers',
     'Docker',
     'Jira',
