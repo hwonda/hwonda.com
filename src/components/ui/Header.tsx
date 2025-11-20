@@ -34,7 +34,7 @@ const Header = () => {
       {/* 컨텐츠 */}
       <h1 className="font-paperlogy relative z-10 text-base font-medium sm:text-2xl">
         <a href="/" aria-label="홈페이지로 이동">
-          <span className="hidden sm:inline">여름에 더 뜨거운 개발자</span>
+          <span className="hidden sm:inline">겨울에 더 뜨거운 개발자</span>
           <span className="sm:hidden">뜨거운 개발자</span>
         </a>
       </h1>

@@ -35,8 +35,7 @@ export const aboutParagraphs = [
 export const personalInfo = {
   name: '주다훤',
   title: '프론트엔드 개발자',
-  profileImage:
-    'https://media.licdn.com/dms/image/v2/D5603AQFaLlB2j5rQFg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1722641365907?e=1758153600&v=beta&t=9D-5anZ8tfQZP3yPR3m-HVQW0KjKt0Y5wM5e15HTyeA',
+  profileImage: 'https://avatars.githubusercontent.com/u/95617014?v=4',
   email: 'hwondaa@gmail.com',
   github: 'hwonda',
   linkedin: 'hwonda',
