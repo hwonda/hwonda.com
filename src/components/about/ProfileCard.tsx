@@ -29,8 +29,8 @@ export default function ProfileCard({
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="text-center">
-        <div className="mx-auto mb-4 h-40 w-40">
+      <div className="flex flex-col items-center">
+        <div className="mb-4 h-40 w-40">
           <img
             src={profileImage}
             alt={`${name} 프로필 이미지`}
