@@ -105,7 +105,8 @@
   animation-play-state: paused;
 }
 
-.group:hover .animate-fill-gauge {
+.group:hover .animate-fill-gauge,
+.highlighted-skill .animate-fill-gauge {
   animation-play-state: running;
 }
 
