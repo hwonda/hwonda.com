@@ -1,5 +1,5 @@
 import { X } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { type YearProjects } from '@/types/projects';
 import {
@@ -16,6 +16,16 @@ interface ProjectsPageProps {
 }
 
 export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
+  // URL에서 초기값 읽기
+  const getInitialState = useCallback(() => {
+    if (typeof window === 'undefined') return { tab: 'all', stacks: [] };
+    const params = new URLSearchParams(window.location.search);
+    const tab = params.get('tab') || 'all';
+    const stackParam = params.get('stack');
+    const stacks = stackParam ? stackParam.split(',').filter(Boolean) : [];
+    return { tab, stacks };
+  }, []);
+
   const [activeYear, setActiveYear] = useState<string>('all');
   const [hoverYear, setHoverYear] = useState<string | null>(null);
   const [filteredProjects, setFilteredProjects] = useState<YearProjects[]>([]);
@@ -36,13 +46,45 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
   // 각 기술 스택이 사용된 프로젝트 수 계산
   const skillCounts = countProjectsBySkill(projectsData);
 
+  // URL 업데이트 함수
+  const updateURL = (tab: string, stacks: string[]) => {
+    if (typeof window === 'undefined') return;
+
+    const params = new URLSearchParams();
+    if (tab !== 'all') params.set('tab', tab);
+    if (stacks.length > 0) params.set('stack', stacks.join(','));
+
+    const newURL = params.toString()
+      ? `${window.location.pathname}?${params.toString()}`
+      : window.location.pathname;
+
+    window.history.pushState({}, '', newURL);
+  };
+
+  // 초기 마운트 시 URL에서 상태 읽기
   useEffect(() => {
+    const state = getInitialState();
+    setActiveYear(state.tab);
+    setActiveTechStacks(state.stacks);
+
     const timer = setTimeout(() => {
       setIsLoaded(true);
     }, 100);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [getInitialState]);
+
+  // URL 변경 감지 (뒤로가기/앞으로가기 지원)
+  useEffect(() => {
+    const handlePopState = () => {
+      const state = getInitialState();
+      setActiveYear(state.tab);
+      setActiveTechStacks(state.stacks);
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [getInitialState, setActiveYear, setActiveTechStacks]);
 
   // 탭 변경 처리 함수
   const handleYearChange = (year: string) => {
@@ -50,6 +92,7 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
 
     setIsAnimating(true);
     setActiveYear(year);
+    updateURL(year, activeTechStacks);
 
     // 애니메이션을 위한 타이머 설정
     setTimeout(() => {
@@ -63,11 +106,11 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
 
     // 이미 선택된 기술 스택인 경우 제거, 아니면 추가
     setActiveTechStacks((prev) => {
-      if (prev.includes(tech)) {
-        return prev.filter((item) => item !== tech);
-      } else {
-        return [...prev, tech];
-      }
+      const newStacks = prev.includes(tech)
+        ? prev.filter((item) => item !== tech)
+        : [...prev, tech];
+      updateURL(activeYear, newStacks);
+      return newStacks;
     });
 
     setTimeout(() => {
@@ -78,6 +121,7 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
   // 모든 기술 스택 필터 초기화
   const resetTechStackFilters = () => {
     setActiveTechStacks([]);
+    updateURL(activeYear, []);
     setIsAnimating(true);
     setTimeout(() => {
       setIsAnimating(false);

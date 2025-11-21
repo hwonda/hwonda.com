@@ -38,6 +38,7 @@ const bottomImages = fullImages.slice(4);
 
 // 모든 이미지 배열 생성 (썸네일 + 전체 이미지)
 const allImages = [project.images.thumbnail, ...fullImages];
+const lowercase = (str: string) => str.toLowerCase();
 ---
 
 <Layout
@@ -75,11 +76,14 @@ const allImages = [project.images.thumbnail, ...fullImages];
       <div class="mt-3 flex flex-wrap gap-2">
         {
           project.techStack?.map((tech) => (
-            <span class="text-gray-1 border-accent-2 relative rounded-full border px-3 py-1 text-sm">
+            <a
+              href={`/projects?stack=${encodeURIComponent(lowercase(tech))}`}
+              class="text-gray-1 border-accent-2 relative rounded-full border px-3 py-1 text-sm"
+            >
               <span class="from-accent-2 to-accent-4 absolute inset-0 rounded-full bg-gradient-to-r opacity-20" />
               <span class="bg-gray-8 absolute inset-[1px] rounded-full" />
               <span class="text-gray-1 relative z-10">{tech}</span>
-            </span>
+            </a>
           ))
         }
       </div>

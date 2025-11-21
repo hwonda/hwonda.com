@@ -9,6 +9,8 @@ interface TechStackProps {
 export default function TechStackSection({ techStacks }: TechStackProps) {
   const [isHighlighted, setIsHighlighted] = useState(false);
 
+  const lowercase = (str: string) => str.toLowerCase();
+
   return (
     <div className="border-gray9 rounded-lg border p-4 sm:p-6">
       <div className="mb-4 flex items-center justify-between">
@@ -45,7 +47,11 @@ export default function TechStackSection({ techStacks }: TechStackProps) {
               const nameClass = `relative z-10 ${isHighlighted ? 'text-main' : 'text-sub group-hover:text-main'}`;
 
               return (
-                <div key={idx} className={skillItemClass}>
+                <a
+                  key={idx}
+                  href={`/projects?stack=${encodeURIComponent(lowercase(skill.name))}`}
+                  className={skillItemClass}
+                >
                   <span className={badgeClass}>
                     <span
                       key={`gauge-${isHighlighted}`}
@@ -62,7 +68,7 @@ export default function TechStackSection({ techStacks }: TechStackProps) {
                     <span className={nameClass}>{skill.name}</span>
                   </span>
                   <span className="mt-[3px] text-sm">{skill.description}</span>
-                </div>
+                </a>
               );
             })}
           </div>
