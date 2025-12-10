@@ -15,16 +15,7 @@ Github Pages로 Storybook Docs를 제작하고 NPM에 배포했으며,
   },
   images: {
     thumbnail: '/projects/koast-ui/thumbnail.webp',
-    full: [
-      '/projects/koast-ui/1.webp',
-      '/projects/koast-ui/2.webp',
-      '/projects/koast-ui/3.webp',
-      '/projects/koast-ui/4.webp',
-      '/projects/koast-ui/5.webp',
-      '/projects/koast-ui/6.webp',
-      '/projects/koast-ui/7.webp',
-      '/projects/koast-ui/8.webp',
-    ],
+    full: [],
   },
   urls: {
     github: 'https://github.com/koast-crew/koast-ui',
