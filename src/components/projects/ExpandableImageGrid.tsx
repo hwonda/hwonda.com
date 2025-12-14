@@ -49,9 +49,9 @@ const ExpandableImageGrid = ({
       </div>
       <button
         onClick={toggleExpand}
-        className={`bg-accent-1 hover:bg-accent-1/90 text-inverse ${isExpanded ? 'mt-3' : 'mt-0'} cursor-pointer rounded px-4 py-2 font-bold transition-colors`}
+        className={`bg-accent-1 hover:bg-accent-1/90 text-inverse ${isExpanded ? '' : 'mt-0'} cursor-pointer rounded px-4 py-2 font-bold transition-colors`}
       >
-        {isExpanded ? '접기' : '더보기'}
+        {isExpanded ? '접기' : '이미지 더보기'}
       </button>
     </div>
   );
