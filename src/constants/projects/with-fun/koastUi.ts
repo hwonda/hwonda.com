@@ -8,14 +8,18 @@ export const koastUi: Project = {
   description: {
     short:
       '사내 React UI 라이브러리로, 개발 러닝커브를 낮추고 일관된 디자인 아이덴티티를 제공합니다.',
-    full: `React 기반 UI 개발의 러닝커브를 낮추기 위해 자발적으로 사내 공용 UI 라이브러리를 자발적으로 개발했습니다.
-      기존에 JSP, 타임리프, Vue 등 다양한 프레임워크가 혼재된 환경에서 React로 표준화하는 과정이 더 큰 도전이었고, 특히 지도 요소에 필수적인 Time slider나 Legend 같은 특화 컴포넌트를 React로 구현하고 공용화하는 데 어려움이 있었습니다.
-      Github Pages로 Storybook Docs를 제작하고 NPM에 배포했으며, Github Actions를 활용하여 태그 생성부터 배포까지 자동화하였습니다. 백엔드 개발자의 UI 구현 속도 향상 및 서비스 전반에 일관된 디자인 아이덴티티를 부여했습니다.`,
+    full: `React 기반 UI 개발의 러닝커브를 낮추기 위해 자발적으로 **사내 공용 UI 라이브러리**를 자발적으로 개발했습니다.
+      기존에 JSP, 타임리프, Vue 등 다양한 프레임워크가 혼재된 환경에서 React로 표준화하는 과정에서 **UI 구현 속도 저하가 큰 이슈사항**이었고, 특히 지도 요소에 필수적인 Time slider나 Legend 같은 특화 컴포넌트를 React로 구현하고 공용화하는 데 어려움이 있었습니다.
+      Github Pages로 **Storybook Docs를 제작**하고 **NPM에 배포**했으며, **Github Actions를 활용하여 태그 생성부터 배포까지 자동화**하였습니다. 백엔드 개발자의 **UI 구현 속도 향상 및 서비스 전반에 일관된 디자인 아이덴티티를 부여**했습니다.`,
   },
   images: {
     thumbnail: '/projects/koast-ui/thumbnail.webp',
-    full: ['/projects/koast-ui/1.webp'],
-    captions: ['라이브러리 NPM 배포 화면', 'Github Actions 배포 화면'],
+    full: ['/projects/koast-ui/1.webp', '/projects/koast-ui/2.webp'],
+    captions: [
+      '라이브러리 NPM 배포 화면',
+      'Github Actions 배포 화면',
+      'Storybook Docs 화면',
+    ],
   },
   urls: {
     github: 'https://github.com/koast-crew/koast-ui',
