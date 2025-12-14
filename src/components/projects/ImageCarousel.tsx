@@ -231,9 +231,12 @@ export default function ImageCarousel({
         </button>
 
         {/* 메인 이미지 */}
+        <div className="z-10 text-end text-white">
+          {currentIndex + 1} / {images.length}
+        </div>
         <div
           ref={mainImageRef}
-          className="relative flex aspect-video flex-1 cursor-grab items-center justify-center overflow-hidden"
+          className="relative flex max-h-[60vh] flex-1 cursor-grab items-center justify-center overflow-hidden"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
@@ -247,9 +250,6 @@ export default function ImageCarousel({
             className="transition-transform duration-200"
             style={{ transform: `translateX(${swipeOffset}px)` }}
           >
-            <div className="z-10 text-end text-white">
-              {currentIndex + 1} / {images.length}
-            </div>
             <img
               src={images[currentIndex]}
               alt={captions?.[currentIndex] || `이미지 ${currentIndex + 1}`}
@@ -261,12 +261,15 @@ export default function ImageCarousel({
             type="button"
             className="bg-gray8 hover:bg-accent-1 text-main absolute left-0 rounded-full p-2 opacity-70 transition-all duration-300 hover:cursor-pointer sm:left-4"
             onClick={handlePrev}
+            onMouseDown={(e) => e.stopPropagation()}
           >
             <ChevronLeft className="text-main ml-[-2px] size-6" />
           </button>
           <button
+            type="button"
             className="bg-gray8 hover:bg-accent-1 text-main absolute right-0 rounded-full p-2 opacity-70 transition-all duration-300 hover:cursor-pointer sm:right-4"
             onClick={handleNext}
+            onMouseDown={(e) => e.stopPropagation()}
           >
             <ChevronRight className="text-main mr-[-2px] size-6" />
           </button>
