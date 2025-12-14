@@ -233,7 +233,7 @@ export default function ImageCarousel({
         {/* 메인 이미지 */}
         <div
           ref={mainImageRef}
-          className="relative flex flex-1 cursor-grab items-center justify-center overflow-hidden"
+          className="relative flex aspect-video flex-1 cursor-grab items-center justify-center overflow-hidden"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
@@ -275,7 +275,7 @@ export default function ImageCarousel({
         {/* 이미지 설명 */}
         {captions && captions[currentIndex] && (
           <div className="bg-gray8 mt-4 rounded-lg p-4 text-center">
-            <p className="text-gray-1">{captions[currentIndex]}</p>
+            <p className="text-gray1">{captions[currentIndex]}</p>
           </div>
         )}
 

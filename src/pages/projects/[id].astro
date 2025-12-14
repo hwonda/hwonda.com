@@ -60,7 +60,7 @@ const lowercase = (str: string) => str.toLowerCase();
 
     <div class="mb-16 space-y-2">
       <h1 class="font-paperlogy text-4xl font-bold">{project.title}</h1>
-      <h2 class="text-gray-2 text-lg">{project.description.short}</h2>
+      <h2 class="text-gray2 text-lg">{project.description.short}</h2>
       <div
         class="grid grid-cols-[auto_1fr] justify-start gap-2 md:grid-cols-[auto_auto_auto_auto_auto_auto]"
       >
@@ -79,11 +79,11 @@ const lowercase = (str: string) => str.toLowerCase();
           project.techStack?.map((tech) => (
             <a
               href={`/projects?stack=${encodeURIComponent(lowercase(tech))}`}
-              class="text-gray-1 border-accent-2 relative rounded-full border px-3 py-1 text-sm"
+              class="text-gray1 border-accent-2 relative rounded-full border px-3 py-1 text-sm"
             >
               <span class="from-accent-2 to-accent-4 absolute inset-0 rounded-full bg-gradient-to-r opacity-20" />
               <span class="bg-gray-8 absolute inset-[1px] rounded-full" />
-              <span class="text-gray-1 relative z-10">{tech}</span>
+              <span class="text-gray1 relative z-10">{tech}</span>
             </a>
           ))
         }

@@ -8,7 +8,7 @@ export default function About() {
           <h2 className="font-pretendard mb-8 text-center text-3xl font-bold md:text-4xl">
             소개
           </h2>
-          <div className="text-gray-1 space-y-4">
+          <div className="text-gray1 space-y-4">
             <p>
               안녕하세요, 프론트엔드 개발자 주다훤입니다. 사용자 경험을 중심으로
               한 웹 개발에 관심이 많으며, 최신 기술 트렌드를 따라가며 지속적으로
