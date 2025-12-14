@@ -35,10 +35,12 @@ const ProjectPointsAccordion = ({ points }: ProjectPointsAccordionProps) => {
                   도전 과제 {index + 1}
                 </h2>
                 <div
-                  className={`accordion-header bg-gray9 flex h-full cursor-pointer justify-between rounded-lg p-6 transition-colors hover:bg-gray-800 ${isOpen ? 'rounded-b-none' : ''}`}
+                  className={`accordion-header bg-gray9 flex h-full cursor-pointer justify-between rounded-lg p-6 transition-colors hover:bg-gray-800 ${isOpen ? 'rounded-b-none' : ''} ${isOpen ? 'outline-accent-2 outline-b-none outline' : ''}`}
                   onClick={() => handleToggle(index)}
                 >
-                  <div className="text-gray-2 whitespace-pre-line">
+                  <div
+                    className={`whitespace-pre-line ${isOpen ? 'text-gray2' : 'text-sub'}`}
+                  >
                     {point.challenges}
                   </div>
                   <ChevronDown
@@ -51,32 +53,34 @@ const ProjectPointsAccordion = ({ points }: ProjectPointsAccordionProps) => {
               </div>
             )}
             <div
-              className={`grid transition-[grid-template-rows] duration-400 ease-in-out ${
-                isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+              className={`grid rounded-b-lg transition-[grid-template-rows] duration-400 ease-in-out ${
+                isOpen
+                  ? 'outline-accent-2 outline-t-none grid-rows-[1fr] outline'
+                  : 'grid-rows-[0fr]'
               }`}
             >
               <div className="min-h-0 overflow-hidden">
                 <div
-                  className={`accordion-content border-gray8 grid rounded-b-lg border-t transition-opacity duration-300 md:grid-cols-2 ${
+                  className={`accordion-content border-gray8 grid border-t transition-opacity duration-300 md:grid-cols-2 ${
                     isOpen ? 'opacity-100' : 'opacity-0'
                   }`}
                 >
                   {point.solutions && (
                     <div className="bg-gray9 h-full p-6">
-                      <h3 className="font-pretendard text-accent-3/80 text-lg font-bold">
+                      <h3 className="font-pretendard text-accent-3/80 mb-2 text-lg font-bold">
                         {'노력 / 방법'}
                       </h3>
-                      <div className="text-gray-2 whitespace-pre-line">
+                      <div className="text-sub whitespace-pre-line">
                         {point.solutions}
                       </div>
                     </div>
                   )}
                   {point.results && (
                     <div className="bg-gray9 h-full p-6">
-                      <h3 className="font-pretendard text-accent-2/80 text-lg font-bold">
+                      <h3 className="font-pretendard text-accent-2/80 mb-2 text-lg font-bold">
                         {'결과 / 성과'}
                       </h3>
-                      <div className="text-gray-2 whitespace-pre-line">
+                      <div className="text-sub whitespace-pre-line">
                         {point.results}
                       </div>
                     </div>
