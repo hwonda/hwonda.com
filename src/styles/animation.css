@@ -52,6 +52,37 @@
   }
 }
 
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 1000px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpCollapse {
+  from {
+    max-height: 1000px;
+    opacity: 1;
+  }
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes rotate180 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
 /* 커스텀 애니메이션 클래스 */
 .animate-fade-in {
   animation: fadeIn 1s ease forwards;
@@ -131,4 +162,24 @@
 .animate-gradient-rise:hover::before {
   opacity: 1;
   animation: gradientRiseUp 0.5s ease forwards;
+}
+
+/* 슬라이드 다운/업 애니메이션 */
+.animate-slide-down {
+  animation: slideDown 0.5s ease forwards;
+  overflow: hidden;
+}
+
+.animate-slide-up {
+  animation: slideUpCollapse 0.5s ease forwards;
+  overflow: hidden;
+}
+
+/* 회전 애니메이션 */
+.animate-rotate-180 {
+  animation: rotate180 0.3s ease forwards;
+}
+
+.animate-rotate-0 {
+  animation: rotate180 0.3s ease reverse;
 }
