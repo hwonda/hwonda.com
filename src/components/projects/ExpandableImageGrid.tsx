@@ -21,7 +21,7 @@ const ExpandableImageGrid = ({
           behavior: 'smooth',
           block: 'center',
         });
-      }, 100);
+      }, 200);
     }
   };
 
@@ -49,9 +49,9 @@ const ExpandableImageGrid = ({
       </div>
       <button
         onClick={toggleExpand}
-        className={`bg-accent-1 hover:bg-accent-1/90 text-inverse ${isExpanded ? '' : 'mt-0'} cursor-pointer rounded px-4 py-2 font-bold transition-colors`}
+        className={`bg-accent-1 hover:bg-accent-1/90 text-inverse ${isExpanded ? '' : 'mt-0'} my-2 cursor-pointer rounded px-4 py-2 font-bold transition-colors`}
       >
-        {isExpanded ? '접기' : '이미지 더보기'}
+        {isExpanded ? '이미지 접기' : '이미지 더보기'}
       </button>
     </div>
   );
