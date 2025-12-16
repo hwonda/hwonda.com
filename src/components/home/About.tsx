@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function About() {
   return (
-    <section className="bg-gray-9 py-16">
+    <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl">
           <h2 className="font-pretendard mb-8 text-center text-3xl font-bold md:text-4xl">

@@ -1,6 +1,8 @@
 import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 
+import MarkdownContent from '../common/MarkdownContent';
+
 interface ProjectPoint {
   challenges?: string;
   solutions?: string;
@@ -41,7 +43,7 @@ const ProjectPointsAccordion = ({ points }: ProjectPointsAccordionProps) => {
                   <div
                     className={`whitespace-pre-line ${isOpen ? 'text-gray2' : 'text-sub'}`}
                   >
-                    {point.challenges}
+                    <MarkdownContent content={point.challenges} />
                   </div>
                   <ChevronDown
                     className={`flex-shrink-0 transition-transform duration-300 ${
@@ -71,7 +73,7 @@ const ProjectPointsAccordion = ({ points }: ProjectPointsAccordionProps) => {
                         {'노력 / 방법'}
                       </h3>
                       <div className="text-sub whitespace-pre-line">
-                        {point.solutions}
+                        <MarkdownContent content={point.solutions} />
                       </div>
                     </div>
                   )}
@@ -81,7 +83,7 @@ const ProjectPointsAccordion = ({ points }: ProjectPointsAccordionProps) => {
                         {'결과 / 성과'}
                       </h3>
                       <div className="text-sub whitespace-pre-line">
-                        {point.results}
+                        <MarkdownContent content={point.results} />
                       </div>
                     </div>
                   )}

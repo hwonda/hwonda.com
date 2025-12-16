@@ -28,7 +28,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           className="aspect-video object-cover transition-transform duration-500 group-hover:scale-105"
         />
         {/* 그라데이션 오버레이 */}
-        <div className="from-gray-9/80 absolute inset-0 bg-gradient-to-t to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-40" />
+        <div className="from-gray9/80 absolute inset-0 bg-gradient-to-t to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-40" />
       </div>
 
       {/* 프로젝트 정보 */}
