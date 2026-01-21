@@ -3,7 +3,7 @@ import { getProjectPeriod } from '@/utils/dateUtils';
 
 export const digitalTwin: Project = {
   id: 'digital-twin',
-  title: '디지털 트윈',
+  title: '해양예측정보 제공 서비스',
   subtitle: '어획량 예측 웹 개발',
   description: {
     short:

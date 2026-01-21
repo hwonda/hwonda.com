@@ -76,8 +76,8 @@ export const diki: Project = {
     },
   ],
   startTime: '2024.10',
-  endTime: '현재',
-  period: getProjectPeriod('2024.10', '현재'),
+  endTime: '2025.12',
+  period: getProjectPeriod('2024.10', '2025.12'),
   role: 'Frontend / Backend / SEO',
   team: 'DXWiki',
   techStack: [

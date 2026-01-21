@@ -25,9 +25,9 @@ export const zizizip: Project = {
       results: ``,
     },
   ],
-  startTime: '2025.09',
-  endTime: '현재',
-  period: getProjectPeriod('2025.09', '현재'),
+  startTime: '2025.10',
+  endTime: '2025.12',
+  period: getProjectPeriod('2025.10', '2025.12'),
   role: 'Frontend / Backend / SEO',
   team: '개인',
   techStack: [
