@@ -2,11 +2,11 @@ import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import type { MouseEvent, TouchEvent } from 'react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-import { testimonials } from '@/constants/testimonialsConst';
+import { recommendations } from '@/constants/recommendationsConst';
 
 const AUTO_SLIDE_INTERVAL = 5000; // 5초
 
-export default function Testimonials() {
+export default function Recommendation() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -21,14 +21,14 @@ export default function Testimonials() {
 
   const handlePrev = useCallback(() => {
     setCurrentIndex((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1,
+      prev === 0 ? recommendations.length - 1 : prev - 1,
     );
     setProgress(0);
   }, []);
 
   const handleNext = useCallback(() => {
     setCurrentIndex((prev) =>
-      prev === testimonials.length - 1 ? 0 : prev + 1,
+      prev === recommendations.length - 1 ? 0 : prev + 1,
     );
     setProgress(0);
   }, []);
@@ -131,7 +131,7 @@ export default function Testimonials() {
     setIsPaused(false);
   };
 
-  const currentTestimonial = testimonials[currentIndex];
+  const currentRecommendation = recommendations[currentIndex];
 
   return (
     <section className="py-20">
@@ -142,10 +142,28 @@ export default function Testimonials() {
 
         <div
           ref={containerRef}
-          className="relative mx-auto max-w-3xl"
+          className="group relative mx-auto max-w-3xl"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={handleMouseLeave}
         >
+          {/* 좌우 네비게이션 버튼 - lg 이상: 카드 외부 */}
+          <button
+            type="button"
+            onClick={handlePrev}
+            onMouseDown={(e) => e.stopPropagation()}
+            className="bg-gray8 hover:bg-accent-1 absolute top-1/2 z-10 hidden -translate-y-1/2 rounded-full p-2 transition-all duration-300 lg:left-[-60px] lg:block lg:opacity-70 lg:hover:opacity-100"
+          >
+            <ChevronLeft className="text-main size-5" />
+          </button>
+          <button
+            type="button"
+            onClick={handleNext}
+            onMouseDown={(e) => e.stopPropagation()}
+            className="bg-gray8 hover:bg-accent-1 absolute top-1/2 z-10 hidden -translate-y-1/2 rounded-full p-2 transition-all duration-300 lg:right-[-60px] lg:block lg:opacity-70 lg:hover:opacity-100"
+          >
+            <ChevronRight className="text-main size-5" />
+          </button>
+
           {/* 메인 카드 영역 */}
           <div
             className="bg-gray9 relative cursor-grab overflow-hidden rounded-2xl border border-gray-700 p-6 select-none sm:p-8 md:p-10"
@@ -166,7 +184,7 @@ export default function Testimonials() {
               style={{ transform: `translateX(${swipeOffset}px)` }}
             >
               <p className="text-gray1 mb-8 min-h-[120px] text-base leading-relaxed sm:text-lg md:min-h-[100px]">
-                "{currentTestimonial.content}"
+                "{currentRecommendation.content}"
               </p>
 
               {/* 구분선 */}
@@ -177,32 +195,32 @@ export default function Testimonials() {
                 {/* 아바타 플레이스홀더 */}
                 <div className="from-accent-1 to-accent-4 flex size-12 items-center justify-center rounded-full bg-gradient-to-br">
                   <span className="text-lg font-bold text-white">
-                    {currentTestimonial.name.charAt(0)}
+                    {currentRecommendation.name.charAt(0)}
                   </span>
                 </div>
 
                 <div className="flex flex-col">
                   <span className="text-main font-bold">
-                    {currentTestimonial.name}
+                    {currentRecommendation.name}
                   </span>
                   <span className="text-gray3 text-sm">
-                    {currentTestimonial.role}
-                    {currentTestimonial.company &&
-                      ` · ${currentTestimonial.company}`}
+                    {currentRecommendation.role}
+                    {currentRecommendation.company &&
+                      ` · ${currentRecommendation.company}`}
                   </span>
                   <span className="text-accent-2 text-xs">
-                    {currentTestimonial.relationship}
+                    {currentRecommendation.relationship}
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* 좌우 네비게이션 버튼 */}
+            {/* 좌우 네비게이션 버튼 - sm~lg: 카드 내부, 호버 시에만 표시 */}
             <button
               type="button"
               onClick={handlePrev}
               onMouseDown={(e) => e.stopPropagation()}
-              className="bg-gray8 hover:bg-accent-1 absolute top-1/2 left-2 -translate-y-1/2 rounded-full p-2 opacity-70 transition-all duration-300 hover:opacity-100 sm:left-4"
+              className="bg-gray8 hover:bg-accent-1 absolute top-1/2 left-4 hidden -translate-y-1/2 rounded-full p-2 opacity-0 transition-all duration-300 group-hover:opacity-100 sm:block lg:hidden"
             >
               <ChevronLeft className="text-main size-5" />
             </button>
@@ -210,7 +228,7 @@ export default function Testimonials() {
               type="button"
               onClick={handleNext}
               onMouseDown={(e) => e.stopPropagation()}
-              className="bg-gray8 hover:bg-accent-1 absolute top-1/2 right-2 -translate-y-1/2 rounded-full p-2 opacity-70 transition-all duration-300 hover:opacity-100 sm:right-4"
+              className="bg-gray8 hover:bg-accent-1 absolute top-1/2 right-4 hidden -translate-y-1/2 rounded-full p-2 opacity-0 transition-all duration-300 group-hover:opacity-100 sm:block lg:hidden"
             >
               <ChevronRight className="text-main size-5" />
             </button>
@@ -220,7 +238,7 @@ export default function Testimonials() {
           <div className="mt-6 flex flex-col items-center gap-4">
             {/* Dot 인디케이터 */}
             <div className="flex gap-2">
-              {testimonials.map((_, index) => (
+              {recommendations.map((_, index) => (
                 <button
                   key={index}
                   type="button"
@@ -244,7 +262,8 @@ export default function Testimonials() {
 
             {/* 현재 위치 표시 */}
             <span className="text-gray4 text-sm">
-              {currentIndex + 1} / {testimonials.length}
+              <span className="text-accent-1">{currentIndex + 1}</span> /{' '}
+              {recommendations.length}
             </span>
           </div>
         </div>
