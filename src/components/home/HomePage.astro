@@ -3,6 +3,7 @@
 import About from './About';
 import Hero from './Hero';
 import Projects from './Projects';
+import Recommendation from './Recommendation';
 ---
 
 <>
@@ -10,6 +11,7 @@ import Projects from './Projects';
 
   <!-- <Header client:load /> -->
   <div class="flex flex-col px-4 sm:px-8 md:px-10 lg:px-20 xl:px-40">
+    <Recommendation client:visible />
     <Projects client:visible />
     <About />
   </div>
