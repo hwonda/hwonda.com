@@ -216,76 +216,31 @@ export default function ImageCarousel({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
-      <div
-        className="bg-background border-accent-2 relative flex max-h-[90vh] w-[90vw] flex-col rounded-md border p-4"
-        onClick={(e) => e.stopPropagation()}
-      >
-        {/* 닫기 버튼 */}
+    <div className="fixed inset-0 z-50 flex h-screen flex-col items-center justify-center bg-black/80">
+      {/* 닫기 버튼 */}
+      <div className="absolute top-0 left-0 z-10 w-full">
         <button
-          className="bg-gray8 hover:bg-accent-1 text-main absolute top-[-48px] right-0 z-10 flex w-full items-center justify-center gap-2 rounded-lg p-2 transition-all duration-300 hover:cursor-pointer sm:pl-3.5"
+          className="hover:text-accent-4 text-accent-1 flex h-[60px] w-full items-center gap-1.5 px-10 transition-all duration-300 hover:cursor-pointer"
           onClick={onClose}
         >
-          <span className="hidden sm:block">닫기</span>
-          <X className="text-main size-6" />
+          <p className="text-2xl font-bold">닫기</p>
+          <X className="size-10" />
         </button>
+      </div>
 
-        {/* 메인 이미지 */}
+      <div
+        className="bg-gray9 border-accent-2 absolute bottom-0 flex h-[calc(100vh-60px)] w-full flex-col border-t p-10"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="z-10 text-end text-white">
-          {currentIndex + 1} / {images.length}
+          <span className="text-main">
+            {currentIndex + 1} / {images.length}
+          </span>
         </div>
-        <div
-          ref={mainImageRef}
-          className="relative flex max-h-[60vh] flex-1 cursor-grab items-center justify-center overflow-hidden"
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseLeave}
-        >
-          <div
-            ref={imageContainerRef}
-            className="transition-transform duration-200"
-            style={{ transform: `translateX(${swipeOffset}px)` }}
-          >
-            <img
-              src={images[currentIndex]}
-              alt={captions?.[currentIndex] || `이미지 ${currentIndex + 1}`}
-              className="max-h-[70vh] max-w-full object-contain"
-            />
-          </div>
-          {/* 이전/다음 버튼 */}
-          <button
-            type="button"
-            className="bg-gray8 hover:bg-accent-1 text-main absolute left-0 rounded-full p-2 opacity-70 transition-all duration-300 hover:cursor-pointer sm:left-4"
-            onClick={handlePrev}
-            onMouseDown={(e) => e.stopPropagation()}
-          >
-            <ChevronLeft className="text-main ml-[-2px] size-6" />
-          </button>
-          <button
-            type="button"
-            className="bg-gray8 hover:bg-accent-1 text-main absolute right-0 rounded-full p-2 opacity-70 transition-all duration-300 hover:cursor-pointer sm:right-4"
-            onClick={handleNext}
-            onMouseDown={(e) => e.stopPropagation()}
-          >
-            <ChevronRight className="text-main mr-[-2px] size-6" />
-          </button>
-        </div>
-
-        {/* 이미지 설명 */}
-        {captions && captions[currentIndex] && (
-          <div className="bg-gray8 mt-4 rounded-lg p-4 text-center">
-            <p className="text-gray1">{captions[currentIndex]}</p>
-          </div>
-        )}
-
         {/* 썸네일 목록 */}
         <div
           ref={thumbnailsContainerRef}
-          className="mt-4 flex gap-2 overflow-x-auto scroll-smooth pb-2"
+          className="flex shrink-0 gap-2 overflow-x-auto scroll-smooth py-4"
         >
           {images.map((image, index) => (
             <button
@@ -311,6 +266,55 @@ export default function ImageCarousel({
             </button>
           ))}
         </div>
+
+        {/* 메인 이미지 */}
+        <div
+          ref={mainImageRef}
+          className="relative flex max-h-[calc(100vh-340px)] shrink-0 cursor-grab items-center justify-center overflow-hidden"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div
+            ref={imageContainerRef}
+            className="flex h-full w-full items-center justify-center transition-transform duration-200"
+            style={{ transform: `translateX(${swipeOffset}px)` }}
+          >
+            <img
+              src={images[currentIndex]}
+              alt={captions?.[currentIndex] || `이미지 ${currentIndex + 1}`}
+              className="max-h-full max-w-full object-contain"
+            />
+          </div>
+          {/* 이전/다음 버튼 */}
+          <button
+            type="button"
+            className="bg-gray8 hover:bg-accent-1 text-main absolute left-0 rounded-full p-2 opacity-70 transition-all duration-300 hover:cursor-pointer sm:left-4"
+            onClick={handlePrev}
+            onMouseDown={(e) => e.stopPropagation()}
+          >
+            <ChevronLeft className="text-main ml-[-2px] size-6" />
+          </button>
+          <button
+            type="button"
+            className="bg-gray8 hover:bg-accent-1 text-main absolute right-0 rounded-full p-2 opacity-70 transition-all duration-300 hover:cursor-pointer sm:right-4"
+            onClick={handleNext}
+            onMouseDown={(e) => e.stopPropagation()}
+          >
+            <ChevronRight className="text-main mr-[-2px] size-6" />
+          </button>
+        </div>
+
+        {/* 이미지 설명 */}
+        {captions && captions[currentIndex] && (
+          <div className="bg-gray8 my-10 rounded-lg p-2 text-center">
+            <p className="text-gray1">{captions[currentIndex]}</p>
+          </div>
+        )}
       </div>
     </div>
   );
