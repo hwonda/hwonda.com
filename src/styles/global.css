@@ -1,7 +1,4 @@
 @import "tailwindcss";
-@import "./tailwind.css";
-@import "./animation.css";
-@import "./ui.css";
 
 html {
   background-color: var(--background-color);
@@ -88,6 +85,6 @@ button {
   --color-gray9: var(--gray-9);
 
   --font-paperlogy: 'Paperlogy', sans-serif;
-  --font-pretendard: 'Pretendard', sans-serif;
+  --font-pretendard: 'Pretendard Variable', sans-serif;
   --font-noto: 'Noto Sans KR', sans-serif;
 }
