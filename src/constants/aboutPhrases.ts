@@ -1,0 +1,24 @@
+export interface AboutPhrase {
+  emoji: string;
+  text: string;
+}
+
+export const aboutPhrases: AboutPhrase[] = [
+  { emoji: '🔥', text: '"누군가 하겠지"보다, "제가 해볼게요"라고 말합니다.' },
+  {
+    emoji: '💡',
+    text: '상황에 따라 우선순위를 조정하며 팀의 흐름을 끊지 않으려 합니다.',
+  },
+  {
+    emoji: '💻',
+    text: '새로운 기술이 필요해서가 아니라, 재미있어서 학습합니다.',
+  },
+  {
+    emoji: '🚀',
+    text: '성장 가능성이 보이거나 해보고 싶으면, 그냥 시도해 봅니다.',
+  },
+  {
+    emoji: '🤝',
+    text: '코드만 잘 짜기보다 의사소통이 매끄러운 개발자를 목표로 합니다.',
+  },
+];
