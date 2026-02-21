@@ -1,10 +1,14 @@
-export interface AboutPhrase {
-  emoji: string;
-  text: string;
-}
-
-export const aboutPhrases: AboutPhrase[] = [
-  { emoji: '🔥', text: '"누군가 하겠지"보다, "제가 해볼게요"라고 말합니다.' },
+// TPM 자기소개 프레이즈 (TODO: 수정 필요)
+export const aboutPhrases = [
+  // { emoji: '🔥', text: '기술을 이해하는 PM' },
+  // { emoji: '📊', text: '체계적으로 관리하는 PM' },
+  // { emoji: '🤝', text: '팀과 소통하는 PM' },
+  // { emoji: '🎯', text: '목표를 달성하는 PM' },
+  // { emoji: '💡', text: '문제를 해결하는 PM' },
+  {
+    emoji: '🔥',
+    text: '"누군가 하겠지"보다, "제가 해볼게요"라고 말합니다.',
+  },
   {
     emoji: '💡',
     text: '상황에 따라 우선순위를 조정하며 팀의 흐름을 끊지 않으려 합니다.',

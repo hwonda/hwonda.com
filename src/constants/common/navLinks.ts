@@ -7,9 +7,10 @@ export interface NavLink {
   isHighlighted?: boolean;
 }
 
-export const navLinks: NavLink[] = [
+// 기본 경로를 role에 따라 생성하는 함수
+export const getNavLinks = (basePath: '/fe' | '/tpm'): NavLink[] => [
   {
-    href: '/about',
+    href: `${basePath}/about`,
     label: '주다훤',
     labelFull: '에 대하여',
     hoverClass: 'hover:bg-accent-1/20',
@@ -21,7 +22,7 @@ export const navLinks: NavLink[] = [
     isExternal: true,
   },
   {
-    href: '/projects',
+    href: `${basePath}/projects`,
     label: '프로젝트',
     hoverClass: 'bg-gray3/10 hover:bg-gray3/20',
     isHighlighted: true,
