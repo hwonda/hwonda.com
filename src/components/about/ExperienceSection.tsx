@@ -1,11 +1,5 @@
-import React from 'react';
-
-interface ExperienceItem {
-  period: string;
-  title: string;
-  company: string;
-  description?: string;
-}
+import SectionWrapper from '@/components/common/SectionWrapper';
+import type { ExperienceItem } from '@/types/about';
 
 interface ExperienceProps {
   experiences: ExperienceItem[];
@@ -13,14 +7,11 @@ interface ExperienceProps {
 
 export default function ExperienceSection({ experiences }: ExperienceProps) {
   return (
-    <div className="group border-gray9 hover:bg-gray9 rounded-lg border p-4 transition-all duration-500 sm:p-6">
-      <h2 className="text-gray3 group-hover:text-main mb-4 font-bold transition-all duration-500">
-        경력
-      </h2>
+    <SectionWrapper title="경력" variant="outlined">
       <div className="space-y-6">
         {experiences.map((exp, index) => (
           <div
-            key={index}
+            key={`experience-${index}`}
             className="border-gray8 border-b pb-6 last:border-0 last:pb-0"
           >
             <div className="mb-2 flex items-center justify-between">
@@ -32,6 +23,6 @@ export default function ExperienceSection({ experiences }: ExperienceProps) {
           </div>
         ))}
       </div>
-    </div>
+    </SectionWrapper>
   );
 }

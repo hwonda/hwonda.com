@@ -1,11 +1,5 @@
-import React from 'react';
-
-interface EducationItem {
-  period: string;
-  degree: string;
-  institution: string;
-  description: string;
-}
+import SectionWrapper from '@/components/common/SectionWrapper';
+import type { EducationItem } from '@/types/about';
 
 interface EducationProps {
   education: EducationItem[];
@@ -13,13 +7,10 @@ interface EducationProps {
 
 export default function EducationSection({ education }: EducationProps) {
   return (
-    <div className="group border-gray9 hover:bg-gray9 rounded-lg border p-4 transition-all duration-500 sm:p-6">
-      <h2 className="text-gray3 group-hover:text-main mb-4 font-bold transition-all duration-500">
-        교육
-      </h2>
+    <SectionWrapper title="교육" variant="outlined">
       <div className="space-y-6">
         {education.map((edu, index) => (
-          <div key={index}>
+          <div key={`education-${index}`}>
             <div className="mb-2 flex items-center justify-between">
               <h3 className="text-main text-xl font-semibold">{edu.degree}</h3>
               <span className="text-gray2 text-sm">{edu.period}</span>
@@ -29,6 +20,6 @@ export default function EducationSection({ education }: EducationProps) {
           </div>
         ))}
       </div>
-    </div>
+    </SectionWrapper>
   );
 }

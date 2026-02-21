@@ -9,10 +9,10 @@ export default function SectionWrapper({
   children,
   variant = 'outlined',
 }: SectionWrapperProps) {
-  const baseClasses = 'group rounded-lg p-4 transition-all duration-500 sm:p-6';
+  const baseClasses = 'group rounded-lg p-4 sm:p-6';
   const variantClasses =
     variant === 'filled'
-      ? 'bg-gray9 hover:outline-gray7 hover:outline'
+      ? 'bg-gray9 hover:outline hover:outline-gray7'
       : 'border-gray9 hover:bg-gray9 border';
 
   return (
