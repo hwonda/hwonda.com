@@ -5,7 +5,7 @@ import MarkdownContent from '@/components/common/MarkdownContent';
 import ExpandableImageGrid from '@/components/projects/ExpandableImageGrid';
 import ImageCarouselWrapper from '@/components/projects/ImageCarouselWrapper';
 import ProjectPointsAccordion from '@/components/projects/ProjectPointsAccordion';
-import { projectsData } from '@/constants/projects';
+import { projectsData } from '@/constants/fe/projectsData';
 import Layout from '@/layouts/Layout.astro';
 import type { Project } from '@/types/projects';
 
@@ -45,12 +45,13 @@ const lowercase = (str: string) => str.toLowerCase();
 <Layout
   title={`${project.title} | 주다훤 포트폴리오`}
   description={project.description.short}
-  canonicalURL={new URL(`/projects/${project.id}`, Astro.site).toString()}
+  canonicalURL={new URL(`/fe/projects/${project.id}`, Astro.site).toString()}
+  basePath="/fe"
 >
   <main class="mx-auto mt-20 max-w-[1000px] px-6 sm:top-8 md:px-10">
     <div class="my-8 w-fit">
       <a
-        href="/projects"
+        href="/fe/projects"
         class="text-accent-1 hover:bg-gray9 flex items-center gap-2 rounded-full p-2 pr-4 opacity-85 hover:opacity-100"
       >
         <ChevronLeft />
@@ -78,7 +79,7 @@ const lowercase = (str: string) => str.toLowerCase();
         {
           project.techStack?.map((tech) => (
             <a
-              href={`/projects?stack=${encodeURIComponent(lowercase(tech))}`}
+              href={`/fe/projects?stack=${encodeURIComponent(lowercase(tech))}`}
               class="group text-gray1 border-accent-2 hover:text-main relative rounded-full border px-3 py-1 text-sm"
             >
               <span class="from-accent-2 to-accent-4 absolute inset-0 rounded-full bg-gradient-to-r opacity-20 group-hover:opacity-40" />

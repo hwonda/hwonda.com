@@ -1,0 +1,201 @@
+---
+import { ChevronLeft } from 'lucide-react';
+
+import MarkdownContent from '@/components/common/MarkdownContent';
+import ExpandableImageGrid from '@/components/projects/ExpandableImageGrid';
+import ImageCarouselWrapper from '@/components/projects/ImageCarouselWrapper';
+import ProjectPointsAccordion from '@/components/projects/ProjectPointsAccordion';
+import { projectsData } from '@/constants/tpm/projectsData';
+import Layout from '@/layouts/Layout.astro';
+import type { Project } from '@/types/projects';
+
+// Astro의 동적 라우팅을 위한 getStaticPaths 함수 추가
+export function getStaticPaths() {
+  // 모든 프로젝트를 하나의 배열로 합치기
+  const allProjects: Project[] = projectsData.flatMap(
+    (yearData) => yearData.projects,
+  );
+
+  return allProjects.map((project) => ({
+    params: { id: project.id },
+    props: { project, allProjects },
+  }));
+}
+
+// getStaticPaths에서 전달받은 props
+const { project } = Astro.props;
+
+// 프로젝트가 undefined인 경우 404 페이지로 리다이렉트
+if (!project) {
+  return Astro.redirect('/404');
+}
+
+// 이미지 관련 변수 계산
+const fullImages = project.images?.full || [];
+const hasRightImages = fullImages.length > 0;
+const hasBottomImages = fullImages.length > 4;
+const rightImages = fullImages.slice(0, 4);
+const bottomImages = fullImages.slice(4);
+
+// 모든 이미지 배열 생성 (썸네일 + 전체 이미지)
+const allImages = [project.images.thumbnail, ...fullImages];
+const lowercase = (str: string) => str.toLowerCase();
+---
+
+<Layout
+  title={`${project.title} | 주다훤 포트폴리오 - Technical Project Manager`}
+  description={project.description.short}
+  canonicalURL={new URL(`/tpm/projects/${project.id}`, Astro.site).toString()}
+  basePath="/tpm"
+>
+  <main class="mx-auto mt-20 max-w-[1000px] px-6 sm:top-8 md:px-10">
+    <div class="my-8 w-fit">
+      <a
+        href="/tpm/projects"
+        class="text-accent-1 hover:bg-gray9 flex items-center gap-2 rounded-full p-2 pr-4 opacity-85 hover:opacity-100"
+      >
+        <ChevronLeft />
+        모든 프로젝트 보기
+      </a>
+    </div>
+
+    <div class="mb-16 space-y-2">
+      <h1 class="font-paperlogy text-4xl font-bold">{project.title}</h1>
+      <h2 class="text-sub text-lg">{project.description.short}</h2>
+      <div
+        class="grid grid-cols-[auto_1fr] justify-start gap-2 md:grid-cols-[auto_auto_auto_auto_auto_auto]"
+      >
+        <span class="text-sub">Period</span>
+        <span class="text-accent-2"
+          >{project.startTime} ~ {project.endTime} ({project.period})</span
+        >
+        <span class="text-sub"> Role </span>
+        <span class="text-accent-2">{project.role}</span>
+        <span class="text-sub"> Team </span>
+        <span class="text-accent-2">{project.team}</span>
+      </div>
+
+      <div class="mt-3 flex flex-wrap gap-2">
+        {
+          project.techStack?.map((tech) => (
+            <a
+              href={`/tpm/projects?stack=${encodeURIComponent(lowercase(tech))}`}
+              class="group text-gray1 border-accent-2 hover:text-main relative rounded-full border px-3 py-1 text-sm"
+            >
+              <span class="from-accent-2 to-accent-4 absolute inset-0 rounded-full bg-gradient-to-r opacity-20 group-hover:opacity-40" />
+              <span class="absolute inset-[1px] rounded-full" />
+              <span class="relative z-10">{tech}</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="mb-16 space-y-2">
+      <div class="text-sub flex flex-col gap-2 leading-relaxed">
+        <span class="text-xl font-bold">프로젝트 개요</span>
+        <MarkdownContent content={project.description.full} />
+      </div>
+      <div
+        class="mt-2 flex items-center justify-center gap-4 sm:mt-4 md:justify-start"
+      >
+        {
+          project.urls?.demo && (
+            <a
+              href={project.urls.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-accent-1 hover:bg-accent-1/90 text-inverse inline-block rounded px-3 py-2.5 text-sm font-bold transition-colors sm:px-6 sm:py-3 sm:text-base"
+            >
+              프로젝트 보기
+            </a>
+          )
+        }
+        {
+          project.urls?.github && (
+            <a
+              href={project.urls.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="border-gray3 text-main hover:bg-gray9 inline-block rounded border px-3 py-2.5 text-sm font-medium transition-colors sm:px-6 sm:py-3 sm:text-base"
+            >
+              GitHub 저장소
+            </a>
+          )
+        }
+        {
+          project.urls?.etc && (
+            <div>
+              {project.urls.etc.map((url) => (
+                <a
+                  href={url.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="border-gray8 bg-gray8 text-main hover:bg-gray7 inline-block rounded border px-3 py-2.5 text-sm font-medium transition-colors sm:px-6 sm:py-3 sm:text-base"
+                >
+                  {url.title}
+                </a>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </div>
+
+    <div class="mb-2 space-y-2">
+      <div class="text-xl font-bold">프로젝트 이미지</div>
+      <div class="flex flex-col gap-3 lg:flex-row">
+        <div
+          class="image-gallery border-gray8 aspect-video cursor-pointer rounded-lg border opacity-90 hover:opacity-100 lg:w-1/2"
+          data-image-index="0"
+        >
+          <img
+            src={project.images.thumbnail}
+            alt={`${project.title} 메인 이미지`}
+            class="h-full w-full rounded-lg object-cover"
+          />
+        </div>
+        {
+          hasRightImages && (
+            <div class="grid grid-cols-2 grid-rows-2 gap-3 lg:w-1/2">
+              {rightImages.map((image, index) => (
+                <div
+                  class="image-gallery border-gray8 aspect-video cursor-pointer rounded-lg border opacity-90 hover:opacity-100"
+                  data-image-index={index + 1}
+                >
+                  <img
+                    src={image}
+                    alt={`${project.title} 이미지 ${index + 1}`}
+                    class="h-full w-full rounded-lg object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </div>
+
+    {
+      hasBottomImages && (
+        <ExpandableImageGrid
+          client:load
+          images={bottomImages}
+          projectTitle={project.title}
+        />
+      )
+    }
+
+    {
+      project.points && project.points.length > 0 && (
+        <ProjectPointsAccordion client:load points={project.points} />
+      )
+    }
+  </main>
+
+  <ImageCarouselWrapper
+    client:load
+    images={allImages}
+    captions={project.images.captions || []}
+  />
+</Layout>
