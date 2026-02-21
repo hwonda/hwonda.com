@@ -12,9 +12,13 @@ import { EmptyState, ProjectGrid, TechStackFilter, YearTabs } from './page';
 
 interface ProjectsPageProps {
   projectsData: YearProjects[];
+  basePath?: string;
 }
 
-export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
+export default function ProjectsPage({
+  projectsData,
+  basePath = '',
+}: ProjectsPageProps) {
   // URL에서 초기값 읽기
   const getInitialState = useCallback(() => {
     if (typeof window === 'undefined') return { tab: 'all', stacks: [] };
@@ -174,6 +178,7 @@ export default function ProjectsPage({ projectsData }: ProjectsPageProps) {
             filteredProjects={filteredProjects}
             activeYear={activeYear}
             isAnimating={isAnimating}
+            basePath={basePath}
           />
         ) : (
           <EmptyState
