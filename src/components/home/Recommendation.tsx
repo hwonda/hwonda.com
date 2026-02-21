@@ -3,11 +3,18 @@ import { useRef } from 'react';
 
 import NavButton from '@/components/common/NavButton';
 import ProgressDots from '@/components/common/ProgressDots';
-import { recommendations } from '@/constants/recommendationsConst';
+import { recommendations as feRecommendations } from '@/constants/fe/recommendationsConst';
+import { recommendations as tpmRecommendations } from '@/constants/tpm/recommendationsConst';
 import { useAutoSlide, useSwipe } from '@/hooks';
 
-export default function Recommendation() {
+interface RecommendationProps {
+  role: 'fe' | 'tpm';
+}
+
+export default function Recommendation({ role }: RecommendationProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const recommendations =
+    role === 'fe' ? feRecommendations : tpmRecommendations;
 
   const {
     currentIndex,

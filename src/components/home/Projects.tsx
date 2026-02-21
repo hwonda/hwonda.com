@@ -1,10 +1,17 @@
 import { useEffect, useRef } from 'react';
 
-import { projectsData } from '@/constants/projects';
+import { projectsData as feProjectsData } from '@/constants/fe/projectsData';
+import { projectsData as tpmProjectsData } from '@/constants/tpm/projectsData';
 
-export default function Projects() {
+interface ProjectsProps {
+  basePath: '/fe' | '/tpm';
+  role: 'fe' | 'tpm';
+}
+
+export default function Projects({ basePath, role }: ProjectsProps) {
   const projectRefs = useRef<(HTMLAnchorElement | null)[][]>([]);
   const titleRefs = useRef<(HTMLHeadingElement | null)[]>([]);
+  const projectsData = role === 'fe' ? feProjectsData : tpmProjectsData;
 
   useEffect(() => {
     const options = {
@@ -83,7 +90,7 @@ export default function Projects() {
                         ref={(el) => {
                           projectRefs.current[yearIndex][projectIndex] = el;
                         }}
-                        href={`/projects/${project.id}`}
+                        href={`${basePath}/projects/${project.id}`}
                         key={project.id}
                         data-index={projectIndex}
                         className="group border-background hover:border-accent-2 relative flex aspect-video flex-col gap-1 rounded-lg border p-1 opacity-0 shadow-sm transition-all duration-300 hover:cursor-pointer hover:shadow-md"
