@@ -183,3 +183,30 @@
 .animate-rotate-0 {
   animation: rotate180 0.3s ease reverse;
 }
+
+/* 흐르는 그라디언트 텍스트 애니메이션 */
+@keyframes gradientFlow {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-flow {
+  background: linear-gradient(
+    to right,
+    var(--color-accent-1),
+    var(--color-accent-2),
+    var(--color-accent-4),
+    var(--color-accent-1),
+    var(--color-accent-2),
+    var(--color-accent-4)
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientFlow 60s linear infinite;
+}
