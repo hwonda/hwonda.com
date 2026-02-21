@@ -1,80 +1,21 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 
-const phrases = [
-  { emoji: '🔥', text: '"누군가 하겠지"보다, "제가 해볼게요"라고 말합니다.' },
-  {
-    emoji: '💡',
-    text: '상황에 따라 우선순위를 조정하며 팀의 흐름을 끊지 않으려 합니다.',
-  },
-  {
-    emoji: '💻',
-    text: '새로운 기술이 필요해서가 아니라, 재미있어서 학습합니다.',
-  },
-  {
-    emoji: '🚀',
-    text: '성장 가능성이 보이거나 해보고 싶으면, 그냥 시도해 봅니다.',
-  },
-  {
-    emoji: '🤝',
-    text: '코드만 잘 짜기보다 의사소통이 매끄러운 개발자를 목표로 합니다.',
-  },
-];
-
-const AUTO_SLIDE_INTERVAL = 5000;
+import ProgressDots from '@/components/common/ProgressDots';
+import { aboutPhrases } from '@/constants/aboutPhrases';
+import { useAutoSlide, useMouseGlow } from '@/hooks';
 
 export default function About() {
   const cardRef = useRef<HTMLDivElement>(null);
-  const [glowPosition, setGlowPosition] = useState({ x: 50, y: 50 });
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-  const [progress, setProgress] = useState(0);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
-    const rect = cardRef.current.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    setGlowPosition({ x, y });
-  };
+  const { glowPosition, handleMouseMove } = useMouseGlow({
+    elementRef: cardRef,
+  });
 
-  const handleNext = useCallback(() => {
-    setIsVisible(false);
-    setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % phrases.length);
-      setIsVisible(true);
-    }, 100);
-    setProgress(0);
-  }, []);
+  const { currentIndex, progress, isVisible, handleDotClick } = useAutoSlide({
+    itemsLength: aboutPhrases.length,
+  });
 
-  const handleDotClick = (
-    e: React.MouseEvent<HTMLButtonElement>,
-    index: number,
-  ) => {
-    e.stopPropagation();
-    e.preventDefault();
-    if (index === currentIndex) return;
-    setIsVisible(false);
-    setTimeout(() => {
-      setCurrentIndex(index);
-      setIsVisible(true);
-    }, 100);
-    setProgress(0);
-  };
-
-  // 자동 슬라이드 + 프로그레스 바
-  useEffect(() => {
-    const progressInterval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          handleNext();
-          return 0;
-        }
-        return prev + 100 / (AUTO_SLIDE_INTERVAL / 50);
-      });
-    }, 50);
-
-    return () => clearInterval(progressInterval);
-  }, [handleNext]);
+  const currentPhrase = aboutPhrases[currentIndex];
 
   return (
     <section className="flex min-h-[400px] items-center justify-center py-16">
@@ -110,39 +51,22 @@ export default function About() {
                 }`}
               >
                 <span className="mb-2 block text-4xl">
-                  {phrases[currentIndex].emoji}
+                  {currentPhrase.emoji}
                 </span>
                 <p className="font-paperlogy from-accent-1 to-accent-3 bg-gradient-to-r bg-clip-text text-xl font-bold text-transparent md:text-2xl">
-                  {phrases[currentIndex].text}
+                  {currentPhrase.text}
                 </p>
               </div>
             </div>
 
             {/* 인디케이터 */}
             <div className="mb-4 flex flex-col items-center gap-3">
-              {/* Dot 인디케이터 */}
-              <div className="flex gap-2">
-                {phrases.map((_, index) => (
-                  <button
-                    key={index}
-                    type="button"
-                    onClick={(e) => handleDotClick(e, index)}
-                    className={`relative h-2 overflow-hidden rounded-full transition-all duration-300 ${
-                      currentIndex === index
-                        ? 'bg-gray6 w-8'
-                        : 'bg-gray7 hover:bg-gray5 w-2'
-                    }`}
-                  >
-                    {/* 현재 활성화된 dot에 프로그레스 표시 */}
-                    {currentIndex === index && (
-                      <div
-                        className="from-accent-1 to-accent-2 absolute inset-y-0 left-0 rounded-full bg-gradient-to-r transition-all duration-75"
-                        style={{ width: `${progress}%` }}
-                      />
-                    )}
-                  </button>
-                ))}
-              </div>
+              <ProgressDots
+                total={aboutPhrases.length}
+                currentIndex={currentIndex}
+                progress={progress}
+                onDotClick={handleDotClick}
+              />
             </div>
 
             <div className="text-gray3 group-hover:text-accent-1 inline-flex items-center text-sm font-medium transition-all duration-300">

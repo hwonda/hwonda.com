@@ -1,4 +1,4 @@
-import React from 'react';
+import SectionWrapper from '@/components/common/SectionWrapper';
 
 interface AboutMeProps {
   paragraphs: string[];
@@ -6,17 +6,14 @@ interface AboutMeProps {
 
 export default function AboutMeSection({ paragraphs }: AboutMeProps) {
   return (
-    <div className="group bg-gray9 hover:outline-gray7 rounded-lg p-4 hover:outline sm:p-6">
-      <h2 className="text-gray3 group-hover:text-main mb-4 font-bold transition-all duration-500">
-        자기소개
-      </h2>
+    <SectionWrapper title="자기소개" variant="filled">
       <div className="space-y-4">
         {paragraphs.map((paragraph, index) => (
-          <p key={index} className="text-main">
+          <p key={`about-paragraph-${index}`} className="text-main">
             {paragraph}
           </p>
         ))}
       </div>
-    </div>
+    </SectionWrapper>
   );
 }

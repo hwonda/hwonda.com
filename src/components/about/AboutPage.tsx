@@ -1,3 +1,5 @@
+import type { AboutPageProps } from '@/types/about';
+
 import {
   AboutMeSection,
   EducationSection,
@@ -6,45 +8,6 @@ import {
   ProfileCard,
   TechStackSection,
 } from './index';
-
-export interface Skills {
-  name: string;
-  proficiency: number;
-  description: string;
-}
-
-// 타입 정의
-export interface techStack {
-  category: string;
-  skills: Skills[];
-}
-
-export interface ExperienceItem {
-  period: string;
-  title: string;
-  company: string;
-  description?: string;
-}
-
-export interface EducationItem {
-  period: string;
-  degree: string;
-  institution: string;
-  description: string;
-}
-
-interface AboutProps {
-  name: string;
-  title: string;
-  profileImage: string;
-  email: string;
-  github: string;
-  linkedin: string;
-  techStacks: techStack[];
-  aboutParagraphs: string[];
-  experiences: ExperienceItem[];
-  education: EducationItem[];
-}
 
 export default function About({
   name,
@@ -57,7 +20,7 @@ export default function About({
   aboutParagraphs,
   experiences,
   education,
-}: AboutProps) {
+}: AboutPageProps) {
   return (
     <div className="mx-auto mt-24 max-w-[1000px] px-4 sm:top-8 md:mt-44 md:px-10 2xl:max-w-[1200px]">
       <div className="grid gap-8 md:grid-cols-3">
