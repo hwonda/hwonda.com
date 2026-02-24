@@ -10,6 +10,7 @@ interface UseAutoSlideReturn {
   currentIndex: number;
   progress: number;
   isVisible: boolean;
+  isPaused: boolean;
   handleNext: () => void;
   handlePrev: () => void;
   handleDotClick: (index: number) => void;
@@ -84,6 +85,7 @@ export default function useAutoSlide({
     currentIndex,
     progress,
     isVisible,
+    isPaused,
     handleNext,
     handlePrev,
     handleDotClick,

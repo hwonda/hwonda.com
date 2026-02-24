@@ -1,10 +1,9 @@
-export interface AboutPhrase {
-  emoji: string;
-  text: string;
-}
-
-export const aboutPhrases: AboutPhrase[] = [
-  { emoji: '🔥', text: '"누군가 하겠지"보다, "제가 해볼게요"라고 말합니다.' },
+// FE 자기소개 프레이즈
+export const aboutPhrases = [
+  {
+    emoji: '🔥',
+    text: '"누군가 하겠지"보다, "제가 해볼게요"라고 말합니다.',
+  },
   {
     emoji: '💡',
     text: '상황에 따라 우선순위를 조정하며 팀의 흐름을 끊지 않으려 합니다.',

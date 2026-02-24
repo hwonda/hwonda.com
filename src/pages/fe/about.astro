@@ -1,23 +1,24 @@
 ---
 import { About as AboutComponent } from '@/components/about';
+import { personalInfo } from '@/constants/common/personalInfo';
 import {
   aboutParagraphs,
   education,
   experiences,
-  personalInfo,
-} from '@/constants/aboutConst';
-import { techStacks } from '@/constants/techStackConst';
+} from '@/constants/fe/aboutConst';
+import { techStacks } from '@/constants/fe/techStackConst';
 import Layout from '@/layouts/Layout.astro';
 ---
 
 <Layout
   title="소개 | 주다훤 포트폴리오"
   description="프론트엔드 개발자 주다훤의 소개 페이지입니다. 경력, 기술 스택, 그리고 교육 배경에 대한 정보를 확인하세요."
-  canonicalURL={new URL('/about', Astro.site).toString()}
+  canonicalURL={new URL('/fe/about', Astro.site).toString()}
+  basePath="/fe"
 >
   <AboutComponent
     name={personalInfo.name}
-    title={personalInfo.title}
+    title="프론트엔드 개발자"
     profileImage={personalInfo.profileImage}
     email={personalInfo.email}
     github={personalInfo.github}

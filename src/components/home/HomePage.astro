@@ -1,18 +1,23 @@
 ---
-// import Header from '../ui/Header';
 import About from './About';
 import Hero from './Hero';
 import Projects from './Projects';
 import Recommendation from './Recommendation';
+
+interface Props {
+  basePath: '/fe' | '/tpm';
+  role: 'fe' | 'tpm';
+}
+
+const { basePath, role } = Astro.props;
 ---
 
 <>
-  <Hero client:load />
+  <Hero client:load role={role} />
 
-  <!-- <Header client:load /> -->
   <div class="flex flex-col px-4 sm:px-8 md:px-10 lg:px-20 xl:px-40">
-    <Recommendation client:visible />
-    <Projects client:visible />
-    <About client:visible />
+    <Recommendation client:visible role={role} />
+    <Projects client:visible basePath={basePath} role={role} />
+    <About client:visible basePath={basePath} role={role} />
   </div>
 </>

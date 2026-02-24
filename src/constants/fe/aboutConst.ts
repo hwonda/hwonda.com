@@ -30,13 +30,3 @@ export const aboutParagraphs = [
   'React, TypeScript, Tailwind CSS 등의 기술 스택을 활용하여 사용자 친화적이고 성능이 뛰어난 웹 애플리케이션을 개발하는 것을 좋아합니다. 특히 복잡한 UI 컴포넌트를 설계하고 구현하는 것에 강점이 있으며, 접근성과 반응형 디자인을 항상 고려합니다.',
   '팀 협업을 중요시하며, 명확한 커뮤니케이션과 코드 리뷰를 통해 더 나은 결과물을 만들어내는 것을 지향합니다. 항상 새로운 도전을 환영하며, 문제 해결 과정에서 배우는 것을 즐깁니다.',
 ];
-
-// 개인 정보
-export const personalInfo = {
-  name: '주다훤',
-  title: '프론트엔드 개발자',
-  profileImage: 'https://avatars.githubusercontent.com/u/95617014?v=4',
-  email: 'hwondaa@gmail.com',
-  github: 'hwonda',
-  linkedin: 'hwonda',
-};

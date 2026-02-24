@@ -12,6 +12,7 @@ interface Props {
   description?: string;
   image?: string;
   canonicalURL?: string;
+  basePath?: '/fe' | '/tpm';
 }
 
 const {
@@ -19,6 +20,7 @@ const {
   description = '훤다의 프론트엔드 개발 포트폴리오입니다. React, TypeScript, Astro 등을 활용한 프로젝트를 확인해보세요.',
   image = '/images/og-image.png',
   canonicalURL = new URL(Astro.url.pathname, Astro.site),
+  basePath,
 } = Astro.props;
 
 const siteURL = Astro.site || 'https://www.hwonda.com/';
@@ -89,7 +91,7 @@ const siteURL = Astro.site || 'https://www.hwonda.com/';
       <div
         class="fixed top-4 z-50 w-full px-4 sm:px-8 md:px-10 lg:px-20 xl:px-40"
       >
-        <Header client:load />
+        {basePath && <Header client:load basePath={basePath} />}
       </div>
       <slot />
     </main>

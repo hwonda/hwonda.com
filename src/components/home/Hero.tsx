@@ -11,7 +11,11 @@ import {
 
 const LAST_MODIFIED = '25/09/11';
 
-export default function Hero() {
+interface HeroProps {
+  role: 'fe' | 'tpm';
+}
+
+export default function Hero({ role }: HeroProps) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -32,8 +36,8 @@ export default function Hero() {
 
       <div className="relative z-10 container flex size-full items-end justify-center px-4 pb-24 sm:px-8 sm:pb-48">
         <div className="flex flex-col">
-          <Title isLoaded={isLoaded} />
-          <Description isLoaded={isLoaded} />
+          <Title isLoaded={isLoaded} role={role} />
+          <Description isLoaded={isLoaded} role={role} />
           <ActionButtons isLoaded={isLoaded} />
         </div>
       </div>

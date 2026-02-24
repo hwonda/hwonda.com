@@ -1,13 +1,66 @@
 ---
-import HomePage from '@/components/home/HomePage.astro';
-import Layout from '@/layouts/Layout.astro';
+import '@/styles/global.css';
+import '@/styles/tailwind.css';
+import '@/styles/animation.css';
+
+import Font from '@/components/Font.astro';
 ---
 
-<Layout
-  title="주다훤 포트폴리오 - 프론트엔드 개발자"
-  description="주다훤의 프론트엔드 개발 포트폴리오입니다. React, Vue, TypeScript, TailwindCSS 등을 활용한 다양한 프로젝트와 기술 스택을 확인하실 수 있습니다."
-  image="/images/home-og-image.png"
-  canonicalURL={new URL('/', Astro.site).toString()}
->
-  <HomePage />
-</Layout>
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="주다훤의 포트폴리오입니다." />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <Font />
+    <title>주다훤 포트폴리오</title>
+  </head>
+  <body class="min-h-screen overflow-x-hidden">
+    <main class="flex min-h-screen flex-col items-center justify-center px-6">
+      <!-- 배경 그라데이션 -->
+      <div
+        class="from-accent-1/10 via-accent-3/5 to-accent-4/10 pointer-events-none fixed inset-0 bg-gradient-to-br"
+      >
+      </div>
+
+      <!-- 메인 콘텐츠 -->
+      <div class="relative z-10 max-w-2xl text-center">
+        <!-- 인사말 -->
+        <h1
+          class="font-paperlogy animate-intro mb-6 text-4xl font-bold md:text-5xl"
+        >
+          <span class="animate-gradient-flow"> 안녕하세요! 주다훤입니다.</span>
+        </h1>
+
+        <!-- 안내 메시지 -->
+        <p
+          class="text-gray2 animate-intro mb-8 text-lg leading-relaxed delay-200 md:text-xl"
+        >
+          포트폴리오는
+          <span class="text-accent-2 font-semibold"> 전달받은 링크 </span>
+          로 접근해주세요 😊
+        </p>
+
+        <!-- 데코레이션 -->
+        <div
+          class="animate-intro flex items-center justify-center gap-4 delay-500"
+        >
+          <div class="bg-accent-1 h-1 w-8 rounded-full opacity-50"></div>
+          <div class="bg-accent-2 h-1 w-4 rounded-full opacity-50"></div>
+          <div class="bg-accent-4 h-1 w-2 rounded-full opacity-50"></div>
+        </div>
+      </div>
+
+      <!-- 푸터 -->
+      <footer class="absolute bottom-8 text-center">
+        <p class="text-gray3 text-sm">
+          <span>© 2025 </span>
+          <span class="text-gray1 font-bold">주다훤</span>
+          <span>All rights reserved.</span>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

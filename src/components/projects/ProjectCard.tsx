@@ -2,12 +2,16 @@ import { type Project } from '@/types/projects';
 
 interface ProjectCardProps {
   project: Project;
+  basePath?: string;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({
+  project,
+  basePath = '',
+}: ProjectCardProps) {
   return (
     <a
-      href={`/projects/${project.id}`}
+      href={`${basePath}/projects/${project.id}`}
       className="group flex flex-col gap-1 overflow-hidden opacity-100 sm:opacity-80 sm:hover:opacity-100"
     >
       {project.inProgress ? (

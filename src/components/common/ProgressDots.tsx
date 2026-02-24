@@ -4,6 +4,7 @@ interface ProgressDotsProps {
   progress?: number;
   onDotClick?: (index: number) => void;
   showProgress?: boolean;
+  isPaused?: boolean;
 }
 
 export default function ProgressDots({
@@ -12,6 +13,7 @@ export default function ProgressDots({
   progress = 0,
   onDotClick,
   showProgress = true,
+  isPaused = false,
 }: ProgressDotsProps) {
   const handleClick = (
     e: React.MouseEvent<HTMLButtonElement>,
@@ -39,7 +41,7 @@ export default function ProgressDots({
           {currentIndex === index && showProgress && (
             <div
               className="from-accent-1 to-accent-2 absolute inset-y-0 left-0 rounded-full bg-gradient-to-r transition-all duration-75"
-              style={{ width: `${progress}%` }}
+              style={{ width: isPaused ? '100%' : `${progress}%` }}
             />
           )}
         </button>

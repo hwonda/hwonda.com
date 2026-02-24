@@ -1,11 +1,18 @@
 import { useRef } from 'react';
 
 import ProgressDots from '@/components/common/ProgressDots';
-import { aboutPhrases } from '@/constants/aboutPhrases';
+import { aboutPhrases as feAboutPhrases } from '@/constants/fe/aboutPhrases';
+import { aboutPhrases as tpmAboutPhrases } from '@/constants/tpm/aboutPhrases';
 import { useAutoSlide, useMouseGlow } from '@/hooks';
 
-export default function About() {
+interface AboutProps {
+  basePath?: string;
+  role?: 'fe' | 'tpm';
+}
+
+export default function About({ basePath = '', role = 'tpm' }: AboutProps) {
   const cardRef = useRef<HTMLDivElement>(null);
+  const aboutPhrases = role === 'fe' ? feAboutPhrases : tpmAboutPhrases;
 
   const { glowPosition, handleMouseMove } = useMouseGlow({
     elementRef: cardRef,
@@ -27,7 +34,7 @@ export default function About() {
           background: `radial-gradient(circle at ${glowPosition.x}% ${glowPosition.y}%, rgba(254, 59, 97, 0.12) 0%, transparent 50%)`,
         }}
       >
-        <a href="/about">
+        <a href={`${basePath}/about`}>
           {/* 글로우 효과 */}
           <div
             className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"

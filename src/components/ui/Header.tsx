@@ -1,9 +1,20 @@
 import { useEffect, useState } from 'react';
 
-import { navLinks } from '@/constants/navLinks';
+import { getNavLinks } from '@/constants/common/navLinks';
 
-export default function Header() {
+interface HeaderProps {
+  basePath: '/fe' | '/tpm';
+}
+
+export default function Header({ basePath }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navLinks = getNavLinks(basePath);
+
+  // 역할별 로고 텍스트
+  const logoText = {
+    '/fe': { full: 'FE DAHWON', short: 'FE Dev' },
+    '/tpm': { full: 'TPM DAHWON', short: 'TPM' },
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,9 +40,11 @@ export default function Header() {
 
       {/* 로고 */}
       <h1 className="font-paperlogy relative z-10 text-base font-medium sm:text-2xl">
-        <a href="/" aria-label="홈페이지로 이동">
-          <span className="hidden font-bold sm:inline">FE HWONDA</span>
-          <span className="sm:hidden">FE Dev</span>
+        <a href={basePath} aria-label="홈페이지로 이동">
+          <span className="hidden font-bold sm:inline">
+            {logoText[basePath].full}
+          </span>
+          <span className="sm:hidden">{logoText[basePath].short}</span>
         </a>
       </h1>
 

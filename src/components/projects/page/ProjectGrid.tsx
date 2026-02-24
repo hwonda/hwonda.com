@@ -6,12 +6,14 @@ interface ProjectGridProps {
   filteredProjects: YearProjects[];
   activeYear: string;
   isAnimating: boolean;
+  basePath?: string;
 }
 
 export default function ProjectGrid({
   filteredProjects,
   activeYear,
   isAnimating,
+  basePath = '',
 }: ProjectGridProps) {
   const getAnimationStyle = (index: number) => ({
     transitionDelay: `${index * (activeYear === 'all' ? 50 : 100)}ms`,
@@ -29,7 +31,7 @@ export default function ProjectGrid({
               className="transition-all duration-500"
               style={getAnimationStyle(index)}
             >
-              <ProjectCard project={project} />
+              <ProjectCard project={project} basePath={basePath} />
             </div>
           )),
         )}
@@ -48,7 +50,7 @@ export default function ProjectGrid({
                 className="transition-all duration-500"
                 style={getAnimationStyle(index)}
               >
-                <ProjectCard project={project} />
+                <ProjectCard project={project} basePath={basePath} />
               </div>
             ))}
           </div>
