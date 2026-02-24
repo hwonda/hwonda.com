@@ -22,8 +22,8 @@ const descriptions = {
   },
   tpm: {
     tagline: {
-      first: { highlight: '기술을 ', rest: '이해하고,' },
-      second: { highlight: ' 프로젝트를 ', rest: '이끕니다' },
+      first: { highlight: '현장의 코드', rest: '에 공감하고,' },
+      second: { highlight: ' 프로젝트의 성공', rest: '에 집착합니다.' },
     },
     detail: {
       desktop: [
@@ -53,7 +53,7 @@ export default function Description({ isLoaded, role }: DescriptionProps) {
   return (
     <>
       <p
-        className={`font-paperlogy flex flex-col gap-1 text-2xl font-bold sm:flex-row ${animationClass('delay-500')}`}
+        className={`font-paperlogy mb-1 flex flex-col gap-1 text-2xl font-bold sm:flex-row ${animationClass('delay-500')}`}
       >
         <span>
           <span className="text-accent-1">
