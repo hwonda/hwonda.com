@@ -26,7 +26,7 @@ export default function TechStackFilter({
 
   return (
     <div className={containerClass}>
-      <div className="mt-1 flex flex-wrap gap-2 overflow-x-auto">
+      <div className="mt-4 mb-2 flex flex-wrap gap-2 overflow-x-auto">
         {uniqueSkills.map((tech) => {
           const isActive = activeTechStacks.includes(tech);
           const isHighFrequency = skillCounts[tech] >= 3;

@@ -3,12 +3,12 @@ import type { YearProjects } from '@/types/projects';
 import { projects2023 } from '../projects/2023';
 import { projects2024 } from '../projects/2024';
 import { projects2025 } from '../projects/2025';
-import { withFunProjects } from '../projects/with-fun';
+import { sideProjects } from '../projects/with-fun';
 
 export const projectsData: YearProjects[] = [
   {
-    year: 'With Fun',
-    projects: withFunProjects,
+    year: 'Side',
+    projects: sideProjects,
   },
   {
     year: '2025년',

@@ -134,8 +134,8 @@ export default function ProjectsPage({
   return (
     <section className="relative px-4 sm:px-8 md:px-10 md:pt-20 lg:px-20 xl:px-40">
       {/* Header */}
-      <div className="bg-background sticky top-0 left-0 z-40 backdrop-blur-md md:pb-4">
-        <div className="flex flex-col gap-4 pt-24 md:flex-row md:items-end md:justify-between">
+      <div className="bg-background sticky top-0 left-0 z-40 mb-4 backdrop-blur-md">
+        <div className="mb-4 flex flex-col gap-4 pt-24 md:flex-row md:items-end md:justify-between">
           <h1
             className={`font-paperlogy text-4xl font-bold transition-all duration-500 md:text-5xl ${loadedClass}`}
           >
@@ -170,7 +170,7 @@ export default function ProjectsPage({
 
       {/* Projects Grid */}
       <div
-        className={`space-y-16 pt-4 transition-all delay-200 duration-500 ${loadedClass}`}
+        className={`space-y-16 px-4 transition-all delay-200 duration-500 xl:px-0 ${loadedClass}`}
         ref={projectsRef}
       >
         {filteredProjects.length > 0 ? (
