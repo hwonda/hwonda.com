@@ -37,5 +37,5 @@ export const aquaFarm2025: Project = {
     'Jira',
     'Git',
   ],
-  inProgress: true,
+  inProgress: false,
 };

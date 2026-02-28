@@ -3,11 +3,11 @@ import type { YearProjects } from '@/types/projects';
 import { projects2023 } from './2023';
 import { projects2024 } from './2024';
 import { projects2025 } from './2025';
-import { sideProjects } from './with-fun';
+import { sideProjects } from './side';
 
 export const projectsData: YearProjects[] = [
   {
-    year: 'Side',
+    year: '사이드',
     projects: sideProjects,
   },
   {
@@ -35,4 +35,4 @@ export const projectsData: YearProjects[] = [
 export * from './2023';
 export * from './2024';
 export * from './2025';
-export * from './with-fun';
+export * from './side';
