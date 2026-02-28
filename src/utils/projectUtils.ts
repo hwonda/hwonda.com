@@ -1,5 +1,5 @@
 // import { projectsData } from '@/constants/projects';
-import type { Project, YearProjects } from '@/types/projects';
+import type { Project, ProjectOverride, YearProjects } from '@/types/projects';
 
 /**
  * 모든 프로젝트의 총 개수를 계산
@@ -139,4 +139,44 @@ export const countProjectsBySkill = (
   });
 
   return skillCounts;
+};
+
+/**
+ * 단일 프로젝트에 오버라이드 적용
+ */
+const applyOverrideToProject = (
+  project: Project,
+  override: ProjectOverride,
+): Project => {
+  return {
+    ...project,
+    description: {
+      short: override.description?.short ?? project.description.short,
+      full: override.description?.full ?? project.description.full,
+    },
+    points: override.points ?? project.points,
+    role: override.role ?? project.role,
+  };
+};
+
+/**
+ * 기본 프로젝트 데이터에 오버라이드 적용
+ */
+export const mergeProjectsWithOverrides = (
+  baseProjects: YearProjects[],
+  overrides: ProjectOverride[],
+): YearProjects[] => {
+  // 오버라이드가 없으면 기본 데이터 반환
+  if (overrides.length === 0) return baseProjects;
+
+  // id로 빠르게 찾기 위한 Map 생성
+  const overrideMap = new Map(overrides.map((o) => [o.id, o]));
+
+  return baseProjects.map((yearData) => ({
+    ...yearData,
+    projects: yearData.projects.map((project) => {
+      const override = overrideMap.get(project.id);
+      return override ? applyOverrideToProject(project, override) : project;
+    }),
+  }));
 };
