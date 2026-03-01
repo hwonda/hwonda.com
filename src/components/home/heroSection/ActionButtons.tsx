@@ -7,23 +7,24 @@ interface ActionButton {
 
 interface ActionButtonsProps {
   isLoaded: boolean;
+  role: 'fe' | 'tpm';
 }
 
-const actionButtons: ActionButton[] = [
-  {
-    href: '/projects',
-    label: '프로젝트 보기',
-    variant: 'primary',
-  },
-  {
-    href: '/resume_dahwon_ju.pdf',
-    label: '이력서 다운로드',
-    variant: 'secondary',
-    download: true,
-  },
-];
+export default function ActionButtons({ isLoaded, role }: ActionButtonsProps) {
+  const actionButtons: ActionButton[] = [
+    {
+      href: `/${role}/projects`,
+      label: '프로젝트 보기',
+      variant: 'primary',
+    },
+    {
+      href: '/resume_dahwon_ju.pdf',
+      label: '이력서 다운로드',
+      variant: 'secondary',
+      download: true,
+    },
+  ];
 
-export default function ActionButtons({ isLoaded }: ActionButtonsProps) {
   const variantClasses = {
     primary:
       'bg-foreground hover:bg-foreground/80 text-inverse rounded-lg px-6 pt-3.5 pb-2.5 font-bold transition-colors',
