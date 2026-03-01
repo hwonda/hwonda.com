@@ -83,7 +83,7 @@ export default function YearTabs({
           onClick={() => onYearChange(item.year)}
           onMouseEnter={() => onTabHover(item.year)}
           onMouseLeave={() => onTabHover(null)}
-          className={`relative cursor-pointer px-2 py-2.5 text-sm font-medium transition-all duration-300 ${
+          className={`relative cursor-pointer px-1 py-2.5 text-sm font-medium transition-all duration-300 sm:px-2 ${
             activeYear === item.year
               ? 'text-accent-1'
               : 'text-gray2 hover:text-accent-2'
@@ -95,7 +95,7 @@ export default function YearTabs({
           }
           data-year={item.year}
         >
-          {item.year === 'all' ? 'All' : item.year}
+          {item.year === 'all' ? '전체' : item.year}
           <span className="hidden md:inline">({item.count})</span>
         </button>
       ))}

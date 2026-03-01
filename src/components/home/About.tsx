@@ -60,7 +60,7 @@ export default function About({ basePath = '', role = 'tpm' }: AboutProps) {
                 <span className="mb-2 block text-4xl">
                   {currentPhrase.emoji}
                 </span>
-                <p className="font-paperlogy from-accent-1 to-accent-3 bg-gradient-to-r bg-clip-text text-xl font-bold text-transparent md:text-2xl">
+                <p className="font-paperlogy from-accent-1 to-accent-3 bg-gradient-to-r bg-clip-text text-xl font-bold whitespace-pre-line text-transparent md:text-2xl">
                   {currentPhrase.text}
                 </p>
               </div>

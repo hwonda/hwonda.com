@@ -40,5 +40,5 @@ export const mmis2025: Project = {
     'Figma',
     'Git',
   ],
-  inProgress: true,
+  inProgress: false,
 };

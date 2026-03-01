@@ -38,7 +38,7 @@ export default function Hero({ role }: HeroProps) {
         <div className="flex flex-col">
           <Title isLoaded={isLoaded} role={role} />
           <Description isLoaded={isLoaded} role={role} />
-          <ActionButtons isLoaded={isLoaded} />
+          <ActionButtons isLoaded={isLoaded} role={role} />
         </div>
       </div>
 
