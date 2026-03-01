@@ -1,7 +1,9 @@
 import { useState } from 'react';
 
+import type { ImageItem } from '@/types/projects';
+
 interface ExpandableImageGridProps {
-  images: string[];
+  images: ImageItem[];
   projectTitle: string;
 }
 
@@ -40,8 +42,8 @@ const ExpandableImageGrid = ({
             data-image-index={index + 5}
           >
             <img
-              src={image}
-              alt={`${projectTitle} 이미지 ${index + 5}`}
+              src={image.url}
+              alt={image.caption || `${projectTitle} 이미지 ${index + 5}`}
               className="h-full w-full rounded-lg object-cover transition-transform duration-300 hover:scale-105"
             />
           </div>

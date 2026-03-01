@@ -106,7 +106,7 @@ export default function Projects({ basePath, role }: ProjectsProps) {
                           </>
                         ) : null}
                         <img
-                          src={project.images.thumbnail}
+                          src={project.images.thumbnail.url}
                           alt={project.title}
                           className="h-full w-full rounded-lg object-cover opacity-85 transition-all duration-300 group-hover:p-1 group-hover:opacity-100"
                         />

@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react';
 
+import type { ImageItem } from '@/types/projects';
+
 interface ThumbnailListProps {
-  images: string[];
+  images: ImageItem[];
   currentIndex: number;
   onThumbnailClick: (index: number) => void;
 }
@@ -53,8 +55,8 @@ export default function ThumbnailList({
             <div className="bg-accent-1/20 absolute inset-0" />
           )}
           <img
-            src={image}
-            alt={`썸네일 ${index + 1}`}
+            src={image.url}
+            alt={image.caption || `썸네일 ${index + 1}`}
             className="h-full w-full object-cover"
           />
         </button>

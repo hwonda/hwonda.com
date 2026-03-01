@@ -150,8 +150,9 @@ const lowercase = (str: string) => str.toLowerCase();
           data-image-index="0"
         >
           <img
-            src={project.images.thumbnail}
-            alt={`${project.title} 메인 이미지`}
+            src={project.images.thumbnail.url}
+            alt={project.images.thumbnail.caption ||
+              `${project.title} 메인 이미지`}
             class="h-full w-full rounded-lg object-cover"
           />
         </div>
@@ -164,8 +165,10 @@ const lowercase = (str: string) => str.toLowerCase();
                   data-image-index={index + 1}
                 >
                   <img
-                    src={image}
-                    alt={`${project.title} 이미지 ${index + 1}`}
+                    src={image.url}
+                    alt={
+                      image.caption || `${project.title} 이미지 ${index + 1}`
+                    }
                     class="h-full w-full rounded-lg object-cover transition-transform duration-300 hover:scale-105"
                   />
                 </div>
@@ -193,9 +196,5 @@ const lowercase = (str: string) => str.toLowerCase();
     }
   </main>
 
-  <ImageCarouselWrapper
-    client:load
-    images={allImages}
-    captions={project.images.captions || []}
-  />
+  <ImageCarouselWrapper client:load images={allImages} />
 </Layout>

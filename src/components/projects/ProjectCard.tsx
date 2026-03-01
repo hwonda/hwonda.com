@@ -27,7 +27,7 @@ export default function ProjectCard({
       {/* 썸네일 이미지 */}
       <div className="relative overflow-hidden">
         <img
-          src={project.images.thumbnail}
+          src={project.images.thumbnail.url}
           alt={project.title}
           className="aspect-video object-cover transition-transform duration-500 group-hover:scale-105"
         />

@@ -1,18 +1,18 @@
 import { X } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
 
+import type { ImageItem } from '@/types/projects';
+
 import { MainImage, ThumbnailList } from './carousel';
 
 interface ImageCarouselProps {
-  images: string[];
-  captions?: string[];
+  images: ImageItem[];
   initialIndex: number;
   onClose: () => void;
 }
 
 export default function ImageCarousel({
   images,
-  captions,
   initialIndex,
   onClose,
 }: ImageCarouselProps) {
@@ -85,16 +85,15 @@ export default function ImageCarousel({
         {/* 메인 이미지 */}
         <MainImage
           images={images}
-          captions={captions}
           currentIndex={currentIndex}
           onPrev={handlePrev}
           onNext={handleNext}
         />
 
         {/* 이미지 설명 */}
-        {captions && captions[currentIndex] && (
+        {images[currentIndex]?.caption && (
           <div className="bg-gray8 my-10 rounded-lg p-2 text-center">
-            <p className="text-gray1">{captions[currentIndex]}</p>
+            <p className="text-gray1">{images[currentIndex].caption}</p>
           </div>
         )}
       </div>

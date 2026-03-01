@@ -2,10 +2,10 @@ import { useRef } from 'react';
 
 import NavButton from '@/components/common/NavButton';
 import { useSwipe } from '@/hooks';
+import type { ImageItem } from '@/types/projects';
 
 interface MainImageProps {
-  images: string[];
-  captions?: string[];
+  images: ImageItem[];
   currentIndex: number;
   onPrev: () => void;
   onNext: () => void;
@@ -13,7 +13,6 @@ interface MainImageProps {
 
 export default function MainImage({
   images,
-  captions,
   currentIndex,
   onPrev,
   onNext,
@@ -38,8 +37,8 @@ export default function MainImage({
         style={{ transform: `translateX(${swipeOffset}px)` }}
       >
         <img
-          src={images[currentIndex]}
-          alt={captions?.[currentIndex] || `이미지 ${currentIndex + 1}`}
+          src={images[currentIndex].url}
+          alt={images[currentIndex].caption || `이미지 ${currentIndex + 1}`}
           className="max-h-full max-w-full object-contain"
         />
       </div>

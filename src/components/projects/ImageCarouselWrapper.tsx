@@ -1,16 +1,14 @@
 import { useEffect, useState } from 'react';
 
+import type { ImageItem } from '@/types/projects';
+
 import ImageCarousel from './ImageCarousel';
 
 interface ImageCarouselWrapperProps {
-  images: string[];
-  captions: string[];
+  images: ImageItem[];
 }
 
-const ImageCarouselWrapper = ({
-  images,
-  captions,
-}: ImageCarouselWrapperProps) => {
+const ImageCarouselWrapper = ({ images }: ImageCarouselWrapperProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [initialIndex, setInitialIndex] = useState(0);
 
@@ -41,7 +39,6 @@ const ImageCarouselWrapper = ({
   return isOpen ? (
     <ImageCarousel
       images={images}
-      captions={captions}
       initialIndex={initialIndex}
       onClose={() => setIsOpen(false)}
     />
