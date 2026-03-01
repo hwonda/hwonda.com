@@ -8,11 +8,15 @@ interface Description {
   full: string;
 }
 
+export interface ImageItem {
+  url: string;
+  caption?: string;
+}
+
 interface Images {
-  thumbnail: string;
-  full?: string[];
+  thumbnail: ImageItem;
+  full?: ImageItem[];
   video?: string;
-  captions?: string[]; // 각 이미지에 대한 설명 추가
 }
 
 interface EtcUrls {
