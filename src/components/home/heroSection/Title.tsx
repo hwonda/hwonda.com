@@ -6,7 +6,7 @@ interface TitleProps {
 const titleText = {
   fe: {
     full: 'Front-End Developer',
-    short: 'FE',
+    short: 'FE DEV',
   },
   tpm: {
     full: 'Technical Project Manager',
