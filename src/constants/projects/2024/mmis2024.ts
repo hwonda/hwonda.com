@@ -13,12 +13,12 @@ export const mmis2024: Project = {
     3. React-Native를 사용하여 위성 방송 애플리케이션에 콘텐츠를 추가했습니다.`,
   },
   images: {
-    thumbnail: '/projects/mmis-2024/thumbnail.webp',
+    thumbnail: { url: '/projects/mmis-2024/thumbnail.webp' },
     full: [
-      '/projects/mmis-2024/1.webp',
-      '/projects/mmis-2024/2.webp',
-      '/projects/mmis-2024/3.webp',
-      '/projects/mmis-2024/4.webp',
+      { url: '/projects/mmis-2024/1.webp' },
+      { url: '/projects/mmis-2024/2.webp' },
+      { url: '/projects/mmis-2024/3.webp' },
+      { url: '/projects/mmis-2024/4.webp' },
     ],
   },
   startTime: '2024.09',

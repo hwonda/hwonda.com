@@ -20,7 +20,7 @@ export const aquaFarm2025: Project = {
     `,
   },
   images: {
-    thumbnail: '/projects/aqua-farm-2025/thumbnail.webp',
+    thumbnail: { url: '/projects/aqua-farm-2025/thumbnail.webp' },
   },
   startTime: '2025.06',
   endTime: '현재',

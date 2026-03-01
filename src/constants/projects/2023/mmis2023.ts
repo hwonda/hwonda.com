@@ -12,8 +12,11 @@ export const mmis2023: Project = {
         - 일일 평균 접속자 수 3,000명 이상의 대국민 서비스와 기상청 임직원 100여 명이 사용하는 내부 플랫폼에 신규 기능을 추가하고, 기존 레거시 시스템을 리팩토링하여 사용자 경험 및 인식 개선을 진행했습니다.`,
   },
   images: {
-    thumbnail: '/projects/mmis-2023/thumbnail.webp',
-    full: ['/projects/mmis-2023/1.webp', '/projects/mmis-2023/2.webp'],
+    thumbnail: { url: '/projects/mmis-2023/thumbnail.webp' },
+    full: [
+      { url: '/projects/mmis-2023/1.webp' },
+      { url: '/projects/mmis-2023/2.webp' },
+    ],
   },
   startTime: '2023.04',
   endTime: '2023.10',

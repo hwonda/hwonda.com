@@ -10,9 +10,8 @@ export const zizizip: Project = {
     full: ``,
   },
   images: {
-    thumbnail: '/projects/zizizip/thumbnail.webp',
+    thumbnail: { url: '/projects/zizizip/thumbnail.webp' },
     full: [],
-    captions: [],
   },
   urls: {
     github: 'https://github.com/hwonda/zizizip',

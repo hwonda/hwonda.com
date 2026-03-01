@@ -21,7 +21,7 @@ export const mmis2025: Project = {
     `,
   },
   images: {
-    thumbnail: '/projects/mmis-2025/thumbnail.webp',
+    thumbnail: { url: '/projects/mmis-2025/thumbnail.webp' },
   },
   startTime: '2025.06',
   endTime: '현재',

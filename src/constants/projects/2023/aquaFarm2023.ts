@@ -25,7 +25,7 @@ export const aquaFarm2023: Project = {
     },
   ],
   images: {
-    thumbnail: '/projects/aqua-farm-2023/thumbnail.webp',
+    thumbnail: { url: '/projects/aqua-farm-2023/thumbnail.webp' },
   },
   startTime: '2023.01',
   endTime: '2023.04',

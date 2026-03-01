@@ -15,12 +15,12 @@ OpenLayers 지도상에 장비의 위치 및 상태를 표시했습니다.
 RTK Query를 사용하여 데이터의 효율적인 상태 관리 및 서버와의 통신을 구현했습니다.`,
   },
   images: {
-    thumbnail: '/projects/nims/thumbnail.webp',
+    thumbnail: { url: '/projects/nims/thumbnail.webp' },
     full: [
-      '/projects/nims/1.webp',
-      '/projects/nims/2.webp',
-      '/projects/nims/3.webp',
-      '/projects/nims/4.webp',
+      { url: '/projects/nims/1.webp' },
+      { url: '/projects/nims/2.webp' },
+      { url: '/projects/nims/3.webp' },
+      { url: '/projects/nims/4.webp' },
     ],
   },
   startTime: '2024.06',

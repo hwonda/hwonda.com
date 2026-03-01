@@ -13,12 +13,13 @@ export const koastUi: Project = {
       Github Pages로 **Storybook Docs를 제작**하고 **NPM에 배포**했으며, **Github Actions를 활용하여 태그 생성부터 배포까지 자동화**하였습니다. 백엔드 개발자의 **UI 구현 속도 향상 및 서비스 전반에 일관된 디자인 아이덴티티를 부여**했습니다.`,
   },
   images: {
-    thumbnail: '/projects/koast-ui/thumbnail.webp',
-    full: ['/projects/koast-ui/1.webp', '/projects/koast-ui/2.webp'],
-    captions: [
-      '라이브러리 NPM 배포 화면',
-      'Github Actions 배포 화면',
-      'Storybook Docs 화면',
+    thumbnail: {
+      url: '/projects/koast-ui/thumbnail.webp',
+      caption: '라이브러리 NPM 배포 화면',
+    },
+    full: [
+      { url: '/projects/koast-ui/1.webp', caption: 'Github Actions 배포 화면' },
+      { url: '/projects/koast-ui/2.webp', caption: 'Storybook Docs 화면' },
     ],
   },
   urls: {
