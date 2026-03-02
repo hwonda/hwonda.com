@@ -56,9 +56,9 @@ export default function ImageCarousel({
   }, [onClose, handlePrev, handleNext]);
 
   return (
-    <div className="hover:bg-gray8 fixed inset-0 z-50 flex h-screen flex-col items-center justify-center bg-black/80">
+    <div className="fixed inset-0 z-50 flex h-screen flex-col items-center justify-center bg-black/80">
       {/* 닫기 버튼 */}
-      <div className="absolute top-0 left-0 z-10 w-full">
+      <div className="absolute top-0 left-0 z-10 w-full hover:bg-black/50">
         <button
           className="hover:text-accent-4 text-accent-1 flex h-[60px] w-full items-center gap-1.5 px-4 transition-all duration-300 hover:cursor-pointer sm:px-10"
           onClick={onClose}
