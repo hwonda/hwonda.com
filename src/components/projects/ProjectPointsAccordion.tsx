@@ -26,6 +26,9 @@ const ProjectPointsAccordion = ({ points }: ProjectPointsAccordionProps) => {
 
   return (
     <div className="my-16 space-y-6">
+      <h2 className="font-pretendard text-sub text-xl font-bold">
+        프로젝트 회고
+      </h2>
       {points.map((point, index) => {
         const isOpen = openIndex === index;
 
@@ -33,16 +36,14 @@ const ProjectPointsAccordion = ({ points }: ProjectPointsAccordionProps) => {
           <div key={index}>
             {point.challenges && (
               <div className="flex flex-col gap-2">
-                <h2 className="font-pretendard text-sub text-xl font-bold">
-                  도전 과제 {index + 1}
-                </h2>
                 <div
-                  className={`accordion-header bg-gray9 flex h-full cursor-pointer justify-between rounded-lg p-6 transition-colors hover:bg-gray-800 ${isOpen ? 'rounded-b-none' : ''} ${isOpen ? 'outline-accent-2 outline-b-none outline' : ''}`}
+                  className={`accordion-header bg-gray9 flex h-full cursor-pointer items-center justify-between gap-6 rounded-lg p-6 transition-colors hover:bg-gray-800 ${isOpen ? 'rounded-b-none' : ''} ${isOpen ? 'outline-accent-2 outline-b-none outline' : ''}`}
                   onClick={() => handleToggle(index)}
                 >
                   <div
-                    className={`whitespace-pre-line ${isOpen ? 'text-gray2' : 'text-sub'}`}
+                    className={`flex items-start whitespace-pre-line ${isOpen ? 'text-gray2' : 'text-sub'}`}
                   >
+                    <span className="text-gray1 mr-1">{index + 1}.</span>
                     <MarkdownContent content={point.challenges} />
                   </div>
                   <ChevronDown
