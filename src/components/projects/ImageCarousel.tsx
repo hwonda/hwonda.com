@@ -8,13 +8,17 @@ import { MainImage, ThumbnailList } from './carousel';
 interface ImageCarouselProps {
   images: ImageItem[];
   initialIndex: number;
+  isClosing?: boolean;
   onClose: () => void;
+  onAnimationEnd?: () => void;
 }
 
 export default function ImageCarousel({
   images,
   initialIndex,
+  isClosing = false,
   onClose,
+  onAnimationEnd,
 }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
 
@@ -52,11 +56,11 @@ export default function ImageCarousel({
   }, [onClose, handlePrev, handleNext]);
 
   return (
-    <div className="fixed inset-0 z-50 flex h-screen flex-col items-center justify-center bg-black/80">
+    <div className="hover:bg-gray8 fixed inset-0 z-50 flex h-screen flex-col items-center justify-center bg-black/80">
       {/* 닫기 버튼 */}
       <div className="absolute top-0 left-0 z-10 w-full">
         <button
-          className="hover:text-accent-4 text-accent-1 flex h-[60px] w-full items-center gap-1.5 px-10 transition-all duration-300 hover:cursor-pointer"
+          className="hover:text-accent-4 text-accent-1 flex h-[60px] w-full items-center gap-1.5 px-4 transition-all duration-300 hover:cursor-pointer sm:px-10"
           onClick={onClose}
         >
           <p className="text-2xl font-bold">닫기</p>
@@ -65,8 +69,13 @@ export default function ImageCarousel({
       </div>
 
       <div
-        className="bg-gray9 border-accent-2 absolute bottom-0 flex h-[calc(100vh-60px)] w-full flex-col border-t p-10"
+        className={`bg-gray9 border-accent-2 absolute bottom-0 flex h-[calc(100vh-60px)] w-full flex-col border-t px-4 py-10 sm:px-10 ${
+          isClosing
+            ? 'animate-carousel-slide-down'
+            : 'animate-carousel-slide-up'
+        }`}
         onClick={(e) => e.stopPropagation()}
+        onAnimationEnd={onAnimationEnd}
       >
         {/* 현재 인덱스 표시 */}
         <div className="z-10 text-end text-white">

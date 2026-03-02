@@ -74,6 +74,33 @@
   }
 }
 
+/* 캐러셀용 슬라이드 애니메이션 */
+@keyframes carouselSlideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes carouselSlideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.animate-carousel-slide-up {
+  animation: carouselSlideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-carousel-slide-down {
+  animation: carouselSlideDown 0.3s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
 @keyframes rotate180 {
   from {
     transform: rotate(0deg);

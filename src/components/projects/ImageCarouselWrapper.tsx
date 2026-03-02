@@ -10,6 +10,7 @@ interface ImageCarouselWrapperProps {
 
 const ImageCarouselWrapper = ({ images }: ImageCarouselWrapperProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const [initialIndex, setInitialIndex] = useState(0);
 
   useEffect(() => {
@@ -22,6 +23,7 @@ const ImageCarouselWrapper = ({ images }: ImageCarouselWrapperProps) => {
         10,
       );
       setInitialIndex(index);
+      setIsClosing(false);
       setIsOpen(true);
     };
 
@@ -36,11 +38,24 @@ const ImageCarouselWrapper = ({ images }: ImageCarouselWrapperProps) => {
     };
   }, []);
 
+  const handleClose = () => {
+    setIsClosing(true);
+  };
+
+  const handleAnimationEnd = () => {
+    if (isClosing) {
+      setIsOpen(false);
+      setIsClosing(false);
+    }
+  };
+
   return isOpen ? (
     <ImageCarousel
       images={images}
       initialIndex={initialIndex}
-      onClose={() => setIsOpen(false)}
+      isClosing={isClosing}
+      onClose={handleClose}
+      onAnimationEnd={handleAnimationEnd}
     />
   ) : null;
 };
