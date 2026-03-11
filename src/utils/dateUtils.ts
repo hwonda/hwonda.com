@@ -24,7 +24,7 @@ export const getProjectPeriod = (start: string, end: string): string => {
   }
 
   // 총 개월 수 계산
-  const totalMonths = (endYear - startYear) * 12 + (endMonth - startMonth + 1);
+  const totalMonths = (endYear - startYear) * 12 + (endMonth - startMonth);
   const years = Math.floor(totalMonths / 12);
   const months = totalMonths % 12;
 
@@ -43,4 +43,13 @@ export const getProjectPeriod = (start: string, end: string): string => {
   }
 
   return periodText;
+};
+
+// 오늘 날짜 반환(YYYY.MM.DD 형식)
+export const getTodayDate = (): string => {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth() + 1;
+  const day = now.getDate();
+  return `${year}.${month}.${day}`;
 };

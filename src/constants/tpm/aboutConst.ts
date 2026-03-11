@@ -1,14 +1,16 @@
+import { getProjectPeriod } from '@/utils/dateUtils';
+
 // TPM 경력 데이터 (TODO: 수정 필요)
 export const experiences = [
   {
-    period: '2023.01 - 현재 (2년 7개월 ~)',
+    period: `2023.01 - 현재(${getProjectPeriod('2023.01', '현재')})`,
     title: 'Technical Project Manager',
     company: '(주)한국해양기상기술',
     description:
       '조직의 엔지니어링 표준 수립과 AI 기반 워크플로우 도입을 주도하며 전사 프로젝트 관리 체계를 구축했습니다. Jira 기반 WBS 수립 및 피드백 루프를 통해 프로젝트 가시성을 확보하고, Cursor/Claude Code 매뉴얼 배포 등 AI 에이전트 전파를 통해 유지보수 시간을 50% 이상 단축하며 데이터 기반의 의사결정 문화를 정착시켰습니다.',
   },
   {
-    period: '2019.09 - 2023.01 (3년 5개월)',
+    period: '2019.09 - 2023.01(3년 5개월)',
     title: '승강기 법정 검사원',
     company: '한국승강기안전공단',
   },

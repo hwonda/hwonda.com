@@ -1,14 +1,16 @@
+import { getProjectPeriod } from '@/utils/dateUtils';
+
 // 경력 데이터
 export const experiences = [
   {
-    period: '2023.01 - 현재 (2년 7개월 ~)',
+    period: `2023.01 - 현재(${getProjectPeriod('2023.01', '현재')})`,
     title: '프론트엔드 개발자',
     company: '(주)한국해양기상기술',
     description:
       '주요 웹 애플리케이션 개발 및 유지보수를 담당하고 있습니다. React와 TypeScript를 활용하여 사용자 친화적인 인터페이스를 구현하였습니다.',
   },
   {
-    period: '2019.09 - 2023.01 (3년 5개월)',
+    period: '2019.09 - 2023.01(3년 5개월)',
     title: '승강기 법정 검사원',
     company: '한국승강기안전공단',
   },

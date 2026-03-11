@@ -2,6 +2,8 @@ import '@/styles/animation.css';
 
 import { useEffect, useState } from 'react';
 
+import { getTodayDate } from '@/utils/dateUtils';
+
 import {
   ActionButtons,
   BackgroundImage,
@@ -9,7 +11,7 @@ import {
   Title,
 } from './heroSection';
 
-const LAST_MODIFIED = '25/09/11';
+const LAST_MODIFIED = getTodayDate();
 
 interface HeroProps {
   role: 'fe' | 'tpm';
@@ -42,7 +44,7 @@ export default function Hero({ role }: HeroProps) {
         </div>
       </div>
 
-      <p className="absolute right-4 bottom-4 text-sm">
+      <p className="absolute right-8 bottom-4 text-sm">
         <span className="text-gray6 text-xs">Last Modified</span>
         <span className="text-gray3 ml-2 font-bold">{LAST_MODIFIED}</span>
       </p>
