@@ -18,14 +18,24 @@ export default function PageTitle({
         {suffix}
         <div className="from-accent-1 to-accent-3 absolute bottom-[-16px] left-0 h-[12px] w-[102px] rounded-full bg-gradient-to-b opacity-30 md:w-[132px]"></div>
       </h1>
-      <a
-        href="/resume_dahwon_ju.pdf"
-        download
-        className="text-main hover:text-accent-1 flex items-center gap-2 pb-6 font-medium transition-colors duration-300"
-      >
-        <Download className="h-4 w-4" />
-        이력서(pdf)
-      </a>
+      <div className="flex items-center gap-4">
+        <a
+          href="/resume_dahwon_ju.pdf"
+          download
+          className="text-main hover:text-accent-1 flex items-center gap-1 pb-6 font-medium transition-colors duration-300"
+        >
+          <Download className="h-4 w-4" />
+          이력서
+        </a>
+        <a
+          href="/career_description_dahwon_ju.pdf"
+          download
+          className="text-main hover:text-accent-1 flex items-center gap-1 pb-6 font-medium transition-colors duration-300"
+        >
+          <Download className="h-4 w-4" />
+          경력 기술서
+        </a>
+      </div>
     </div>
   );
 }

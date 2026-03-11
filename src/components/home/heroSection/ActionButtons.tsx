@@ -23,6 +23,12 @@ export default function ActionButtons({ isLoaded, role }: ActionButtonsProps) {
       variant: 'secondary',
       download: true,
     },
+    {
+      href: '/career_description_dahwon_ju.pdf',
+      label: '경력기술서 다운로드',
+      variant: 'secondary',
+      download: true,
+    },
   ];
 
   const variantClasses = {
