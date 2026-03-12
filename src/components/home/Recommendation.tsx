@@ -60,10 +60,10 @@ export default function Recommendation({ role }: RecommendationProps) {
     const deltaTime = Date.now() - dragState.startTime;
     const velocity = Math.abs(deltaX) / deltaTime;
 
-    const FLICK_THRESHOLD = 0.3;
-    const MIN_DISTANCE = 50;
+    const flickThreshold = 0.3;
+    const minDistance = 50;
 
-    if (velocity > FLICK_THRESHOLD || Math.abs(deltaX) > MIN_DISTANCE) {
+    if (velocity > flickThreshold || Math.abs(deltaX) > minDistance) {
       if (deltaX > 0) {
         handlePrev();
         resetProgress();

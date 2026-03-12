@@ -18,11 +18,11 @@ interface UseAutoSlideReturn {
   resetProgress: () => void;
 }
 
-const DEFAULT_INTERVAL = 5000;
+const defaultInterval = 5000;
 
 export default function useAutoSlide({
   itemsLength,
-  interval = DEFAULT_INTERVAL,
+  interval = defaultInterval,
   autoPlay = true,
 }: UseAutoSlideOptions): UseAutoSlideReturn {
   const [currentIndex, setCurrentIndex] = useState(0);

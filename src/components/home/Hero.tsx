@@ -11,7 +11,7 @@ import {
   Title,
 } from './heroSection';
 
-const LAST_MODIFIED = getTodayDate();
+const lastModified = getTodayDate();
 
 interface HeroProps {
   role: 'fe' | 'tpm';
@@ -46,7 +46,7 @@ export default function Hero({ role }: HeroProps) {
 
       <p className="absolute right-8 bottom-4 text-sm">
         <span className="text-gray6 text-xs">Last Modified</span>
-        <span className="text-gray3 ml-2 font-bold">{LAST_MODIFIED}</span>
+        <span className="text-gray3 ml-2 font-bold">{lastModified}</span>
       </p>
     </section>
   );

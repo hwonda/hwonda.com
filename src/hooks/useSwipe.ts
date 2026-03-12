@@ -24,14 +24,14 @@ interface UseSwipeReturn {
   };
 }
 
-const DEFAULT_MIN_SWIPE_DISTANCE = 50;
-const DEFAULT_MAX_OFFSET = 150;
+const defaultMinSwipeDistance = 50;
+const defaultMaxOffset = 150;
 
 export default function useSwipe({
   onPrev,
   onNext,
-  minSwipeDistance = DEFAULT_MIN_SWIPE_DISTANCE,
-  maxOffset = DEFAULT_MAX_OFFSET,
+  minSwipeDistance = defaultMinSwipeDistance,
+  maxOffset = defaultMaxOffset,
   onSwipeStart,
   onSwipeEnd,
 }: UseSwipeOptions): UseSwipeReturn {
