@@ -2,8 +2,6 @@ import '@/styles/animation.css';
 
 import { useEffect, useState } from 'react';
 
-import { getTodayDate } from '@/utils/dateUtils';
-
 import {
   ActionButtons,
   BackgroundImage,
@@ -11,13 +9,12 @@ import {
   Title,
 } from './heroSection';
 
-const lastModified = getTodayDate();
-
 interface HeroProps {
   role: 'fe' | 'tpm';
+  lastModified: string;
 }
 
-export default function Hero({ role }: HeroProps) {
+export default function Hero({ role, lastModified }: HeroProps) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
