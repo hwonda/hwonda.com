@@ -76,8 +76,8 @@
 .prose code {
   padding: 0.25rem 0.4rem;
   border-radius: 0.25rem;
-  color: var(--primary-color);
-  background-color: var(--gray-4);
+  color: var(--secondary-color);
+  background-color: var(--gray-8);
   font-family: var(--font-pretendard);
 }
 
