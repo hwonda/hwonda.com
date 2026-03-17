@@ -2,7 +2,16 @@
 function parseMarkdownSegment(segment: string) {
   let html = segment;
 
-  html = html.replace(/\n/g, '<br>');
+  // 1. 먼저 두 번 이상의 줄바꿈을 임시 마커로 변환 (공백만 있는 줄도 빈 줄로 인식)
+  html = html.replace(/(\n\s*){2,}/g, '<PARAGRAPH_BREAK>');
+  // 2. 리스트 항목(-), 순서 리스트(숫자.), 인용구(>) 앞의 줄바꿈은 유지
+  html = html.replace(/\n(\s*[-\d>])/g, '<br>$1');
+  // 3. 리스트/인용구 뒤에 비리스트 텍스트가 오면 줄바꿈 유지
+  html = html.replace(/(<br>\s*[-\d>][^\n]*)\n(?!\s*[-\d>])/g, '$1<br>');
+  // 4. 나머지 단일 줄바꿈은 공백으로 변환
+  html = html.replace(/\n/g, ' ');
+  // 5. 임시 마커를 <br>로 변환
+  html = html.replace(/<PARAGRAPH_BREAK>/g, '<br>');
 
   // 표 처리
   html = html.replace(/\|(.+)\|/g, (match) => {
