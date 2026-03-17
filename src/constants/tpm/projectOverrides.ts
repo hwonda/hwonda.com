@@ -24,7 +24,7 @@ export const projectOverrides: ProjectOverride[] = [
 - 백엔드 개발자의 UI 구현 속도 10배 이상 향상
 - 팀 협업 프로세스 체계화 및 개발 문화 개선`,
     },
-    role: 'Technical PM / Frontend Lead',
+    role: 'Technical PM · Frontend Lead',
     points: [
       {
         challenges: `다양한 프레임워크가 혼재된 환경에서 팀원들의 기술 역량 편차가 크고, 표준화된 개발 프로세스가 부재했습니다.`,

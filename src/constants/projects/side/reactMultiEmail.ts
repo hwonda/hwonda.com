@@ -8,7 +8,12 @@ export const reactMultiEmail: Project = {
   description: {
     short:
       '다중 이메일 입력을 위한 React 컴포넌트 라이브러리로, 사용자 친화적인 인터페이스와 검증 기능을 제공합니다.',
-    full: '오픈 소스 프로젝트에 기여한 활동으로, Jest를 사용하여 유닛 테스트를 작성하고 검증했으며, 버그를 수정하고 PR과 Issue를 확인했습니다.\n 또한, Docusaurus와 mdx를 사용해 라이브러리를 문서화했습니다.',
+    full: `
+    react-multi-email 오픈소스 라이브러리에 기여하여 테스트 코드 도입, 버그 수정, 문서화를 통해 라이브러리의 안정성과 사용성을 개선했습니다.
+
+    Jest 기반 유닛 테스트를 추가하여 주요 로직의 신뢰도를 높이고, 실제 사용자 이슈를 분석해 버그를 수정했습니다.
+    또한 Docusaurus/MDX 기반 공식 문서를 구축하여 개발자가 라이브러리를 쉽게 도입할 수 있는 환경을 마련했습니다.
+    `,
   },
   images: {
     thumbnail: { url: '/projects/react-multi-email/thumbnail.webp' },
@@ -35,11 +40,37 @@ export const reactMultiEmail: Project = {
   },
   points: [
     {
-      challenges: `이메일 입력 시 Enter 키를 눌렀을 때, validateEmail 함수가 false를 반환하거나 오류가 발생하는 경우 스피너가 멈추지 않는 문제를 해결했습니다.`,
-      solutions: `철저한 테스트와 타입 안정성을 보장하기 위해 TypeScript를 도입했습니다.
-또한 ARIA 속성과 키보드 네비게이션을 구현하여 접근성을 높였습니다.`,
-      results: `npm에서 주간 다운로드 5,000회 이상을 기록하며 많은 개발자들에게 사용되고 있습니다.
-GitHub에서 300개 이상의 별을 받았으며, 지속적인 기여와 개선이 이루어지고 있습니다.`,
+      challenges: `
+      이메일 입력 시 Enter 키를 눌렀을 때, validateEmail 함수가 false를 반환하거나 오류가 발생하는 경우 스피너가 멈추지 않았습니다.
+      `,
+      solutions: `
+      validateEmail 함수를 수정하여 스피너가 멈추지 않도록 한 뒤 PR을 제출했습니다.
+      `,
+      results: `
+      PR이 머지되어 이메일 입력 시의 버그가 해결되었습니다.
+      `,
+    },
+    {
+      challenges: `
+      테스트 코드가 없어 기능 변경 시 런타임 에러 발생 가능성이 존재했습니다.
+      `,
+      solutions: `
+      Jest 기반 핵심 로직 유닛 테스트를 작성했습니다.
+      `,
+      results: `
+      코드 변경 시 안정적으로 검증 가능한 구조를 확보했습니다.
+      `,
+    },
+    {
+      challenges: `
+      사용법에 대한 가이드가 부족해 라이브러리 도입이 어려운 문제가 있었습니다.
+      `,
+      solutions: `
+      Docusaurus/MDX 기반 공식 문서 및 사용법 가이드를 구축했습니다.
+      `,
+      results: `
+      사용자가 빠르게 이해하고 적용할 수 있는 문서 환경을 구축했습니다.
+      `,
     },
   ],
   startTime: '2023.07',
