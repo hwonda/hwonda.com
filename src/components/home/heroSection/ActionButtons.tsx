@@ -11,6 +11,8 @@ interface ActionButtonsProps {
 }
 
 export default function ActionButtons({ isLoaded, role }: ActionButtonsProps) {
+  const fileSuffix = role === 'fe' ? '' : '(pm)';
+
   const actionButtons: ActionButton[] = [
     {
       href: `/${role}/projects`,
@@ -18,13 +20,13 @@ export default function ActionButtons({ isLoaded, role }: ActionButtonsProps) {
       variant: 'primary',
     },
     {
-      href: '/resume_dahwon_ju.pdf',
+      href: `/resume_dahwon_ju${fileSuffix}.pdf`,
       label: '이력서 다운로드',
       variant: 'secondary',
       download: true,
     },
     {
-      href: '/career_description_dahwon_ju.pdf',
+      href: `/career_description_dahwon_ju${fileSuffix}.pdf`,
       label: '경력기술서 다운로드',
       variant: 'secondary',
       download: true,

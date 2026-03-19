@@ -3,12 +3,16 @@ import { Download } from 'lucide-react';
 interface PageTitleProps {
   name: string;
   suffix?: string;
+  role?: 'fe' | 'tpm';
 }
 
 export default function PageTitle({
   name,
   suffix = '에 대하여',
+  role = 'fe',
 }: PageTitleProps) {
+  const fileSuffix = role === 'fe' ? '' : '(pm)';
+
   return (
     <div className="flex justify-between">
       <h1 className="font-pretendard relative mb-0 text-4xl font-bold sm:mb-12 md:text-5xl">
@@ -20,7 +24,7 @@ export default function PageTitle({
       </h1>
       <div className="flex items-center gap-4">
         <a
-          href="/resume_dahwon_ju.pdf"
+          href={`/resume_dahwon_ju${fileSuffix}.pdf`}
           download
           className="text-main hover:text-accent-1 flex items-center gap-1 pb-6 font-medium transition-colors duration-300"
         >
@@ -28,7 +32,7 @@ export default function PageTitle({
           이력서
         </a>
         <a
-          href="/career_description_dahwon_ju.pdf"
+          href={`/career_description_dahwon_ju${fileSuffix}.pdf`}
           download
           className="text-main hover:text-accent-1 flex items-center gap-1 pb-6 font-medium transition-colors duration-300"
         >

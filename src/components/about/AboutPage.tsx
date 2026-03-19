@@ -20,6 +20,7 @@ export default function About({
   aboutParagraphs,
   experiences,
   education,
+  role,
 }: AboutPageProps) {
   return (
     <div className="mx-auto mt-24 max-w-[1000px] px-4 sm:top-8 md:mt-44 md:px-10 2xl:max-w-[1200px]">
@@ -38,7 +39,7 @@ export default function About({
         </div>
 
         <div className="animate-intro-next flex flex-col gap-8 md:col-span-2">
-          <PageTitle name={name} />
+          <PageTitle name={name} role={role} />
           <AboutMeSection paragraphs={aboutParagraphs} />
           <ExperienceSection experiences={experiences} />
           <EducationSection education={education} />

@@ -43,4 +43,5 @@ export interface AboutPageProps {
   aboutParagraphs: string[];
   experiences: ExperienceItem[];
   education: EducationItem[];
+  role?: 'fe' | 'tpm';
 }
