@@ -54,14 +54,12 @@ export const blog: Project = {
   images: {
     thumbnail: { url: '/projects/blog/thumbnail.webp' },
     full: [
+      { url: '/projects/blog/0.webp' },
       { url: '/projects/blog/1.webp' },
       { url: '/projects/blog/2.webp' },
       { url: '/projects/blog/3.webp' },
       { url: '/projects/blog/4.webp' },
       { url: '/projects/blog/5.webp' },
-      { url: '/projects/blog/6.webp' },
-      { url: '/projects/blog/7.webp' },
-      { url: '/projects/blog/8.webp' },
     ],
   },
   startTime: '2024.07',

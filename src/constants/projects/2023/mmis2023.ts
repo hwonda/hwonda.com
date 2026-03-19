@@ -3,7 +3,7 @@ import { getProjectPeriod } from '@/utils/dateUtils';
 
 export const mmis2023: Project = {
   id: 'mmis-2023',
-  title: '기상청 해양기상 플랫폼',
+  title: '기상청 2023',
   subtitle: '프론트 외주 개발에서 사내 개발로 전환',
   description: {
     short:

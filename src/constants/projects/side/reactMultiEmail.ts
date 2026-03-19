@@ -26,6 +26,7 @@ export const reactMultiEmail: Project = {
       { url: '/projects/react-multi-email/6.webp' },
       { url: '/projects/react-multi-email/7.webp' },
       { url: '/projects/react-multi-email/8.webp' },
+      { url: '/projects/react-multi-email/9.webp' },
     ],
   },
   urls: {

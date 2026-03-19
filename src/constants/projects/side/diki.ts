@@ -24,6 +24,8 @@ export const diki: Project = {
       caption: '프로젝트 메인 대시보드 화면',
     },
     full: [
+      { url: '/projects/diki/diki.webp' },
+      { url: '/projects/diki/0.webp', caption: '랜딩페이지' },
       { url: '/projects/diki/1.webp', caption: '대시보드 화면 - 다크모드' },
       { url: '/projects/diki/2.webp', caption: '포스트 검색 결과 화면' },
       { url: '/projects/diki/3.webp', caption: '포스트 상세 페이지' },
@@ -120,7 +122,7 @@ export const diki: Project = {
   startTime: '2024.10',
   endTime: '2025.12',
   period: getProjectPeriod('2024.10', '2025.12'),
-  role: 'Frontend · Backend · SEO',
+  role: 'PM · UI/UX · Frontend',
   team: 'DXWiki',
   techStack: [
     'Next.js',
