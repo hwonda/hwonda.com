@@ -16,7 +16,7 @@ export const getNavLinks = (basePath: '/fe' | '/tpm'): NavLink[] => [
     hoverClass: 'hover:bg-accent-1/20',
   },
   {
-    href: 'https://www.hwonda.com/blog',
+    href: `https://www.hwonda.com/blog?from=${basePath.slice(1)}`,
     label: '블로그',
     hoverClass: 'hover:bg-accent-3/30',
     isExternal: true,
