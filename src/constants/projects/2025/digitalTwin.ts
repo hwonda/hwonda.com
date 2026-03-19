@@ -66,6 +66,8 @@ export const digitalTwin: Project = {
   images: {
     thumbnail: { url: '/projects/digital-twin/thumbnail.webp' },
     full: [
+      { url: '/projects/digital-twin/0.webp' },
+      { url: '/projects/digital-twin/1.webp' },
       { url: '/projects/digital-twin/2.webp' },
       { url: '/projects/digital-twin/3.webp' },
       { url: '/projects/digital-twin/4.webp' },
@@ -77,6 +79,7 @@ export const digitalTwin: Project = {
       { url: '/projects/digital-twin/10.webp' },
       { url: '/projects/digital-twin/11.webp' },
       { url: '/projects/digital-twin/12.webp' },
+      { url: '/projects/digital-twin/13.webp' },
     ],
   },
   startTime: '2024.12',

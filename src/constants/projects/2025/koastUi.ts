@@ -19,11 +19,16 @@ export const koastUi: Project = {
   images: {
     thumbnail: {
       url: '/projects/koast-ui/thumbnail.webp',
-      caption: '라이브러리 NPM 배포 화면',
     },
     full: [
-      { url: '/projects/koast-ui/1.webp', caption: 'Github Actions 배포 화면' },
-      { url: '/projects/koast-ui/2.webp', caption: 'Storybook Docs 화면' },
+      { url: '/projects/koast-ui/1.webp', caption: '프로젝트 개요' },
+      { url: '/projects/koast-ui/2.webp', caption: 'NPM 배포' },
+      {
+        url: '/projects/koast-ui/3.webp',
+        caption: 'Github Actions 배포 자동화',
+      },
+      { url: '/projects/koast-ui/4.webp', caption: 'Storybook Docs' },
+      { url: '/projects/koast-ui/5.webp', caption: 'Storybook Docs' },
     ],
   },
   urls: {

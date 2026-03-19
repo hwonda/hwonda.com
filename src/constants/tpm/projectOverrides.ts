@@ -8,21 +8,23 @@ export const projectOverrides: ProjectOverride[] = [
     description: {
       short:
         '사내 React UI 라이브러리 도입을 기획하고 개발 프로세스를 주도하여 팀 전체의 개발 생산성을 향상시켰습니다.',
-      full: `프론트엔드 기술 표준화와 개발 생산성 향상을 위해 **사내 공용 UI 라이브러리 도입 프로젝트를 기획하고 주도**했습니다.
+      full: `
+      프론트엔드 기술 표준화와 개발 생산성 향상을 위해 **사내 공용 UI 라이브러리 도입 프로젝트를 기획하고 주도**했습니다.
 
-기존에 JSP, 타임리프, Vue 등 다양한 프레임워크가 혼재된 환경에서 **기술 스택 표준화의 필요성을 CTO에게 제안**하고, React + Tailwind CSS로의 전환 로드맵을 수립했습니다.
+      기존에 JSP, 타임리프, Vue 등 다양한 프레임워크가 혼재된 환경에서 **기술 스택 표준화의 필요성을 CTO에게 제안**하고, React + Tailwind CSS로의 전환 로드맵을 수립했습니다.
 
-**주요 활동:**
-- 기술 스택 표준화 제안 및 의사결정 과정 주도
-- 사내 React 스터디 기획 및 운영 (6명 참여)
-- Storybook 기반 문서화 전략 수립으로 팀 간 커뮤니케이션 효율화
-- GitHub Actions 기반 CI/CD 파이프라인 구축 및 배포 프로세스 표준화
-- 사내 commit convention 및 브랜치 전략 정립
+      **주요 활동:**
+      - 기술 스택 표준화 제안 및 의사결정 과정 주도
+      - 사내 React 스터디 기획 및 운영 (6명 참여)
+      - Storybook 기반 문서화 전략 수립으로 팀 간 커뮤니케이션 효율화
+      - GitHub Actions 기반 CI/CD 파이프라인 구축 및 배포 프로세스 표준화
+      - 사내 commit convention 및 브랜치 전략 정립
 
-**성과:**
-- 2025년 신규 프로젝트 4개 중 3개에 React, Tailwind CSS 적용
-- 백엔드 개발자의 UI 구현 속도 10배 이상 향상
-- 팀 협업 프로세스 체계화 및 개발 문화 개선`,
+      **성과:**
+      - 2025년 신규 프로젝트 4개 중 3개에 React, Tailwind CSS 적용
+      - 백엔드 개발자의 UI 구현 속도 10배 이상 향상
+      - 팀 협업 프로세스 체계화 및 개발 문화 개선
+      `,
     },
     role: 'Technical PM · Frontend Lead',
     points: [
@@ -42,5 +44,13 @@ export const projectOverrides: ProjectOverride[] = [
         results: `배포 오류가 크게 감소하고 배포 주기가 단축되어, 기능 개선 및 버그 수정에 대한 빠른 대응이 가능해졌습니다.`,
       },
     ],
+  },
+  {
+    id: 'zizizip',
+    role: '1인 주도 개발',
+  },
+  {
+    id: 'blog',
+    role: '1인 주도 개발',
   },
 ];

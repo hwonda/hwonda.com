@@ -20,7 +20,32 @@ export const zizizip: Project = {
   },
   images: {
     thumbnail: { url: '/projects/zizizip/thumbnail.webp' },
-    full: [],
+    full: [
+      { url: '/projects/zizizip/0.webp' },
+      { url: '/projects/zizizip/1.webp', caption: '랜딩페이지' },
+      {
+        url: '/projects/zizizip/2.webp',
+        caption: '업로드 중 상태 표시 - 엑셀 컬럼 파싱',
+      },
+      {
+        url: '/projects/zizizip/3.webp',
+        caption: '업로드 중 상태 표시 - 좌표 변환(지오코딩)',
+      },
+      {
+        url: '/projects/zizizip/4.webp',
+        caption: '업로드 완료 표시 - 업로드된 파일 목록',
+      },
+      { url: '/projects/zizizip/5.webp', caption: '업로드된 데이터 화면' },
+      {
+        url: '/projects/zizizip/6.webp',
+        caption: '줌 레벨에 따른 마커 클러스터링',
+      },
+      {
+        url: '/projects/zizizip/7.webp',
+        caption: '마커 클릭 시 상세 정보 표시',
+      },
+      { url: '/projects/zizizip/8.webp', caption: '필터링 기능' },
+    ],
   },
   urls: {
     github: 'https://github.com/hwonda/zizizip',

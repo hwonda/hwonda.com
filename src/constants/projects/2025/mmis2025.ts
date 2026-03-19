@@ -3,7 +3,7 @@ import { getProjectPeriod } from '@/utils/dateUtils';
 
 export const mmis2025: Project = {
   id: 'mmis2025',
-  title: '기상청 해양기상 플랫폼',
+  title: '기상청 2025',
   subtitle: '대국민 서비스 UI/UX 개선',
   description: {
     short: '기상청 대국민 서비스인 해양기상정보포털의 PC, Mobile UI/UX 개선',
@@ -77,11 +77,19 @@ export const mmis2025: Project = {
   ],
   images: {
     thumbnail: { url: '/projects/mmis-2025/thumbnail.webp' },
+    full: [
+      { url: '/projects/mmis-2025/0.webp' },
+      { url: '/projects/mmis-2025/1.webp' },
+      { url: '/projects/mmis-2025/2.webp' },
+      { url: '/projects/mmis-2025/3.webp' },
+      { url: '/projects/mmis-2025/4.webp' },
+      { url: '/projects/mmis-2025/5.webp' },
+    ],
   },
   startTime: '2025.06',
   endTime: '2025.08',
   period: getProjectPeriod('2025.06', '2025.08'),
-  role: 'Frontend',
+  role: 'PM · UI/UX · Frontend Lead',
   team: 'Koast',
   techStack: [
     'Vue.js',
