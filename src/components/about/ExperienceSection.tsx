@@ -1,3 +1,4 @@
+import MarkdownContent from '@/components/common/MarkdownContent';
 import SectionWrapper from '@/components/common/SectionWrapper';
 import type { ExperienceItem } from '@/types/about';
 
@@ -19,7 +20,7 @@ export default function ExperienceSection({ experiences }: ExperienceProps) {
               <span className="text-gray2 text-sm">{exp.period}</span>
             </div>
             <p className="text-accent-2 mb-2 font-medium">{exp.company}</p>
-            <p className="text-gray1">{exp.description}</p>
+            <MarkdownContent content={exp.description || ''} />
           </div>
         ))}
       </div>

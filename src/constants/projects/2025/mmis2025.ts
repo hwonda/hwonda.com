@@ -80,10 +80,7 @@ export const mmis2025: Project = {
     full: [
       { url: '/projects/mmis-2025/0.webp' },
       { url: '/projects/mmis-2025/1.webp' },
-      { url: '/projects/mmis-2025/2.webp' },
-      { url: '/projects/mmis-2025/3.webp' },
-      { url: '/projects/mmis-2025/4.webp' },
-      { url: '/projects/mmis-2025/5.webp' },
+      { url: '/projects/mmis-2025/2.webp', caption: '' },
     ],
   },
   startTime: '2025.06',

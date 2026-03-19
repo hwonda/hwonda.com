@@ -13,6 +13,12 @@ function parseMarkdownSegment(segment: string) {
   // 5. 임시 마커를 <br>로 변환
   html = html.replace(/<PARAGRAPH_BREAK>/g, '<br>');
 
+  // 수평 구분선 처리 (--- 이상)
+  html = html.replace(
+    /(?:^|<br>)\s*-{3,}\s*(?=<br>|$)/g,
+    '<hr class="markdown-hr" />',
+  );
+
   // 표 처리
   html = html.replace(/\|(.+)\|/g, (match) => {
     const rows = match

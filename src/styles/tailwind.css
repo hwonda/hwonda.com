@@ -171,3 +171,9 @@
   border: 0;
   font-weight: 600;
 }
+
+.markdown-hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-color: var(--gray-7);
+}
