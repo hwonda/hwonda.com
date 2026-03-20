@@ -65,7 +65,7 @@ export default function Projects({ basePath, role }: ProjectsProps) {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="font-paperlogy mb-12 text-3xl font-bold md:text-4xl">
-          프로젝트
+          Projects
         </h2>
         <div className="grid grid-cols-1 gap-10 space-y-16">
           {projectsData.map((yearData, yearIndex) => {

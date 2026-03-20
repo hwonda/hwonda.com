@@ -188,7 +188,7 @@ export default function Recommendation({ role }: RecommendationProps) {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="font-paperlogy mb-12 text-3xl font-bold md:text-4xl">
-          동료 평가
+          Peer Review
         </h2>
 
         <div
