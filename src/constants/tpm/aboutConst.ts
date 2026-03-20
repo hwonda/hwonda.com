@@ -7,11 +7,12 @@ export const experiences = [
     title: 'Technical Project Manager',
     company: '(주)한국해양기상기술',
     description: `
-    - 전사 협업 시스템 및 일정 관리 체계(WBS) 수립
-    - Claude Code, Cursor 등 AI 에이전트를 개발 공정에 이식하여 단순 반복 업무 자동화
+    - **JIra 도입**: WBS 기반 일정 관리 체계를 설계하고, 태스크 단위로 마일스톤을 추적할 수 있는 운영 방식으로 전환
+    - **협업 도구 표준화**: Figma와 Storybook을 도입해 기획-디자인-개발 간 단일 협업 창구를 구축하고, UI/UX 커뮤니케이션 오버헤드와 오차 범위를 축소
+    - **AI 에이전트 도입**: Claude Code, Cursor 등 AI 에이전트 도입 및 활용 가이드를 문서화해 반복 업무 자동화와 조직 내 AI 활용 확산을 주도
+    - **형상관리 기준 정립**: 1기능 1브랜치, Hotfix 전략, Squash Merge, Commit Convention을 도입해 일관된 형상관리 및 배포 운영 기준을 수립
     - LLM 기반 자동 코드 리뷰 시스템, 사내 공용 UI 라이브러리 구축
-    - Github Branch 전략 및 Commit 컨벤션을 수립하여 파이프라인 안정성 확보
-    - Figma 도입 및 디자인 시스템-코드 동기화 프로세스를 통해 기획/디자인 오차범위 최소화
+    - 프로젝트 기획부터 UI/UX, 개발까지 End-to-End Leading
     `,
   },
   {

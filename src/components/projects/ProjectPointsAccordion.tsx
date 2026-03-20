@@ -71,7 +71,7 @@ const ProjectPointsAccordion = ({ points }: ProjectPointsAccordionProps) => {
                   {point.solutions && (
                     <div className="bg-gray9 h-full p-6">
                       <h3 className="font-pretendard text-accent-3/80 mb-2 text-lg font-bold">
-                        {'노력 / 방법'}
+                        {'Action'}
                       </h3>
                       <div className="text-sub whitespace-pre-line">
                         <MarkdownContent content={point.solutions} />
@@ -81,7 +81,7 @@ const ProjectPointsAccordion = ({ points }: ProjectPointsAccordionProps) => {
                   {point.results && (
                     <div className="bg-gray9 h-full p-6">
                       <h3 className="font-pretendard text-accent-2/80 mb-2 text-lg font-bold">
-                        {'결과 / 성과'}
+                        {'Result'}
                       </h3>
                       <div className="text-sub whitespace-pre-line">
                         <MarkdownContent content={point.results} />

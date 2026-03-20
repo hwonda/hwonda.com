@@ -27,7 +27,7 @@ export const techStacks = [
         name: 'Jira',
         proficiency: 80,
         description:
-          '스프린트 계획, 이슈 트래킹, 백로그 관리를 통해 애자일 프로젝트를 운영하였습니다.',
+          '스프린트 계획, 이슈 트래킹, 백로그 관리를 통해 애자일 프로젝트를 운영하였습니다. 티켓 발행과 칸반 보드 운영을 기반으로 프로젝트를 체계적으로 리딩할 수 있습니다.',
       },
       {
         name: 'Confluence',
@@ -96,13 +96,13 @@ export const techStacks = [
         name: 'Figma',
         proficiency: 75,
         description:
-          '디자이너와 협업하여 UI/UX 리뷰 및 피드백을 진행하였습니다.',
+          'UI 프로토타입을 제작할 수 있습니다. 디자이너와 협업하여 UI/UX 리뷰 및 피드백을 진행하였습니다.',
       },
       {
         name: 'Slack',
         proficiency: 85,
         description:
-          '팀 커뮤니케이션 채널 구축 및 워크플로우 자동화를 경험하였습니다.',
+          '팀 커뮤니케이션 채널 구축 및 개발 이슈 공유를 진행하였습니다.',
       },
       {
         name: 'Git',
