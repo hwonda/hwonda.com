@@ -1,6 +1,7 @@
 import { X } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
 
+import NavButton from '@/components/common/NavButton';
 import type { ImageItem } from '@/types/projects';
 
 import { MainImage, ThumbnailList } from './carousel';
@@ -57,6 +58,20 @@ export default function ImageCarousel({
 
   return (
     <div className="fixed inset-0 z-50 flex h-screen flex-col items-center justify-center bg-black/80">
+      {/* 좌우 네비게이션 버튼 */}
+      <NavButton
+        direction="prev"
+        onClick={handlePrev}
+        className="absolute top-1/2 left-0 z-20 -translate-y-1/2 opacity-70 sm:left-4"
+        size="lg"
+      />
+      <NavButton
+        direction="next"
+        onClick={handleNext}
+        className="absolute top-1/2 right-0 z-20 -translate-y-1/2 opacity-70 sm:right-4"
+        size="lg"
+      />
+
       {/* 닫기 버튼 */}
       <div className="absolute top-0 left-0 z-10 w-full hover:bg-black/50">
         <button
@@ -78,7 +93,7 @@ export default function ImageCarousel({
         onAnimationEnd={onAnimationEnd}
       >
         {/* 현재 인덱스 표시 */}
-        <div className="z-10 text-end text-white">
+        <div className="z-10 text-start text-white">
           <span className="text-main">
             {currentIndex + 1} / {images.length}
           </span>
@@ -100,11 +115,13 @@ export default function ImageCarousel({
         />
 
         {/* 이미지 설명 */}
-        {images[currentIndex]?.caption && (
-          <div className="bg-gray8 my-10 rounded-lg p-2 text-center">
-            <p className="text-gray1">{images[currentIndex].caption}</p>
-          </div>
-        )}
+        <div
+          className={`bg-gray9 flex h-20 w-full items-center justify-center rounded-lg text-center ${images[currentIndex]?.caption ? 'opacity-100' : 'opacity-0'}`}
+        >
+          <p className="text-sub text-base sm:text-lg">
+            {images[currentIndex].caption}
+          </p>
+        </div>
       </div>
     </div>
   );
