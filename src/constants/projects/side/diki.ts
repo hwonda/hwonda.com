@@ -64,57 +64,57 @@ export const diki: Project = {
   },
   points: [
     {
-      challenges: `
+      situation: `
       페이지 접근 시마다 Firestore 요청이 발생해 무료 플랜 한도를 빠르게 초과하는 문제가 있었습니다.
       `,
-      solutions: `
+      action: `
       빌드 시점에 데이터를 JSON으로 생성하는 SSG 구조로 전환했습니다.
       `,
-      results: `
+      result: `
       런타임 API 요청을 제거하여 비용 제로에 가까운 아키텍처를 구축했습니다.
       `,
     },
     {
-      challenges: `
+      situation: `
       SSG 구조에서는 데이터 변경 시 즉시 반영되지 않는 UX 한계가 있었습니다.
       `,
-      solutions: `
+      action: `
       로컬스토리지를 활용해 사용자 변경사항을 즉시 반영하는 임시 상태를 구성하고, 실제 데이터는 일일 배포로 동기화했습니다.
       `,
-      results: `
+      result: `
       정적 구조를 유지하면서도 실시간에 가까운 사용자 경험 제공했습니다.
       `,
     },
     {
-      challenges: `
+      situation: `
       기본 검색으로는 원하는 용어를 빠르게 찾기 어려운 문제가 있었습니다.
       `,
-      solutions: `
+      action: `
       lunr.js를 커스터마이징하여 필드별 가중치 검색과 오타 허용(Fuzzy 검색)을 구현했습니다.
       `,
-      results: `
+      result: `
       검색 정확도와 속도를 동시에 개선하여 사용자 중심 검색 UX를 구축했습니다.
       `,
     },
     {
-      challenges: `
+      situation: `
       기본 마크다운 렌더링으로는 표, 이미지, 수식 등 복잡한 콘텐츠를 가독성 있게 표현하기 어려운 문제가 있었습니다.
       `,
-      solutions: `
+      action: `
       마크다운을 직접 파싱하여 콘텐츠 유형별(표, 이미지, 수식 등) 최적화된 렌더링 로직을 구현했습니다.
       `,
-      results: `
+      result: `
       기술 문서에 적합한 고가독성 콘텐츠 렌더링 시스템을 구축했습니다.
       `,
     },
     {
-      challenges: `
+      situation: `
       데이터 갱신과 배포가 수동일 경우 운영 부담이 증가했습니다.
       `,
-      solutions: `
+      action: `
       GitHub Actions를 활용해 데이터 수집 → 빌드 → 배포 자동화 파이프라인을 구축했습니다.
       `,
-      results: `
+      result: `
       완전 자동화된 무인 운영 환경을 구축했습니다.
       `,
     },

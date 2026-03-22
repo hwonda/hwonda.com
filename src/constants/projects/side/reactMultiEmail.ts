@@ -41,35 +41,35 @@ export const reactMultiEmail: Project = {
   },
   points: [
     {
-      challenges: `
+      situation: `
       이메일 입력 시 Enter 키를 눌렀을 때, validateEmail 함수가 false를 반환하거나 오류가 발생하는 경우 스피너가 멈추지 않았습니다.
       `,
-      solutions: `
+      action: `
       validateEmail 함수를 수정하여 스피너가 멈추지 않도록 한 뒤 PR을 제출했습니다.
       `,
-      results: `
+      result: `
       PR이 머지되어 이메일 입력 시의 버그가 해결되었습니다.
       `,
     },
     {
-      challenges: `
+      situation: `
       테스트 코드가 없어 기능 변경 시 런타임 에러 발생 가능성이 존재했습니다.
       `,
-      solutions: `
+      action: `
       Jest 기반 핵심 로직 유닛 테스트를 작성했습니다.
       `,
-      results: `
+      result: `
       코드 변경 시 안정적으로 검증 가능한 구조를 확보했습니다.
       `,
     },
     {
-      challenges: `
+      situation: `
       사용법에 대한 가이드가 부족해 라이브러리 도입이 어려운 문제가 있었습니다.
       `,
-      solutions: `
+      action: `
       Docusaurus/MDX 기반 공식 문서 및 사용법 가이드를 구축했습니다.
       `,
-      results: `
+      result: `
       사용자가 빠르게 이해하고 적용할 수 있는 문서 환경을 구축했습니다.
       `,
     },

@@ -18,35 +18,35 @@ export const blog: Project = {
   },
   points: [
     {
-      challenges: `
+      situation: `
       기존 Markdown은 표현력이 제한적이어서 코드 중심 기술 글을 가독성 있게 작성하기 어려운 문제가 있었습니다.
       `,
-      solutions: `
+      action: `
       MDX 기반 구조를 도입하여 코드 블록 중심 커스텀 렌더링과 JSX 컴포넌트 확장 구조를 설계했습니다.
       `,
-      results: `
+      result: `
       코드 중심 기술 글을 가독성 있게 작성할 수 있는 환경을 구축했습니다.
       `,
     },
     {
-      challenges: `
+      situation: `
       정적 블로그에서 SEO 및 피드 관리가 수동으로 이루어질 경우 유지보수 부담이 증가했습니다.
       `,
-      solutions: `
+      action: `
       빌드 시점에 Sitemap, RSS 등을 자동 생성하는 스크립트를 구현했습니다.
       `,
-      results: `
+      result: `
       검색 엔진 노출을 위한 자동화된 SEO 파이프라인을 구축했습니다.
       `,
     },
     {
-      challenges: `
+      situation: `
       코드 블록과 콘텐츠가 많아질수록 페이지 로딩 성능 저하 가능성이 있었습니다.
       `,
-      solutions: `
+      action: `
       코드 스플리팅과 lazy loading을 적용해 필요한 리소스만 로딩하도록 최적화했습니다.
       `,
-      results: `
+      result: `
       콘텐츠 양이 증가해도 안정적인 렌더링 성능을 유지했습니다.
       `,
     },

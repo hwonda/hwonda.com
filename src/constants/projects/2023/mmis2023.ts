@@ -19,35 +19,37 @@ export const mmis2023: Project = {
   },
   points: [
     {
-      challenges: `
+      image: '/projects/mmis-2023/thumbnail.webp',
+      situation: `
         외주 개발 과정에서 **\`any\` 타입이 무분별하게 사용**되고, 대형 컴포넌트 구조로 인해 **코드 중복과 유지보수 어려움**이 발생했습니다.
       `,
-      solutions: `
+      task: `aa`,
+      action: `
         지도, 차트, 컨트롤, 입력 UI 등 기능 단위로 컴포넌트를 분리하고 기능별 폴더 구조로 재정리했습니다. 또한 **공통 타입(type) 모듈을 별도로 구성**하여 TypeScript 타입을 명확하게 관리했습니다.
       `,
-      results: `
+      result: `
         컴포넌트 재사용성과 코드 가독성을 개선하고 확장 가능한 프론트엔드 구조로 리팩토링했습니다.
       `,
     },
     {
-      challenges: `
+      situation: `
         약 500개 좌표 데이터 지도 렌더링 시 로딩 및 인터랙션 성능 저하 발생했습니다.
       `,
-      solutions: `
+      action: `
         OpenLayers 레이어 그룹핑 및 지연 로딩 적용했습니다.
       `,
-      results: `
+      result: `
         지도 초기 로딩 속도와 사용자 인터랙션 성능 개선했습니다.
       `,
     },
     {
-      challenges: `
+      situation: `
         PR 기반 협업 부재와 누적된 버그로 코드 관리와 서비스 안정성이 저하되었습니다.
       `,
-      solutions: `
+      action: `
         PR 리뷰 프로세스와 rebase 브랜치 전략 도입, 전체 버그 점검 및 수정했습니다.
       `,
-      results: `
+      result: `
         80여 개 이상의 버그를 수정하여 서비스 안정성을 개선하고 협업 효율을 높였습니다.
       `,
     },
