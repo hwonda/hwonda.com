@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 
-import NavButton from '@/components/common/NavButton';
 import { useSwipe } from '@/hooks';
 import type { ImageItem } from '@/types/projects';
 
@@ -42,19 +41,6 @@ export default function MainImage({
           className="max-h-full max-w-full object-contain"
         />
       </div>
-
-      <NavButton
-        direction="prev"
-        onClick={onPrev}
-        className="absolute left-0 opacity-70 sm:left-4"
-        size="lg"
-      />
-      <NavButton
-        direction="next"
-        onClick={onNext}
-        className="absolute right-0 opacity-70 sm:right-4"
-        size="lg"
-      />
     </div>
   );
 }

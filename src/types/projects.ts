@@ -30,9 +30,11 @@ interface Urls {
 }
 
 export interface ProjectPoints {
-  challenges?: string;
-  solutions?: string;
-  results?: string;
+  situation?: string;
+  task?: string;
+  action?: string;
+  result?: string;
+  images?: ImageItem[];
 }
 
 // 역할별 프로젝트 오버라이드 타입
