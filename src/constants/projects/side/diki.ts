@@ -1,5 +1,8 @@
+import { blobUrl } from '@/constants/common';
 import type { Project } from '@/types/projects';
 import { getProjectPeriod } from '@/utils/dateUtils';
+
+const blobPath = `${blobUrl}/projects/diki`;
 
 export const diki: Project = {
   id: 'diki',
@@ -20,42 +23,42 @@ export const diki: Project = {
   },
   images: {
     thumbnail: {
-      url: '/projects/diki/thumbnail.webp',
+      url: `${blobPath}/thumbnail.webp`,
       caption: '프로젝트 메인 대시보드 화면',
     },
     full: [
-      { url: '/projects/diki/diki.webp' },
-      { url: '/projects/diki/0.webp', caption: '랜딩페이지' },
-      { url: '/projects/diki/1.webp', caption: '대시보드 화면 - 다크모드' },
-      { url: '/projects/diki/2.webp', caption: '포스트 검색 결과 화면' },
-      { url: '/projects/diki/3.webp', caption: '포스트 상세 페이지' },
-      { url: '/projects/diki/4.webp', caption: '포스트 상세 페이지' },
-      { url: '/projects/diki/5.webp', caption: '로그인 페이지' },
-      { url: '/projects/diki/6.webp', caption: '회원가입 페이지' },
-      { url: '/projects/diki/7.webp', caption: 'Contact 페이지' },
-      { url: '/projects/diki/8.webp', caption: 'Profile 페이지' },
-      { url: '/projects/diki/9.webp', caption: '새 포스트 작성하기' },
-      { url: '/projects/diki/10.webp', caption: '설정 페이지 화면' },
-      { url: '/projects/diki/11.webp' },
-      { url: '/projects/diki/12.webp' },
-      { url: '/projects/diki/13.webp' },
-      { url: '/projects/diki/14.webp' },
-      { url: '/projects/diki/15.webp' },
-      { url: '/projects/diki/16.webp' },
-      { url: '/projects/diki/17.webp' },
-      { url: '/projects/diki/18.webp' },
-      { url: '/projects/diki/19.webp' },
-      { url: '/projects/diki/20.webp' },
-      { url: '/projects/diki/21.webp' },
-      { url: '/projects/diki/22.webp' },
-      { url: '/projects/diki/23.webp' },
-      { url: '/projects/diki/24.webp' },
-      { url: '/projects/diki/25.webp' },
-      { url: '/projects/diki/26.webp' },
-      { url: '/projects/diki/27.webp' },
-      { url: '/projects/diki/28.webp' },
-      { url: '/projects/diki/29.webp' },
-      { url: '/projects/diki/30.webp' },
+      { url: `${blobPath}/diki.webp` },
+      { url: `${blobPath}/0.webp`, caption: '랜딩페이지' },
+      { url: `${blobPath}/1.webp`, caption: '대시보드 화면 - 다크모드' },
+      { url: `${blobPath}/2.webp`, caption: '포스트 검색 결과 화면' },
+      { url: `${blobPath}/3.webp`, caption: '포스트 상세 페이지' },
+      { url: `${blobPath}/4.webp`, caption: '포스트 상세 페이지' },
+      { url: `${blobPath}/5.webp`, caption: '로그인 페이지' },
+      { url: `${blobPath}/6.webp`, caption: '회원가입 페이지' },
+      { url: `${blobPath}/7.webp`, caption: 'Contact 페이지' },
+      { url: `${blobPath}/8.webp`, caption: 'Profile 페이지' },
+      { url: `${blobPath}/9.webp`, caption: '새 포스트 작성하기' },
+      { url: `${blobPath}/10.webp`, caption: '설정 페이지 화면' },
+      { url: `${blobPath}/11.webp` },
+      { url: `${blobPath}/12.webp` },
+      { url: `${blobPath}/13.webp` },
+      { url: `${blobPath}/14.webp` },
+      { url: `${blobPath}/15.webp` },
+      { url: `${blobPath}/16.webp` },
+      { url: `${blobPath}/17.webp` },
+      { url: `${blobPath}/18.webp` },
+      { url: `${blobPath}/19.webp` },
+      { url: `${blobPath}/20.webp` },
+      { url: `${blobPath}/21.webp` },
+      { url: `${blobPath}/22.webp` },
+      { url: `${blobPath}/23.webp` },
+      { url: `${blobPath}/24.webp` },
+      { url: `${blobPath}/25.webp` },
+      { url: `${blobPath}/26.webp` },
+      { url: `${blobPath}/27.webp` },
+      { url: `${blobPath}/28.webp` },
+      { url: `${blobPath}/29.webp` },
+      { url: `${blobPath}/30.webp` },
     ],
   },
   urls: {
@@ -66,24 +69,24 @@ export const diki: Project = {
     {
       images: [
         {
-          url: '/projects/diki/point1-0.webp',
+          url: `${blobPath}/point1-0.webp`,
           caption:
             '기존에는 layout 파일에서 직접 데이터를 fetching 해서 redux로 전달하는 방식',
         },
         {
-          url: '/projects/diki/point1-1.webp',
+          url: `${blobPath}/point1-1.webp`,
           caption: 'firebase 무료 사용량(읽기 50,000회/일) 초과',
         },
         {
-          url: '/projects/diki/point1-2.webp',
+          url: `${blobPath}/point1-2.webp`,
           caption: 'build 시 script 코드 실행',
         },
         {
-          url: '/projects/diki/point1-3.webp',
+          url: `${blobPath}/point1-3.webp`,
           caption: '실행될 script 코드(firebase 데이터 중 `terms` 컬렉션 추출)',
         },
         {
-          url: '/projects/diki/point1-4.webp',
+          url: `${blobPath}/point1-4.webp`,
           caption: 'src/data/terms.json 파일 생성',
         },
       ],
@@ -103,15 +106,15 @@ export const diki: Project = {
     {
       images: [
         {
-          url: '/projects/diki/point2-0.webp',
+          url: `${blobPath}/point2-0.webp`,
           caption: 'Github Actions 설정 파일',
         },
         {
-          url: '/projects/diki/point2-1.webp',
+          url: `${blobPath}/point2-1.webp`,
           caption: '매일 자정 자동 배포',
         },
         {
-          url: '/projects/diki/point2-2.webp',
+          url: `${blobPath}/point2-2.webp`,
           caption: '쿠키를 활용한 사용자 변경 사항 반영',
         },
       ],
@@ -132,32 +135,32 @@ export const diki: Project = {
     {
       images: [
         {
-          url: '/projects/diki/point3-0.webp',
+          url: `${blobPath}/point3-0.webp`,
           caption: 'Diki 검색 화면',
         },
         {
-          url: '/projects/diki/point3-1.webp',
+          url: `${blobPath}/point3-1.webp`,
           caption: '토크나이저 구현',
         },
         {
-          url: '/projects/diki/point3-2.webp',
+          url: `${blobPath}/point3-2.webp`,
           caption: '섹션별 가중치(boost) 설정',
         },
         {
-          url: '/projects/diki/point3-3.webp',
+          url: `${blobPath}/point3-3.webp`,
           caption: '5단계 검색 전략 구현(퍼지 매칭 등)',
         },
         {
-          url: '/projects/diki/point3-4.webp',
+          url: `${blobPath}/point3-4.webp`,
           caption: '검색 예시(오탈자)',
         },
         {
-          url: '/projects/diki/point3-5.webp',
+          url: `${blobPath}/point3-5.webp`,
           caption: '검색 예시(한영 혼용 전문 용어)',
         },
       ],
       situation: `
-      브라우저 기본 검색이나 단순 필터링으로는 한영 혼용 전문 용어 검색 시, 
+      브라우저 기본 검색이나 단순 필터링으로는 한영 혼용 전문 용어 검색 시,
       한글 자모 분리 문제와 오타 처리 미흡으로 **검색 정확도가 낮음**
       `,
       task: `
@@ -179,19 +182,19 @@ export const diki: Project = {
     {
       images: [
         {
-          url: '/projects/diki/point4-0.webp',
+          url: `${blobPath}/point4-0.webp`,
           caption: 'Diki 새 포스트 작성 화면(마크다운 문법 가이드 제공)',
         },
         {
-          url: '/projects/diki/point4-1.webp',
+          url: `${blobPath}/point4-1.webp`,
           caption: '수식/텍스트 세그먼트 분리(MathJax 컴포넌트 위임)',
         },
         {
-          url: '/projects/diki/point4-2.webp',
+          url: `${blobPath}/point4-2.webp`,
           caption: '텍스트 세그먼트 렌더링(정규식 기반)',
         },
         {
-          url: '/projects/diki/point4-3.webp',
+          url: `${blobPath}/point4-3.webp`,
           caption: 'mobile 화면 미리보기(수식, 표 깨짐 없음)',
         },
       ],
@@ -217,32 +220,32 @@ export const diki: Project = {
     {
       images: [
         {
-          url: '/projects/diki/point5-0.webp',
+          url: `${blobPath}/point5-0.webp`,
           caption:
             '랜딩페이지 검색 팁(운영체제에 따라 다른 키보드 단축키 제공)',
         },
         {
-          url: '/projects/diki/point5-1.webp',
+          url: `${blobPath}/point5-1.webp`,
           caption: '단순 검색 추천 시스템',
         },
         {
-          url: '/projects/diki/point5-2.webp',
+          url: `${blobPath}/point5-2.webp`,
           caption: '툴팁 버튼과 Dropdown UI',
         },
         {
-          url: '/projects/diki/point5-3.webp',
+          url: `${blobPath}/point5-3.webp`,
           caption: '부드러운 상세검색(MUI Slider, react-datepicker 래핑)',
         },
         {
-          url: '/projects/diki/point5-4.webp',
+          url: `${blobPath}/point5-4.webp`,
           caption: '반응형 디자인(정렬 UI)',
         },
         {
-          url: '/projects/diki/point5-5.webp',
+          url: `${blobPath}/point5-5.webp`,
           caption: '요소 갯수와 Text 크기에 따른 Grid 레이아웃',
         },
         {
-          url: '/projects/diki/point5-6.webp',
+          url: `${blobPath}/point5-6.webp`,
           caption: 'PC/Mobile 환경에서 최적화된 글쓰기 UI/UX',
         },
       ],

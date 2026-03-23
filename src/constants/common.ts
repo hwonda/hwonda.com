@@ -1,3 +1,7 @@
+// Vercel Blob Storage base URL
+export const blobUrl =
+  'https://hhpukqiys1mbtscs.public.blob.vercel-storage.com';
+
 // 자동 슬라이드 관련 상수
 export const autoSlideInterval = 5000;
 
