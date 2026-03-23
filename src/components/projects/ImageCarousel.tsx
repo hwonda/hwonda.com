@@ -92,10 +92,15 @@ export default function ImageCarousel({
         onClick={(e) => e.stopPropagation()}
         onAnimationEnd={onAnimationEnd}
       >
-        {/* 현재 인덱스 표시 */}
-        <div className="z-10 text-start text-white">
-          <span className="text-main">
-            {currentIndex + 1} / {images.length}
+        <div className="flex items-center justify-between">
+          {/* 현재 인덱스 표시 */}
+          <div className="z-10 text-start text-white">
+            <span className="text-main">
+              {currentIndex + 1} / {images.length}
+            </span>
+          </div>
+          <span className="text-gray3 text-sm">
+            화살 좌우키 또는 스와이프로 이미지 이동이 가능합니다.
           </span>
         </div>
 
