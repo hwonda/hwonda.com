@@ -169,8 +169,12 @@ const ProjectPointsAccordion = ({ points }: ProjectPointsAccordionProps) => {
                       </div>
                     )}
                     {point.action && (
-                      <div className="bg-gray9 border-gray8 border-t px-6 py-4">
-                        <h3 className="font-pretendard text-accent-2/80 mb-2 text-lg font-bold">
+                      <div
+                        className={`bg-gray9 border-gray8 px-6 py-4 ${point.task ? 'border-t' : ''}`}
+                      >
+                        <h3
+                          className={`font-pretendard text-accent-2/80 mb-2 text-lg font-bold`}
+                        >
                           Action
                         </h3>
                         <div className="text-sub whitespace-pre-line">
