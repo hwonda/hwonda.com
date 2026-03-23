@@ -1,21 +1,13 @@
 import { put } from '@vercel/blob';
 import { config } from 'dotenv';
-import {
-  existsSync,
-  mkdirSync,
-  readdirSync,
-  readFileSync,
-  statSync,
-  writeFileSync,
-} from 'fs';
+import { existsSync, readdirSync, readFileSync, statSync } from 'fs';
 import { join, relative } from 'path';
 
 // .env 파일의 환경변수를 process.env로 로드
 // 로컬 실행 시 BLOB_READ_WRITE_TOKEN을 읽기 위해 필요
 config();
 
-const PUBLIC_DIR = join(process.cwd(), 'public', 'projects');
-const OUTPUT_DIR = join(process.cwd(), 'scripts', 'blob-mappings');
+const publicDir = join(process.cwd(), 'public', 'projects');
 
 const IMAGE_EXTENSIONS = [
   '.webp',
@@ -51,7 +43,7 @@ async function uploadFiles(projectName?: string) {
   }
 
   // 인자가 있으면 특정 프로젝트만, 없으면 전체 업로드
-  const targetDir = projectName ? join(PUBLIC_DIR, projectName) : PUBLIC_DIR;
+  const targetDir = projectName ? join(publicDir, projectName) : publicDir;
   if (!existsSync(targetDir)) {
     console.error(`Directory not found: ${targetDir}`);
     process.exit(1);
@@ -75,7 +67,7 @@ async function uploadFiles(projectName?: string) {
       batch.map(async (filePath) => {
         // 로컬 절대경로를 blob 저장소의 경로명으로 변환
         // 예: /Users/.../public/projects/diki/0.webp -> projects/diki/0.webp
-        const relativePath = `projects/${relative(PUBLIC_DIR, filePath)}`;
+        const relativePath = `projects/${relative(publicDir, filePath)}`;
         const fileBuffer = readFileSync(filePath);
 
         const blob = await put(relativePath, fileBuffer, {
@@ -96,17 +88,6 @@ async function uploadFiles(projectName?: string) {
       mapping[oldUrl] = newUrl;
     }
   }
-
-  // 매핑 결과를 JSON 파일로 저장
-  // 이후 소스코드에서 이미지 경로를 일괄 교체할 때 활용
-  if (!existsSync(OUTPUT_DIR)) {
-    mkdirSync(OUTPUT_DIR, { recursive: true });
-  }
-
-  const outputFile = join(OUTPUT_DIR, `${projectName || 'all'}.json`);
-  writeFileSync(outputFile, JSON.stringify(mapping, null, 2));
-  console.log(`\nMapping saved to ${outputFile}`);
-  console.log(`Total uploaded: ${Object.keys(mapping).length} files`);
 }
 
 // CLI 인자로 프로젝트명을 받음
