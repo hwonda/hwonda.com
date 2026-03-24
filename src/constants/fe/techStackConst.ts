@@ -43,7 +43,7 @@ export const techStacks = [
         name: 'Vue.js',
         proficiency: 80,
         description:
-          '대규모 프로젝트와 Vue 2 → 3 마이그레이션을 경험하였으며, Composition API, script setup, Provide/Inject 활용에 능숙합니다.',
+          '대규모 프로젝트와 Vue 2 → 3 마이그레이션을 경험하였으며, Composition API, script setup 활용에 능숙합니다.',
       },
       {
         name: 'Next.js',
@@ -168,7 +168,7 @@ export const techStacks = [
         name: 'Firebase',
         proficiency: 70,
         description:
-          '서버리스 환경에서 API 설계 및 인증을 진행하였습니다. Read, Write, Delete의 사용량을 파악하여 데이터 구조 및 사용량 제어를 최적화할 수 있습니다.',
+          '서버리스 환경에서 API 설계 및 인증을 진행하였습니다. Read, Write, Delete의 사용량을 파악하여 데이터 구조 및 사용량 제어한 경험이 있습니다.',
       },
       {
         name: 'Swagger',
