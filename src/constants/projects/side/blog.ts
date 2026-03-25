@@ -62,6 +62,10 @@ export const blog: Project = {
       { url: '/projects/blog/5.webp' },
     ],
   },
+  urls: {
+    github: 'https://github.com/hwonda/blog',
+    demo: 'https://www.hwonda.com/blog',
+  },
   startTime: '2024.07',
   endTime: '2025.01',
   period: getProjectPeriod('2024.07', '2025.01'),

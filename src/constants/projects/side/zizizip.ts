@@ -50,6 +50,12 @@ export const zizizip: Project = {
   urls: {
     github: 'https://github.com/hwonda/zizizip',
     demo: 'https://www.zizizip.com',
+    etc: [
+      {
+        url: 'https://cafe.naver.com/ayshh?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D30457337%2526articleid%3D158333',
+        title: '네이버 카페 소개글 예시',
+      },
+    ],
   },
   points: [
     {

@@ -62,6 +62,9 @@ export const mmis2024: Project = {
       { url: '/projects/mmis-2024/4.webp' },
     ],
   },
+  urls: {
+    demo: 'https://marine.kma.go.kr/mmis/m',
+  },
   startTime: '2024.08',
   endTime: '2024.11',
   period: getProjectPeriod('2024.08', '2024.11'),

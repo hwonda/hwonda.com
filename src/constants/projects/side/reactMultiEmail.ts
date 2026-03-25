@@ -9,6 +9,8 @@ export const reactMultiEmail: Project = {
     short:
       '다중 이메일 입력을 위한 React 컴포넌트 라이브러리로, 사용자 친화적인 인터페이스와 검증 기능을 제공합니다.',
     full: `
+    github stars: \`317\`, npm weekly downloads: \`100,000+\`
+
     react-multi-email 오픈소스 라이브러리에 기여하여 테스트 코드 도입, 버그 수정, 문서화를 통해 라이브러리의 안정성과 사용성을 개선했습니다.
 
     Jest 기반 유닛 테스트를 추가하여 주요 로직의 신뢰도를 높이고, 실제 사용자 이슈를 분석해 버그를 수정했습니다.
@@ -34,6 +36,14 @@ export const reactMultiEmail: Project = {
     demo: 'https://www.npmjs.com/package/react-multi-email',
     etc: [
       {
+        title: 'Bug fix PR',
+        url: 'https://github.com/axisj/react-multi-email/pull/176',
+      },
+      {
+        title: 'Test code PR',
+        url: 'https://github.com/axisj/react-multi-email/pull/158',
+      },
+      {
         title: 'Docs',
         url: 'https://hwonda.github.io/react-multi-email-docs/',
       },
@@ -41,6 +51,17 @@ export const reactMultiEmail: Project = {
   },
   points: [
     {
+      images: [
+        {
+          url: '/projects/react-multi-email/point1-1.webp',
+          caption:
+            'validateEmail의 결과가 실패(false)로 떨어지거나 비동기 검증 루프가 끝난 후에는 반드시 스피너가 종료되도록 수정',
+        },
+        {
+          url: '/projects/react-multi-email/point1-2.webp',
+          caption: '수정 내용 관련 Test code 작성',
+        },
+      ],
       situation: `
       이메일 입력 시 Enter 키를 눌렀을 때, validateEmail 함수가 false를 반환하거나 오류가 발생하는 경우 스피너가 멈추지 않았습니다.
       `,
@@ -52,6 +73,16 @@ export const reactMultiEmail: Project = {
       `,
     },
     {
+      images: [
+        {
+          url: '/projects/react-multi-email/point2-1.webp',
+          caption: 'onBlur 검증 로직 테스트 코드 작성',
+        },
+        {
+          url: '/projects/react-multi-email/point2-2.webp',
+          caption: 'onDisabled 검증 로직 테스트 코드 작성',
+        },
+      ],
       situation: `
       테스트 코드가 없어 기능 변경 시 런타임 에러 발생 가능성이 존재했습니다.
       `,
@@ -63,6 +94,20 @@ export const reactMultiEmail: Project = {
       `,
     },
     {
+      images: [
+        {
+          url: '/projects/react-multi-email/point3-1.webp',
+          caption: '공식 문서 구축(랜딩 페이지)',
+        },
+        {
+          url: '/projects/react-multi-email/point3-2.webp',
+          caption: '플레이그라운드',
+        },
+        {
+          url: '/projects/react-multi-email/point3-3.webp',
+          caption: 'props 설명(light 모드)',
+        },
+      ],
       situation: `
       사용법에 대한 가이드가 부족해 라이브러리 도입이 어려운 문제가 있었습니다.
       `,
