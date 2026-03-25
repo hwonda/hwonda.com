@@ -23,7 +23,7 @@ export default function ProjectGrid({
 
   if (activeYear === 'all') {
     return (
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {filteredProjects.flatMap((yearData) =>
           yearData.projects.map((project, index) => (
             <div
