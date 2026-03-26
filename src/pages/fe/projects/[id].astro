@@ -97,35 +97,37 @@ const lowercase = (str: string) => str.toLowerCase();
         <MarkdownContent content={project.description.full} />
       </div>
       <div
-        class="mt-2 flex items-center justify-center gap-4 sm:mt-4 md:justify-start"
+        class="mt-2 sm:mt-4 flex flex-col md:flex-row md:items-center gap-4"
       >
+        <div class="flex gap-4">
+          {
+            project.urls?.demo && (
+              <a
+                href={project.urls.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-accent-1 hover:bg-accent-1/90 text-inverse inline-block rounded px-3 py-2.5 text-sm font-bold transition-colors sm:px-6 sm:py-3 sm:text-base"
+              >
+                프로젝트 보기
+              </a>
+            )
+          }
+          {
+            project.urls?.github && (
+              <a
+                href={project.urls.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="border-gray3 text-main hover:bg-gray9 inline-block rounded border px-3 py-2.5 text-sm font-medium transition-colors sm:px-6 sm:py-3 sm:text-base"
+              >
+                GitHub 저장소
+              </a>
+            )
+          }
+        </div>
         {
-          project.urls?.demo && (
-            <a
-              href={project.urls.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="bg-accent-1 hover:bg-accent-1/90 text-inverse inline-block rounded px-3 py-2.5 text-sm font-bold transition-colors sm:px-6 sm:py-3 sm:text-base"
-            >
-              프로젝트 보기
-            </a>
-          )
-        }
-        {
-          project.urls?.github && (
-            <a
-              href={project.urls.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="border-gray3 text-main hover:bg-gray9 inline-block rounded border px-3 py-2.5 text-sm font-medium transition-colors sm:px-6 sm:py-3 sm:text-base"
-            >
-              GitHub 저장소
-            </a>
-          )
-        }
-        {
-          project.urls?.etc && (
-            <div>
+          project.urls?.etc && (  
+            <div class="flex gap-4">
               {project.urls.etc.map((url) => (
                 <a
                   href={url.url}

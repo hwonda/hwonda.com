@@ -1,3 +1,4 @@
+import { blobUrl } from '@/constants/common';
 import type { Project } from '@/types/projects';
 import { getProjectPeriod } from '@/utils/dateUtils';
 
@@ -7,32 +8,48 @@ export const reactMultiEmail: Project = {
   subtitle: 'Open Source Contribute',
   description: {
     short:
-      '다중 이메일 입력을 위한 React 컴포넌트 라이브러리로, 사용자 친화적인 인터페이스와 검증 기능을 제공합니다.',
+      '오픈소스 라이브러리 개선을 주도하여 테스트 코드 도입과 문서화를 통해 안정성과 사용성을 향상시켰습니다.',
     full: `
-    react-multi-email 오픈소스 라이브러리에 기여하여 테스트 코드 도입, 버그 수정, 문서화를 통해 라이브러리의 안정성과 사용성을 개선했습니다.
+      react-multi-email 오픈소스 라이브러리에 기여하여 **테스트 코드 도입, 버그 수정, 문서화를 주도**했습니다.
 
-    Jest 기반 유닛 테스트를 추가하여 주요 로직의 신뢰도를 높이고, 실제 사용자 이슈를 분석해 버그를 수정했습니다.
-    또한 Docusaurus/MDX 기반 공식 문서를 구축하여 개발자가 라이브러리를 쉽게 도입할 수 있는 환경을 마련했습니다.
-    `,
+      **주요 활동:**
+      - 사용자 이슈 분석 및 버그 수정 PR 제출
+      - Jest 기반 핵심 로직 유닛 테스트 설계 및 작성
+      - Docusaurus/MDX 기반 공식 문서 구축 기획
+      - 플레이그라운드 및 props 설명 문서 작성
+
+      **성과:**
+      - 이메일 입력 무한 로딩 버그 해소
+      - 자동 회귀 검증 가능한 테스트 기반 확보
+      - 사용자가 빠르게 이해하고 적용 가능한 문서 환경 구축
+      `,
   },
   images: {
-    thumbnail: { url: '/projects/react-multi-email/thumbnail.webp' },
+    thumbnail: { url: `${blobUrl}/projects/react-multi-email/thumbnail.webp` },
     full: [
-      { url: '/projects/react-multi-email/1.webp' },
-      { url: '/projects/react-multi-email/2.webp' },
-      { url: '/projects/react-multi-email/3.webp' },
-      { url: '/projects/react-multi-email/4.webp' },
-      { url: '/projects/react-multi-email/5.webp' },
-      { url: '/projects/react-multi-email/6.webp' },
-      { url: '/projects/react-multi-email/7.webp' },
-      { url: '/projects/react-multi-email/8.webp' },
-      { url: '/projects/react-multi-email/9.webp' },
+      { url: `${blobUrl}/projects/react-multi-email/1.webp` },
+      { url: `${blobUrl}/projects/react-multi-email/2.webp` },
+      { url: `${blobUrl}/projects/react-multi-email/3.webp` },
+      { url: `${blobUrl}/projects/react-multi-email/4.webp` },
+      { url: `${blobUrl}/projects/react-multi-email/5.webp` },
+      { url: `${blobUrl}/projects/react-multi-email/6.webp` },
+      { url: `${blobUrl}/projects/react-multi-email/7.webp` },
+      { url: `${blobUrl}/projects/react-multi-email/8.webp` },
+      { url: `${blobUrl}/projects/react-multi-email/9.webp` },
     ],
   },
   urls: {
     github: 'https://github.com/axisj/react-multi-email',
     demo: 'https://www.npmjs.com/package/react-multi-email',
     etc: [
+      {
+        title: 'Bug fix PR',
+        url: 'https://github.com/axisj/react-multi-email/pull/176',
+      },
+      {
+        title: 'Test code PR',
+        url: 'https://github.com/axisj/react-multi-email/pull/158',
+      },
       {
         title: 'Docs',
         url: 'https://hwonda.github.io/react-multi-email-docs/',
@@ -41,36 +58,84 @@ export const reactMultiEmail: Project = {
   },
   points: [
     {
+      images: [
+        {
+          url: `${blobUrl}/projects/react-multi-email/point1-1.webp`,
+          caption:
+            'validateEmail의 결과가 실패(false)로 떨어지거나 비동기 검증 루프가 끝난 후에는 반드시 스피너가 종료되도록 수정',
+        },
+        {
+          url: `${blobUrl}/projects/react-multi-email/point1-2.webp`,
+          caption: '수정 내용 관련 Test code 작성',
+        },
+      ],
       situation: `
-      이메일 입력 시 Enter 키를 눌렀을 때, validateEmail 함수가 false를 반환하거나 오류가 발생하는 경우 스피너가 멈추지 않았습니다.
+      이메일 입력 시 Enter 후 validateEmail이 false를 반환하거나 오류가 발생하면 스피너가 종료되지 않는 버그 존재
+      `,
+      task: `
+      비동기 검증 실패/예외 상황에서도 로딩 상태가 반드시 정리되도록 입력 플로우 안정화 필요
       `,
       action: `
-      validateEmail 함수를 수정하여 스피너가 멈추지 않도록 한 뒤 PR을 제출했습니다.
+      validateEmail 처리 흐름 수정으로 실패/예외/루프 종료 시점마다 스피너 상태 정리, 관련 PR 제출
       `,
       result: `
-      PR이 머지되어 이메일 입력 시의 버그가 해결되었습니다.
+      PR 머지 완료, 이메일 입력 시 무한 로딩 버그 해소
       `,
     },
     {
+      images: [
+        {
+          url: `${blobUrl}/projects/react-multi-email/point2-0.webp`,
+          caption: '테스트 코드 담당자 지정 및 테스트 코드 작성 시작',
+        },
+        {
+          url: `${blobUrl}/projects/react-multi-email/point2-1.webp`,
+          caption: 'onBlur 검증 로직 테스트 코드 작성',
+        },
+        {
+          url: `${blobUrl}/projects/react-multi-email/point2-2.webp`,
+          caption: 'onDisabled 검증 로직 테스트 코드 작성',
+        },
+      ],
       situation: `
-      테스트 코드가 없어 기능 변경 시 런타임 에러 발생 가능성이 존재했습니다.
+      테스트 코드 부재로 기능 변경 시 회귀 버그와 런타임 에러 발생 가능성 존재
+      `,
+      task: `
+      핵심 입력/검증 로직을 자동 검증 가능한 형태로 고정해 릴리즈 안정성 확보 필요
       `,
       action: `
-      Jest 기반 핵심 로직 유닛 테스트를 작성했습니다.
+      onBlur, disabled 등 주요 시나리오 중심으로 Jest 유닛 테스트 작성
       `,
       result: `
-      코드 변경 시 안정적으로 검증 가능한 구조를 확보했습니다.
+      코드 변경 시 자동 회귀 검증 가능한 테스트 기반 확보
       `,
     },
     {
+      images: [
+        {
+          url: `${blobUrl}/projects/react-multi-email/point3-1.webp`,
+          caption: '공식 문서 구축(랜딩 페이지)',
+        },
+        {
+          url: `${blobUrl}/projects/react-multi-email/point3-2.webp`,
+          caption: '플레이그라운드',
+        },
+        {
+          url: `${blobUrl}/projects/react-multi-email/point3-3.webp`,
+          caption: 'props 설명(light 모드)',
+        },
+      ],
       situation: `
-      사용법에 대한 가이드가 부족해 라이브러리 도입이 어려운 문제가 있었습니다.
+      사용 가이드가 부족해 신규 사용자가 컴포넌트 도입/적용 흐름을 빠르게 이해하기 어려운 문제 존재
+      `,
+      task: `
+      설치부터 props 활용까지 학습 비용을 줄일 수 있는 공식 문서 체계 구축 필요
       `,
       action: `
-      Docusaurus/MDX 기반 공식 문서 및 사용법 가이드를 구축했습니다.
+      Docusaurus/MDX 기반 공식 문서와 플레이그라운드 중심 사용 가이드 구축
       `,
       result: `
-      사용자가 빠르게 이해하고 적용할 수 있는 문서 환경을 구축했습니다.
+      사용자가 빠르게 이해하고 적용 가능한 문서 환경 확보
       `,
     },
   ],

@@ -121,7 +121,7 @@ export default function ImageCarousel({
 
         {/* 이미지 설명 */}
         <div
-          className={`bg-gray9 flex h-20 w-full items-center justify-center rounded-lg text-center ${images[currentIndex]?.caption ? 'opacity-100' : 'opacity-0'}`}
+          className={`flex h-20 w-full items-center justify-center ${images[currentIndex]?.caption ? 'opacity-100' : 'opacity-0'}`}
         >
           <p className="text-sub text-base sm:text-lg">
             {images[currentIndex].caption}
