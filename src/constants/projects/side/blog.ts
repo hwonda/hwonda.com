@@ -7,14 +7,22 @@ export const blog: Project = {
   subtitle: '프론트엔드 기술 블로그',
   description: {
     short:
-      'Next.js 기반 기술 블로그로, SEO 최적화가 구성된 개인 블로그 플랫폼입니다.',
+      'MDX 기반 기술 블로그 플랫폼을 기획하고 개발하여 SEO 최적화와 콘텐츠 확장성을 확보했습니다.',
     full: `
-    커스터마이징이 가능한 콘텐츠 플랫폼을 목표로 MDX 기반 프론트엔드 기술 블로그를 직접 설계·개발했습니다.
+      커스터마이징 가능한 콘텐츠 플랫폼을 목표로 **MDX 기반 기술 블로그를 기획하고 1인 개발을 주도**했습니다.
 
-    \`next-mdx-remote\`와 \`gray-matter\`를 활용해 마크다운 내 JSX 컴포넌트를 사용할 수 있는 유연한 콘텐츠 작성 환경을 구축하고, 코드 하이라이팅 및 문서 구조 자동화를 적용했습니다.
+      **주요 활동:**
+      - 기술 블로그 플랫폼 기획 및 콘텐츠 전략 수립
+      - MDX 기반 유연한 콘텐츠 작성 환경 설계
+      - 코드 하이라이팅 및 문서 구조 자동화 구현
+      - SEO 최적화 전략 수립 (Sitemap, RSS, OpenGraph)
+      - 코드 스플리팅 및 lazy loading 성능 최적화
 
-    또한 Sitemap, RSS 등 SEO 최적화를 위한 정적 파일을 빌드 시 자동 생성하고, OpenGraph 메타데이터를 동적으로 구성하여 검색 및 공유 효율을 개선했습니다.
-    `,
+      **성과:**
+      - 코드 중심 기술 글을 가독성 있게 작성 가능한 콘텐츠 환경 구축
+      - 검색 엔진 노출을 위한 자동화 SEO 파이프라인 구축
+      - 콘텐츠 확장 시에도 안정적 렌더링 성능 유지
+      `,
   },
   points: [
     {
@@ -78,7 +86,7 @@ export const blog: Project = {
   startTime: '2024.07',
   endTime: '2025.01',
   period: getProjectPeriod('2024.07', '2025.01'),
-  role: 'Fullstack',
+  role: '1인 주도 개발',
   team: '개인',
   techStack: [
     'Next.js',

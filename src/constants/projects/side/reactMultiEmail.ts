@@ -8,15 +8,21 @@ export const reactMultiEmail: Project = {
   subtitle: 'Open Source Contribute',
   description: {
     short:
-      '다중 이메일 입력을 위한 React 컴포넌트 라이브러리로, 사용자 친화적인 인터페이스와 검증 기능을 제공합니다.',
+      '오픈소스 라이브러리 개선을 주도하여 테스트 코드 도입과 문서화를 통해 안정성과 사용성을 향상시켰습니다.',
     full: `
-    github stars: \`317\`, npm weekly downloads: \`100,000+\`
+      react-multi-email 오픈소스 라이브러리에 기여하여 **테스트 코드 도입, 버그 수정, 문서화를 주도**했습니다.
 
-    react-multi-email 오픈소스 라이브러리에 기여하여 테스트 코드 도입, 버그 수정, 문서화를 통해 라이브러리의 안정성과 사용성을 개선했습니다.
+      **주요 활동:**
+      - 사용자 이슈 분석 및 버그 수정 PR 제출
+      - Jest 기반 핵심 로직 유닛 테스트 설계 및 작성
+      - Docusaurus/MDX 기반 공식 문서 구축 기획
+      - 플레이그라운드 및 props 설명 문서 작성
 
-    Jest 기반 유닛 테스트를 추가하여 주요 로직의 신뢰도를 높이고, 실제 사용자 이슈를 분석해 버그를 수정했습니다.
-    또한 Docusaurus/MDX 기반 공식 문서를 구축하여 개발자가 라이브러리를 쉽게 도입할 수 있는 환경을 마련했습니다.
-    `,
+      **성과:**
+      - 이메일 입력 무한 로딩 버그 해소
+      - 자동 회귀 검증 가능한 테스트 기반 확보
+      - 사용자가 빠르게 이해하고 적용 가능한 문서 환경 구축
+      `,
   },
   images: {
     thumbnail: { url: `${blobUrl}/projects/react-multi-email/thumbnail.webp` },
