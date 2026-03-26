@@ -1,3 +1,4 @@
+import { blobUrl } from '@/constants/common';
 import type { Project } from '@/types/projects';
 import { getProjectPeriod } from '@/utils/dateUtils';
 
@@ -25,32 +26,35 @@ export const zizizip: Project = {
       `,
   },
   images: {
-    thumbnail: { url: '/projects/zizizip/thumbnail.webp' },
+    thumbnail: { url: `${blobUrl}/projects/zizizip/thumbnail.webp` },
     full: [
-      { url: '/projects/zizizip/0.webp' },
-      { url: '/projects/zizizip/1.webp', caption: '랜딩페이지' },
+      { url: `${blobUrl}/projects/zizizip/0.webp` },
+      { url: `${blobUrl}/projects/zizizip/1.webp`, caption: '랜딩페이지' },
       {
-        url: '/projects/zizizip/2.webp',
+        url: `${blobUrl}/projects/zizizip/2.webp`,
         caption: '업로드 중 상태 표시 - 엑셀 컬럼 파싱',
       },
       {
-        url: '/projects/zizizip/3.webp',
+        url: `${blobUrl}/projects/zizizip/3.webp`,
         caption: '업로드 중 상태 표시 - 좌표 변환(지오코딩)',
       },
       {
-        url: '/projects/zizizip/4.webp',
+        url: `${blobUrl}/projects/zizizip/4.webp`,
         caption: '업로드 완료 표시 - 업로드된 파일 목록',
       },
-      { url: '/projects/zizizip/5.webp', caption: '업로드된 데이터 화면' },
       {
-        url: '/projects/zizizip/6.webp',
+        url: `${blobUrl}/projects/zizizip/5.webp`,
+        caption: '업로드된 데이터 화면',
+      },
+      {
+        url: `${blobUrl}/projects/zizizip/6.webp`,
         caption: '줌 레벨에 따른 마커 클러스터링',
       },
       {
-        url: '/projects/zizizip/7.webp',
+        url: `${blobUrl}/projects/zizizip/7.webp`,
         caption: '마커 클릭 시 상세 정보 표시',
       },
-      { url: '/projects/zizizip/8.webp', caption: '필터링 기능' },
+      { url: `${blobUrl}/projects/zizizip/8.webp`, caption: '필터링 기능' },
     ],
   },
   urls: {
@@ -65,6 +69,21 @@ export const zizizip: Project = {
   },
   points: [
     {
+      images: [
+        {
+          url: `${blobUrl}/projects/zizizip/point1-1.webp`,
+          caption: '공공주택 공고 정보가 여러 기관에 분산됨',
+        },
+        {
+          url: `${blobUrl}/projects/zizizip/point1-2.webp`,
+          caption:
+            '공공 내 각 정보를 파편적으로 볼 수 있음(엑셀-보증금, 웹-지도)',
+        },
+        {
+          url: `${blobUrl}/projects/zizizip/point1-3.webp`,
+          caption: '지도와 overlay를 통해 정보를 통합적으로 확인',
+        },
+      ],
       situation: `
       공공주택 공고 정보가 여러 기관에 분산되어 있어 사용자가 정보를 통합적으로 확인하기 어려운 문제 존재
       `,
@@ -79,6 +98,20 @@ export const zizizip: Project = {
       `,
     },
     {
+      images: [
+        {
+          url: `${blobUrl}/projects/zizizip/point2-1.webp`,
+          caption: '기관마다 엑셀 컬럼명이 다름',
+        },
+        {
+          url: `${blobUrl}/projects/zizizip/point2-2.webp`,
+          caption: '서로 다른 컬럼을 공통 스키마로 변환',
+        },
+        {
+          url: `${blobUrl}/projects/zizizip/point2-3.webp`,
+          caption: '업로드 실패 없이 안정적으로 처리 가능한 전처리',
+        },
+      ],
       situation: `
       기관마다 엑셀 컬럼명이 달라 데이터를 일관되게 처리하기 어려운 문제 존재
       `,
@@ -93,6 +126,21 @@ export const zizizip: Project = {
       `,
     },
     {
+      images: [
+        {
+          url: `${blobUrl}/projects/zizizip/point3-1.webp`,
+          caption: 'Web worker가 다른 스레드에서 CSV/Excel 파싱',
+        },
+        {
+          url: `${blobUrl}/projects/zizizip/point3-2.webp`,
+          caption:
+            '검증 로직 또한 다른 스레드에서 진행(타임아웃으로 무한 대기 방지)',
+        },
+        {
+          url: `${blobUrl}/projects/zizizip/3.webp`,
+          caption: '사용자가 업로드 중 취소 버튼 클릭 시 업로드 중단 가능',
+        },
+      ],
       situation: `
       엑셀 파싱/좌표 변환 과정에서 메인 스레드 점유로 UI 프리징이 발생하는 문제 존재
       `,
@@ -107,6 +155,16 @@ export const zizizip: Project = {
       `,
     },
     {
+      images: [
+        {
+          url: `${blobUrl}/projects/zizizip/point4-1.webp`,
+          caption: '마커 수가 많은 구간에서 지도 인터랙션 성능 저하',
+        },
+        {
+          url: `${blobUrl}/projects/zizizip/point4-2.webp`,
+          caption: 'Zoom Level 기반 Clustering 적용',
+        },
+      ],
       situation: `
       다수의 마커를 동시에 렌더링할 경우 지도 인터랙션 성능 저하 발생
       `,
