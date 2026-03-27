@@ -14,7 +14,7 @@ export default function PageTitle({
   const fileSuffix = role === 'fe' ? '' : '(pm)';
 
   return (
-    <div className="flex justify-between">
+    <div className="fle-col mt-10 justify-between">
       <h1 className="font-pretendard relative mb-0 text-4xl font-bold sm:mb-12 md:text-5xl">
         <span className="from-accent-3 to-accent-1 bg-gradient-to-b bg-clip-text text-transparent">
           {name}
@@ -22,7 +22,7 @@ export default function PageTitle({
         {suffix}
         <div className="from-accent-1 to-accent-3 absolute bottom-[-16px] left-0 h-[12px] w-[102px] rounded-full bg-gradient-to-b opacity-30 md:w-[132px]"></div>
       </h1>
-      <div className="flex items-center gap-4">
+      <div className="mt-6 flex items-center gap-4 sm:mt-0">
         <a
           href={`/resume_dahwon_ju${fileSuffix}.pdf`}
           download

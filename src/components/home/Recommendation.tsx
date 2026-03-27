@@ -263,8 +263,8 @@ export default function Recommendation({ role }: RecommendationProps) {
                   <div className="bg-gray7 mb-4 h-px w-full sm:mb-6" />
 
                   {/* 평가자 정보 */}
-                  <div className="flex items-center gap-4">
-                    <div className="from-accent-1 to-accent-4 flex size-12 items-center justify-center rounded-full bg-gradient-to-br">
+                  <div className="flex items-center gap-1.5 sm:gap-4">
+                    <div className="from-accent-1 to-accent-4 flex size-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br sm:size-12">
                       <span className="text-lg font-bold text-white">
                         {recommendation.name.charAt(0)}
                       </span>
