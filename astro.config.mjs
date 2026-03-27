@@ -9,6 +9,7 @@ export default defineConfig({
   site: 'https://www.hwonda.com',
   redirects: {
     '/': '/fe',
+    '/tpm': '/fe',
   },
   integrations: [
     react(),
