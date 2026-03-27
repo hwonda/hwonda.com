@@ -10,6 +10,8 @@ export const reactMultiEmail: Project = {
     short:
       '오픈소스 라이브러리 개선을 주도하여 테스트 코드 도입과 문서화를 통해 안정성과 사용성을 향상시켰습니다.',
     full: `
+      github stars: \`317\`, npm weekly downloads: \`100,000+\`
+
       react-multi-email 오픈소스 라이브러리에 기여하여 **테스트 코드 도입, 버그 수정, 문서화를 주도**했습니다.
 
       **주요 활동:**
@@ -142,7 +144,7 @@ export const reactMultiEmail: Project = {
   startTime: '2023.07',
   endTime: '2024.01',
   period: getProjectPeriod('2023.07', '2024.01'),
-  role: 'Contributor/Maintainer',
+  role: 'Contributor',
   team: 'AXISJ(Open Source Team)',
   techStack: [
     'React.js',

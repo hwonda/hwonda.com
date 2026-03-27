@@ -35,10 +35,10 @@ export const aiCodeReviewer: Project = {
   points: [
     {
       situation: `
-      보안 정책상 \`Code Rabbit\`, \`Copilot\` 등 외부 AI 코드 리뷰 서비스를 사용할 수 없는 환경
+      보안 정책상 \`Code Rabbit\`, \`Copilot\` 등 클라우드 환경 AI 코드 리뷰 서비스를 사용할 수 없는 환경
       `,
       task: `
-      외부 API 없이 내부망에서만 동작하는 자동 코드 리뷰 체계 구축 필요
+      내부망에서만 동작하는 자동 코드 리뷰 체계 구축 필요
       `,
       action: `
       Ollama 기반 로컬 LLM 환경 구축 후 \`gpt-oss-120b\` 기반 코드 리뷰 시스템 개발
@@ -113,13 +113,5 @@ export const aiCodeReviewer: Project = {
   period: getProjectPeriod('2025.04', '2025.05'),
   role: 'PM · AI Ops',
   team: 'Koast',
-  techStack: [
-    'React.js',
-    'TypeScript',
-    'Tailwind CSS',
-    'Vite',
-    'Storybook',
-    'Github Actions',
-    'Git',
-  ],
+  techStack: ['Python', 'Systemd', 'GitLab', 'Ollama', 'Pipeline'],
 };
