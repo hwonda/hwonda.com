@@ -93,7 +93,7 @@ const ProjectPointsAccordion = ({ points }: ProjectPointsAccordionProps) => {
               {point.situation && (
                 <div className="flex flex-col gap-2">
                   <div
-                    className={`accordion-header bg-gray9 flex h-full cursor-pointer items-center justify-between gap-6 rounded-lg p-6 transition-colors hover:bg-gray-800 ${isOpen ? 'rounded-b-none' : ''} ${isOpen ? 'outline-accent-2/60 outline-b-none outline' : ''}`}
+                    className={`accordion-header flex h-full cursor-pointer items-center justify-between gap-6 rounded-lg p-6 transition-colors hover:bg-gray-800 ${isOpen ? 'rounded-b-none' : ''} ${isOpen ? 'outline-accent-2/60 outline-b-none bg-accent-2/5 outline' : 'bg-gray9'}`}
                     onClick={() => handleToggle(index)}
                   >
                     <div
