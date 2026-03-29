@@ -18,12 +18,10 @@ export const koastUi: Project = {
       - 사내 React 스터디 기획 및 운영 (6명 참여)
       - Storybook 기반 문서화 전략 수립으로 팀 간 커뮤니케이션 효율화
       - GitHub Actions 기반 CI/CD 파이프라인 구축 및 배포 프로세스 표준화
-      - 사내 commit convention 및 브랜치 전략 정립
 
       **성과:**
       - 2025년 신규 프로젝트 4개 중 3개에 React, Tailwind CSS 적용
       - 백엔드 개발자의 UI 구현 속도 10배 이상 향상
-      - 팀 협업 프로세스 체계화 및 개발 문화 개선
       `,
   },
   images: {
