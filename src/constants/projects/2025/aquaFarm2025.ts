@@ -28,6 +28,10 @@ export const aquaFarm2025: Project = {
     {
       images: [
         {
+          url: `${blobUrl}/projects/aqua-farm-2025/point1-1.webp`,
+          caption: 'Miro를 사용하여 기존 양식장 메뉴 및 사용자 여정 정리',
+        },
+        {
           url: `${blobUrl}/projects/aqua-farm-2025/point1-2.webp`,
           caption: '네이버 폼으로 요구사항 정의',
         },
@@ -168,8 +172,8 @@ export const aquaFarm2025: Project = {
     ],
   },
   startTime: '2025.06',
-  endTime: '현재',
-  period: getProjectPeriod('2025.06', '현재'),
+  endTime: '2025.12',
+  period: getProjectPeriod('2025.06', '2025.12'),
   role: 'PM · UI/UX · Frontend',
   team: 'Koast',
   techStack: [
