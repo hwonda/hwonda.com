@@ -10,7 +10,7 @@ const titleText = {
   },
   pm: {
     full: 'Technical Project Manager',
-    short: 'PM',
+    short: 'TPM',
   },
 };
 
