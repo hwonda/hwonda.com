@@ -82,7 +82,7 @@ export const mmis2024: Project = {
   startTime: '2024.08',
   endTime: '2024.11',
   period: getProjectPeriod('2024.08', '2024.11'),
-  role: 'Frontend',
+  role: 'PM · Frontend',
   team: 'Koast',
   techStack: [
     'Vue.js',

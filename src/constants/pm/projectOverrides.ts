@@ -5,27 +5,27 @@ import type { ProjectOverride } from '@/types/projects';
 export const projectOverrides: ProjectOverride[] = [
   {
     id: 'koast-ui',
-    role: 'PM · Frontend Lead',
+    role: 'PM · Frontend',
   },
   {
     id: 'zizizip',
-    role: 'Technical PM · Frontend · Backend',
+    role: '1인 주도 개발',
   },
   {
     id: 'blog',
-    role: 'Technical PM · Frontend',
+    role: '1인 주도 개발',
   },
   {
     id: 'aqua-farm-2025',
-    role: 'PM · UI/UX · Frontend Lead',
+    role: 'PM · UI/UX · Frontend',
   },
   {
     id: 'mmis2025',
-    role: 'PM · UI/UX Lead · Frontend Lead',
+    role: 'PM · Frontend Lead',
   },
   {
     id: 'ai-code-reviewer',
-    role: 'PM · DevOps',
+    role: 'PM · AI Ops',
   },
   {
     id: 'digital-twin',

@@ -90,7 +90,7 @@ export const koastUi: Project = {
   startTime: '2025.03',
   endTime: '2025.06',
   period: getProjectPeriod('2025.03', '2025.06'),
-  role: 'Frontend · DevOps',
+  role: 'PM · Frontend',
   team: 'KOAST',
   techStack: [
     'React.js',
