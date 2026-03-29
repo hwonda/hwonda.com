@@ -9,7 +9,7 @@ export interface Recommendation {
   avatar?: string;
 }
 
-// TPM 동료 평가 목 데이터 (TODO: 수정 필요)
+// PM 동료 평가 목 데이터 (TODO: 수정 필요)
 export const recommendations: Recommendation[] = [
   {
     id: '1',

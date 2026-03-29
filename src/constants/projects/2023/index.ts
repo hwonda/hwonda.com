@@ -7,7 +7,7 @@ export const projects2023 = [mmis2023, aquaFarm2023];
 // FE용 2023 프로젝트
 export const feProjects2023 = [mmis2023, aquaFarm2023];
 
-// TPM용 2023 프로젝트
-export const tpmProjects2023 = [mmis2023];
+// PM용 2023 프로젝트
+export const pmProjects2023 = [mmis2023];
 
 export { aquaFarm2023, mmis2023 };

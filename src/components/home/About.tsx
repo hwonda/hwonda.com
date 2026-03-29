@@ -2,17 +2,17 @@ import { useRef } from 'react';
 
 import ProgressDots from '@/components/common/ProgressDots';
 import { aboutPhrases as feAboutPhrases } from '@/constants/fe/aboutPhrases';
-import { aboutPhrases as tpmAboutPhrases } from '@/constants/tpm/aboutPhrases';
+import { aboutPhrases as pmAboutPhrases } from '@/constants/pm/aboutPhrases';
 import { useAutoSlide, useMouseGlow } from '@/hooks';
 
 interface AboutProps {
   basePath?: string;
-  role?: 'fe' | 'tpm';
+  role?: 'fe' | 'pm';
 }
 
-export default function About({ basePath = '', role = 'tpm' }: AboutProps) {
+export default function About({ basePath = '', role = 'pm' }: AboutProps) {
   const cardRef = useRef<HTMLDivElement>(null);
-  const aboutPhrases = role === 'fe' ? feAboutPhrases : tpmAboutPhrases;
+  const aboutPhrases = role === 'fe' ? feAboutPhrases : pmAboutPhrases;
 
   const { glowPosition, handleMouseMove } = useMouseGlow({
     elementRef: cardRef,

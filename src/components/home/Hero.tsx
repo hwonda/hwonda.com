@@ -10,7 +10,7 @@ import {
 } from './heroSection';
 
 interface HeroProps {
-  role: 'fe' | 'tpm';
+  role: 'fe' | 'pm';
   lastModified: string;
 }
 

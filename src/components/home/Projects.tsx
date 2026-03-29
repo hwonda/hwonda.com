@@ -1,17 +1,17 @@
 import { useEffect, useRef } from 'react';
 
 import { projectsData as feProjectsData } from '@/constants/fe/projectsData';
-import { projectsData as tpmProjectsData } from '@/constants/tpm/projectsData';
+import { projectsData as pmProjectsData } from '@/constants/pm/projectsData';
 
 interface ProjectsProps {
-  basePath: '/fe' | '/tpm';
-  role: 'fe' | 'tpm';
+  basePath: '/fe' | '/pm';
+  role: 'fe' | 'pm';
 }
 
 export default function Projects({ basePath, role }: ProjectsProps) {
   const projectRefs = useRef<(HTMLAnchorElement | null)[][]>([]);
   const titleRefs = useRef<(HTMLHeadingElement | null)[]>([]);
-  const projectsData = role === 'fe' ? feProjectsData : tpmProjectsData;
+  const projectsData = role === 'fe' ? feProjectsData : pmProjectsData;
 
   useEffect(() => {
     const options = {

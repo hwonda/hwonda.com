@@ -2,7 +2,7 @@ import { ChevronDown } from 'lucide-react';
 
 interface DescriptionProps {
   isLoaded: boolean;
-  role: 'fe' | 'tpm';
+  role: 'fe' | 'pm';
 }
 
 const descriptions = {
@@ -20,7 +20,7 @@ const descriptions = {
         '깔끔한 코드, 부드러운 사용자 경험, 그리고 창의적인 아이디어를 현실로 구현하는 것에 열정을 가지고 있습니다.',
     },
   },
-  tpm: {
+  pm: {
     tagline: {
       first: { highlight: '현장의 코드', rest: '에 공감하고,' },
       second: { highlight: ' 프로젝트의 성공', rest: '에 집착합니다.' },

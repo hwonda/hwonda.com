@@ -8,7 +8,7 @@ export interface NavLink {
 }
 
 // 기본 경로를 role에 따라 생성하는 함수
-export const getNavLinks = (basePath: '/fe' | '/tpm'): NavLink[] => [
+export const getNavLinks = (basePath: '/fe' | '/pm'): NavLink[] => [
   {
     href: `${basePath}/about`,
     label: '주다훤',

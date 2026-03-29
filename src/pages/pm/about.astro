@@ -5,20 +5,20 @@ import {
   aboutParagraphs,
   education,
   experiences,
-} from '@/constants/tpm/aboutConst';
-import { techStacks } from '@/constants/tpm/techStackConst';
+} from '@/constants/pm/aboutConst';
+import { techStacks } from '@/constants/pm/techStackConst';
 import Layout from '@/layouts/Layout.astro';
 ---
 
 <Layout
   title="소개 | 주다훤 포트폴리오"
   description="Technical Project Manager 주다훤의 소개 페이지입니다. 경력, 기술 스택, 그리고 교육 배경에 대한 정보를 확인하세요."
-  canonicalURL={new URL('/tpm/about', Astro.site).toString()}
-  basePath="/tpm"
+  canonicalURL={new URL('/pm/about', Astro.site).toString()}
+  basePath="/pm"
 >
   <AboutComponent
     name={personalInfo.name}
-    title="Technical Project Manager"
+    title="Project Manager"
     profileImage={personalInfo.profileImage}
     email={personalInfo.email}
     github={personalInfo.github}
@@ -27,7 +27,7 @@ import Layout from '@/layouts/Layout.astro';
     aboutParagraphs={aboutParagraphs}
     experiences={experiences}
     education={education}
-    role="tpm"
+    role="pm"
     client:load
   />
 </Layout>

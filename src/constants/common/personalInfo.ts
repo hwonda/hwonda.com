@@ -1,4 +1,4 @@
-// 개인 정보 (FE/TPM 공통)
+// 개인 정보 (FE/PM 공통)
 export const personalInfo = {
   name: '주다훤',
   profileImage: 'https://avatars.githubusercontent.com/u/95617014?v=4',
@@ -10,7 +10,7 @@ export const personalInfo = {
 // 역할별 타이틀
 export const roleTitles = {
   fe: '프론트엔드 개발자',
-  tpm: 'Technical Project Manager',
+  pm: 'Project Manager',
 } as const;
 
 export type RoleType = keyof typeof roleTitles;

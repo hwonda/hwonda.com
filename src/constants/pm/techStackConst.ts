@@ -1,5 +1,5 @@
 /**
- * TPM 관련 스킬 목록 (TODO: 수정 필요)
+ * PM 관련 스킬 목록 (TODO: 수정 필요)
  */
 export const skills = [
   'Jira',
@@ -18,7 +18,7 @@ export const skills = [
   'Technical Documentation',
 ];
 
-// TPM 스킬 데이터 (TODO: 수정 필요)
+// PM 스킬 데이터 (TODO: 수정 필요)
 export const techStacks = [
   {
     category: '프로젝트 관리',

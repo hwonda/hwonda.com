@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { getNavLinks } from '@/constants/common/navLinks';
 
 interface HeaderProps {
-  basePath: '/fe' | '/tpm';
+  basePath: '/fe' | '/pm';
 }
 
 export default function Header({ basePath }: HeaderProps) {
@@ -13,7 +13,7 @@ export default function Header({ basePath }: HeaderProps) {
   // 역할별 로고 텍스트
   const logoText = {
     '/fe': { full: 'FE DAHWON', short: 'FE Dev' },
-    '/tpm': { full: 'TPM DAHWON', short: 'TPM' },
+    '/pm': { full: 'TPM DAHWON', short: 'TPM' },
   };
 
   useEffect(() => {

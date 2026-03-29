@@ -1,6 +1,6 @@
 interface TitleProps {
   isLoaded: boolean;
-  role: 'fe' | 'tpm';
+  role: 'fe' | 'pm';
 }
 
 const titleText = {
@@ -8,9 +8,9 @@ const titleText = {
     full: 'Front-End Developer',
     short: 'FE DEV',
   },
-  tpm: {
+  pm: {
     full: 'Technical Project Manager',
-    short: 'TPM',
+    short: 'PM',
   },
 };
 

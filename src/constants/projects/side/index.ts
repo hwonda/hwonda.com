@@ -9,7 +9,7 @@ export const sideProjects = [diki, zizizip, blog, reactMultiEmail];
 // FE용 사이드 프로젝트
 export const feSideProjects = [diki, zizizip, blog, reactMultiEmail];
 
-// TPM용 사이드 프로젝트
-export const tpmSideProjects = [diki, zizizip, blog, reactMultiEmail];
+// PM용 사이드 프로젝트
+export const pmSideProjects = [diki, zizizip, blog, reactMultiEmail];
 
 export { blog, diki, reactMultiEmail, zizizip };

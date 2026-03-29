@@ -3,11 +3,11 @@ import { useRef, useState } from 'react';
 
 import ProgressDots from '@/components/common/ProgressDots';
 import { recommendations as feRecommendations } from '@/constants/fe/recommendationsConst';
-import { recommendations as tpmRecommendations } from '@/constants/tpm/recommendationsConst';
+import { recommendations as pmRecommendations } from '@/constants/pm/recommendationsConst';
 import { useAutoSlide } from '@/hooks';
 
 interface RecommendationProps {
-  role: 'fe' | 'tpm';
+  role: 'fe' | 'pm';
 }
 
 export default function Recommendation({ role }: RecommendationProps) {
@@ -21,7 +21,7 @@ export default function Recommendation({ role }: RecommendationProps) {
   });
 
   const recommendations =
-    role === 'fe' ? feRecommendations : tpmRecommendations;
+    role === 'fe' ? feRecommendations : pmRecommendations;
 
   const {
     currentIndex,

@@ -7,7 +7,7 @@ interface ActionButton {
 
 interface ActionButtonsProps {
   isLoaded: boolean;
-  role: 'fe' | 'tpm';
+  role: 'fe' | 'pm';
 }
 
 export default function ActionButtons({ isLoaded, role }: ActionButtonsProps) {

@@ -1,6 +1,6 @@
 import { getProjectPeriod } from '@/utils/dateUtils';
 
-// TPM 경력 데이터 (TODO: 수정 필요)
+// PM 경력 데이터 (TODO: 수정 필요)
 export const experiences = [
   {
     period: `2023.01 - 현재(${getProjectPeriod('2023.01', '현재')})`,
@@ -32,7 +32,7 @@ export const education = [
   },
 ];
 
-// TPM 자기소개 데이터 (TODO: 수정 필요)
+// PM 자기소개 데이터 (TODO: 수정 필요)
 export const aboutParagraphs = [
   `
   저는 프론트엔드 개발자로 커리어를 시작했지만, 일을 해갈수록 제 강점은 구현 자체보다 병목을 발견하고 구조적으로 해결하는 데 있다는 것을 알게 되었습니다. 
@@ -40,7 +40,7 @@ export const aboutParagraphs = [
   
   이후 이러한 문제 해결 방식과 실행력을 인정받아 PM과 프론트엔드 업무를 병행하게 되었고, 그 과정에서 제가 가장 큰 희열을 느끼는 순간도 분명해졌습니다. 
   더 나은 코드를 만드는 것만큼이나, Jira 기반의 일정 체계를 세우고, AI 코드 리뷰나 UI 라이브러리 같은 구조를 설계해 팀 전체의 효율을 높일 때 더 큰 보람을 느꼈습니다. 
-  그래서 지금의 저는 개발을 이해하는 사람을 넘어, 기술을 협업 구조와 실행력으로 연결하는 Technical Project Manager로 일하고 있습니다.
+  그래서 지금의 저는 개발을 이해하는 사람을 넘어, 기술을 협업 구조와 실행력으로 연결하는 Project Manager로 일하고 있습니다.
 
   ---
   

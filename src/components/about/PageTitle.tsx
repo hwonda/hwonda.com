@@ -3,7 +3,7 @@ import { Download } from 'lucide-react';
 interface PageTitleProps {
   name: string;
   suffix?: string;
-  role?: 'fe' | 'tpm';
+  role?: 'fe' | 'pm';
 }
 
 export default function PageTitle({

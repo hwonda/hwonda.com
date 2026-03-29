@@ -22,8 +22,8 @@ export const feProjects2025 = [
   digitalTwin,
 ];
 
-// TPM용 2025 프로젝트
-export const tpmProjects2025 = [
+// PM용 2025 프로젝트
+export const pmProjects2025 = [
   aquaFarm2025,
   mmis2025,
   koastUi,
