@@ -63,7 +63,7 @@ export default function Projects({ basePath, role }: ProjectsProps) {
 
   return (
     <section className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="w-full">
         <h2 className="font-paperlogy mb-12 text-3xl font-bold md:text-4xl">
           Projects
         </h2>

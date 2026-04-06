@@ -88,11 +88,7 @@ const siteURL = Astro.site || 'https://www.hwonda.com/';
   </head>
   <body class="min-h-screen overflow-x-hidden">
     <main class="container min-h-screen min-w-screen">
-      <div
-        class="fixed top-4 z-50 w-full px-4 sm:px-8 md:px-10 lg:px-20 xl:px-40"
-      >
         {basePath && <Header client:load basePath={basePath} />}
-      </div>
       <slot />
     </main>
   </body><footer>

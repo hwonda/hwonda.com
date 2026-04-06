@@ -30,48 +30,52 @@ export default function Header({ basePath }: HeaderProps) {
   }, []);
 
   return (
-    <div className="relative flex items-center justify-between rounded-full py-2 pr-3 pl-4 sm:pl-10">
-      {/* 배경 그라데이션 레이어 */}
+    <div className="fixed top-0 z-50 w-full">
       <div
+        className={`relative flex items-center justify-between px-4 py-4 sm:px-8 md:px-10 lg:px-20 xl:px-40 ${isScrolled ? 'bg-background border-gray9 border-b' : ''}`}
+      >
+        {/* 배경 그라데이션 레이어 */}
+        {/* <div
         className={`from-accent-1/50 via-accent-2/20 to-accent-4/40 absolute inset-0 rounded-full bg-gradient-to-r opacity-0 backdrop-blur-md transition-opacity duration-700 ${
           isScrolled ? 'opacity-100' : ''
-        }`}
-      />
+          }`}
+          /> */}
 
-      {/* 로고 */}
-      <h1 className="font-paperlogy relative z-10 text-base font-medium sm:text-2xl">
-        <a href={basePath} aria-label="홈페이지로 이동">
-          <span className="hidden font-bold sm:inline">
-            {logoText[basePath].full}
-          </span>
-          <span className="sm:hidden">{logoText[basePath].short}</span>
-        </a>
-      </h1>
+        {/* 로고 */}
+        <h1 className="font-paperlogy relative z-10 text-base font-medium sm:text-2xl">
+          <a href={basePath} aria-label="홈페이지로 이동">
+            <span className="hidden font-bold sm:inline">
+              {logoText[basePath].full}
+            </span>
+            <span className="sm:hidden">{logoText[basePath].short}</span>
+          </a>
+        </h1>
 
-      {/* 네비게이션 */}
-      <nav className="relative z-10 flex items-center gap-2 text-sm sm:text-base">
-        {navLinks.map((link) => {
-          const linkClass = `color-sub rounded-full px-1.5 py-1.5 transition-all duration-300 sm:px-3 ${link.hoverClass}`;
+        {/* 네비게이션 */}
+        <nav className="relative z-10 flex items-center gap-2 text-sm sm:text-base">
+          {navLinks.map((link) => {
+            const linkClass = `color-sub rounded-full px-1.5 py-1.5 transition-all duration-300 sm:px-3 ${link.hoverClass}`;
 
-          return (
-            <a
-              key={link.href}
-              href={link.href}
-              className={linkClass}
-              aria-label={`${link.label}${link.labelFull || ''} 페이지로 이동`}
-              {...(link.isExternal && {
-                target: '_blank',
-                rel: 'noopener noreferrer',
-              })}
-            >
-              {link.label}
-              {link.labelFull && (
-                <span className="hidden sm:inline">{link.labelFull}</span>
-              )}
-            </a>
-          );
-        })}
-      </nav>
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                className={linkClass}
+                aria-label={`${link.label}${link.labelFull || ''} 페이지로 이동`}
+                {...(link.isExternal && {
+                  target: '_blank',
+                  rel: 'noopener noreferrer',
+                })}
+              >
+                {link.label}
+                {link.labelFull && (
+                  <span className="hidden sm:inline">{link.labelFull}</span>
+                )}
+              </a>
+            );
+          })}
+        </nav>
+      </div>
     </div>
   );
 }
