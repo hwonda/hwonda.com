@@ -26,8 +26,8 @@ export default function ActionButtons({ isLoaded, role }: ActionButtonsProps) {
       download: true,
     },
     {
-      href: `/career_description_dahwon_ju${fileSuffix}.pdf`,
-      label: '경력기술서 다운로드',
+      href: `/portfolio_dahwon_ju${fileSuffix}.pdf`,
+      label: '포트폴리오 다운로드',
       variant: 'secondary',
       download: true,
     },

@@ -32,12 +32,12 @@ export default function PageTitle({
           이력서
         </a>
         <a
-          href={`/career_description_dahwon_ju${fileSuffix}.pdf`}
+          href={`/portfolio_dahwon_ju${fileSuffix}.pdf`}
           download
           className="text-main hover:text-accent-1 flex items-center gap-1 pb-6 font-medium transition-colors duration-300"
         >
           <Download className="h-4 w-4" />
-          경력 기술서
+          포트폴리오
         </a>
       </div>
     </div>
