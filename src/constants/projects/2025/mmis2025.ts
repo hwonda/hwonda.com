@@ -81,18 +81,18 @@ export const mmis2025: Project = {
     },
     {
       images: [
-        {
-          url: `${blobUrl}/projects/mmis-2025/point3-0.webp`,
-          caption: '기존 컴포넌트 구조 예시(범례)',
-        },
+        // {
+        //   url: `${blobUrl}/projects/mmis-2025/point3-0.webp`,
+        //   caption: '기존 컴포넌트 구조 예시(범례, 실제 코드 아님)',
+        // },
         {
           url: `${blobUrl}/projects/mmis-2025/point3-1.webp`,
           caption: '기존에 사용한 메뉴별 범례 정리(메뉴-범례 이미지 매핑)',
         },
-        {
-          url: `${blobUrl}/projects/mmis-2025/point3-2.webp`,
-          caption: '신규 컴포넌트 구조(범례 타입별 컴포넌트, util 분리)',
-        },
+        // {
+        //   url: `${blobUrl}/projects/mmis-2025/point3-2.webp`,
+        //   caption: '신규 컴포넌트 구조(범례 타입별 컴포넌트, util 분리)',
+        // },
       ],
       situation: `2,000라인 이상 단일 메서드 구조의 컴포넌트로 수정/기능 추가 난이도 높음`,
       task: `
